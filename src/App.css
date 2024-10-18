@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,16 +15,16 @@
   --link-color: #2980b9;
 }
 
-
-
 @media (max-width: 500px) {
-
-
-  .root{
+  .root {
     color: var(--primary-color);
   }
-  
 
+  /* Morten */
 
+  /* Rune */
+
+  /* William */
+
+  /* Artilon */
 }
-
