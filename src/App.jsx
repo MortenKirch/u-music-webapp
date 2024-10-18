@@ -4,6 +4,7 @@ import NavBarTemp from "./Components/NavBarTemp";
 import LoginScreen from "./pages/LoginScreen";
 import Explore from "./pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
