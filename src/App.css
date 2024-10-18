@@ -17,6 +17,14 @@
 
 
 
-.root{
-  color: var(--primary-color);
+@media (max-width: 500px) {
+
+
+  .root{
+    color: var(--primary-color);
+  }
+  
+
+
 }
+
