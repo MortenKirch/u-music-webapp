@@ -62,7 +62,31 @@
   /* Genrer */
 
   /* Artilon */
+
   /* Profile */
+  .profile-container {
+    padding: 20px;
+    color: #fff;
+  }
+
+  .profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .followme-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .followme-button:hover {
+    background: #ddd;
+  }
 
   /* Album */
   /* ArtistProfile */
