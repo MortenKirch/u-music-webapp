@@ -13,6 +13,16 @@
 }
 
 @media (max-width: 500px) {
+  body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(99, 0, 90, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-attachment: fixed;
+  }
   .background {
     background: rgb(2, 0, 36);
     background: radial-gradient(
@@ -37,6 +47,23 @@
   .logoName {
     font-size: 8vw;
     font-family: "audiowide", sans-serif;
+  }
+
+  .NavBarTemp {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+  }
+  .NavBarTemp ul {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-around;
+  }
+  .NavBarTemp ul li a {
+    list-style-type: none;
+
+    color: white;
   }
   /* Morten */
   /* onboarding login */
