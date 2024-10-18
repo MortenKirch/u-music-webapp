@@ -70,6 +70,21 @@
 
   /* Rune */
   /* navbar */
+  .topnav {
+    width: 100vw;
+  }
+  .topnav ul {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: end;
+  }
+  .topnav ul li {
+    list-style-type: none;
+    padding: 3%;
+    color: white;
+  }
+  .topnav-links {
+  }
 
   /* William */
   /* Explore */
