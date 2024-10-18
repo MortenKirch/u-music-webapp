@@ -13,30 +13,30 @@
   --background-color: #f5f5f5;
   --text-color: #333;
   --link-color: #2980b9;
-  --background-image:url(/src/images/background.png);
+  --background-image: url(/src/images/background.png);
 }
 
 @media (max-width: 500px) {
- .background{
-  background-image: var(--background-image);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- }
- .logo{
-width: 40%;
-margin: 1rem;
- }
-.logoName{
-font-size: 8vw;
-font-family: "audiowide", sans-serif;
-}
+  .background {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 40%;
+    margin: 1rem;
+  }
+  .logoName {
+    font-size: 8vw;
+    font-family: "audiowide", sans-serif;
+  }
   /* Morten */
 
   /* Rune */
@@ -44,4 +44,13 @@ font-family: "audiowide", sans-serif;
   /* William */
 
   /* Artilon */
+  body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0% rgba(99, 0, 90, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-attachment: fixed;
+  }
 }
