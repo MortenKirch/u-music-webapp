@@ -8,8 +8,8 @@
 
 :root {
   /* Colors */
- --white:#ffffff;
-  --background-image:url(/src/images/background.png);
+  --white: #ffffff;
+  --background-image: url(/src/images/background.png);
 }
 
 @media (max-width: 500px) {
@@ -40,7 +40,28 @@ font-family: "audiowide", sans-serif;
   /* navbar */
 
   /* William */
-  /* sutter diller */
+
+  /* Explore */
+
+  /* Explore Album */
+
+  /* Explore Artist */
+
+  /* Explore Concerts */
+
+  /* Explore Genre */
+
+  /* Explore Subgenre */
+
+  /* Explore Song */
+
+  /* Genrer */
+
+  /* Home Screen */
+
+  /* Charts */
+
+  /* ChartsFilter */
 
   /* Artilon */
   /* profil siden */
