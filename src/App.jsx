@@ -5,10 +5,12 @@ import LoginScreen from "./pages/LoginScreen";
 import Explore from "./pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
 import Profile from "./pages/Profile";
+import NavTop from "./Components/NavbarTop";
 
 function App() {
   return (
     <>
+      <NavTop />
       <NavBarTemp />
       <main>
         <Routes>
