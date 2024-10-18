@@ -8,11 +8,7 @@
 
 :root {
   /* Colors */
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --background-color: #f5f5f5;
-  --text-color: #333;
-  --link-color: #2980b9;
+ --white:#ffffff;
   --background-image:url(/src/images/background.png);
 }
 
@@ -21,6 +17,7 @@
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: contain;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   color: white;
@@ -38,10 +35,14 @@ font-size: 8vw;
 font-family: "audiowide", sans-serif;
 }
   /* Morten */
+  /* onboarding login */
 
   /* Rune */
+  /* navbar */
 
   /* William */
+  /* sutter diller */
 
   /* Artilon */
+  /* profil siden */
 }
