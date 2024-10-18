@@ -13,6 +13,9 @@ export default function NavBarTemp() {
         <li>
           <NavLink to="/Login">Login</NavLink>
         </li>
+        <li>
+          <NavLink to="/Profile">Profile</NavLink>
+        </li>
       </ul>
     </nav>
   );
