@@ -101,6 +101,13 @@
     margin-bottom: 30px;
   }
 
+  .profile-image {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+  }
+
   .followme-button {
     padding: 10px 20px;
     background-color: #fff;
