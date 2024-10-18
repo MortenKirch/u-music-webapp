@@ -1,8 +1,12 @@
+import profilePic from "../images/cat.jpg";
+import "../App.css";
+
 export default function Profile() {
   return (
     <>
       <div className="profile-container">
         <div className="profile-header">
+          <img src={profilePic} alt="Profile" className="profile-image" />
           <h1>Pug Fartmeister</h1>
           <p>Followers: 231</p>
           <p>Following: 12</p>
@@ -43,7 +47,7 @@ export default function Profile() {
         <div className="review-box">
           <h4>Overskrift</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-          <div>Rating 5:10</div>
+          <div>Rating 5/10</div>
         </div>
       </div>
     </>
