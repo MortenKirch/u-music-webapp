@@ -40,6 +40,11 @@ export default function Profile() {
         <h2>Reviews</h2>
         <h2>Ratings</h2>
         <h2>Want to listen</h2>
+        <div className="review-box">
+          <h4>Overskrift</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+          <div>Rating 5:10</div>
+        </div>
       </div>
     </>
   );
