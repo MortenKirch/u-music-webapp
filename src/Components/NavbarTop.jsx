@@ -4,8 +4,10 @@ export default function NavTop() {
   return (
     <nav className="topnav">
       <ul>
-        <li>Concerts</li>
-        <li>Reviews</li>
+        <ul className="topnav-links">
+          <li>Concerts</li>
+          <li>Reviews</li>
+        </ul>
         <li>
           <img src={NotiIcon} alt="Notification icon" />
         </li>
