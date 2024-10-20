@@ -107,34 +107,88 @@
 
   /* Profile */
   .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     color: #fff;
   }
 
   .profile-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .profile-image {
-    border-radius: 100%;
-    object-fit: cover;
-    width: 150px;
-    height: 150px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-name {
+    margin-top: 10px;
+    font-size: 35px;
   }
 
   .followme-button {
     padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: #2a2525;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
   }
 
-  .followme-button:hover {
-    background: #ddd;
+  .followme-button h1 {
+    color: white;
+  }
+
+  .followingsection {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 10px 0;
+  }
+
+  .followers {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .following {
+    font-size: 20px;
+    text-align: right;
+  }
+
+  .favorit-sektion-artist {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .artist-favorit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: vw;
+    justify-content: center;
+  }
+
+  .artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    margin: 10px;
+  }
+
+  .favorit-sange-sektion {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .sange-list {
+    list-style-type: none;
+    padding: 0;
   }
 
   /* Album */
