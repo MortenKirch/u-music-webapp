@@ -10,6 +10,9 @@ import Concerts from "./pages/Concerts";
 import Reviews from "./pages/Reviews";
 import Notifications from "./pages/Notifications";
 import NavbarBottom from "./Components/NavbarBottom";
+import CreateAccount from "./Pages/CreateAccount";
+import ChooseGenre from "./Pages/ChooseGenre";
+import CompleteProfile from "./Pages/CompleteProfile";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
           <Route path="/Explore" element={<Explore />} />
           <Route path="/Login" element={<LoginScreen />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/create-account" element={<CreateAccount />} />
+          <Route path="/choose-genre" element={<ChooseGenre />} />
+          <Route path="/finish-profile" element={<CompleteProfile/>} />
         </Routes>
       </main>
     </>
