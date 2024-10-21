@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -48,21 +49,8 @@
     font-size: 8vw;
     font-family: "audiowide", sans-serif;
   }
-
-  .NavBarTemp {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-  }
-  .NavBarTemp ul {
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-around;
-  }
-  .NavBarTemp ul li a {
-    list-style-type: none;
-
+  .tempnav {
+    font-size: 2rem;
     color: white;
   }
   /* Morten */
@@ -70,20 +58,71 @@
 
   /* Rune */
   /* navbar */
-  .topnav {
-    width: 100vw;
-  }
-  .topnav ul {
+  .top-nav {
     display: flex;
-    margin-bottom: 20px;
-    justify-content: end;
-  }
-  .topnav ul li {
-    list-style-type: none;
-    padding: 3%;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
     color: white;
+    position: relative;
   }
-  .topnav-links {
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.9375rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+
+  .notifications {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.2rem;
+  }
+  .notifications a img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .notification-dot {
+    position: absolute;
+    top: -0.3125rem;
+    right: -0.2rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  /* Bottom nav */
+
+  .Nav--bar--bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    padding-bottom: 0.25rem;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 1) 87%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    width: 100%;
+  }
+
+  .nav--item {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem; /* 14px to rem */
+  }
+
+  .nav--item img {
+    width: 1.5rem; /* Adjust icon size */
+    height: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   /* William */

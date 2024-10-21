@@ -1,3 +1,3 @@
 export default function LoginScreen() {
-  return <p>Morten er en giga faggot som er en biiiiiiiitch</p>;
+  return <p>Login content goes here</p>;
 }
