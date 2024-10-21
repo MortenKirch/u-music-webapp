@@ -1,3 +1,3 @@
 export default function HomeScreen() {
-  return <p>HomeScreen content goes here</p>;
+  return <p>Morten er jo udemærket</p>;
 }
