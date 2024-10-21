@@ -6,16 +6,13 @@ import Explore from "./pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
 import Profile from "./pages/Profile";
 import NavTop from "./Components/NavbarTop";
-<<<<<<< Updated upstream
 import Concerts from "./pages/Concerts";
 import Reviews from "./pages/Reviews";
 import Notifications from "./pages/Notifications";
 import NavbarBottom from "./Components/NavbarBottom";
-=======
 import CreateAccount from "./Pages/CreateAccount";
 import ChooseGenre from "./Pages/ChooseGenre";
 import CompleteProfile from "./Pages/CompleteProfile";
->>>>>>> Stashed changes
 
 function App() {
   return (

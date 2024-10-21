@@ -4,9 +4,6 @@ import Logo from "../images/logo.png";
 
 
 export default function LoginScreen() {
-<<<<<<< Updated upstream
-  return <p>Login content goes here</p>;
-=======
 
   const navigate = useNavigate(); // Initialize the hook
 
@@ -49,5 +46,4 @@ export default function LoginScreen() {
       </div>
     </section>
   );
->>>>>>> Stashed changes
 }
