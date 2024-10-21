@@ -7,6 +7,10 @@ import artist2 from "../images/Kendrick-lamar.jpeg";
 import artist3 from "../images/Drake.jpeg";
 import artist4 from "../images/Eminem.jpeg";
 
+// sange her ville der kun være rap god til at starte med
+
+import sang1 from "../images/Rap god.png";
+
 export default function Profile() {
   return (
     <div>
@@ -47,10 +51,38 @@ export default function Profile() {
       <div className="favorit-sange-sektion">
         <h2>Favorite Songs</h2>
         <ul className="sange-list">
-          <li>Rap God - 9:10</li>
-          <li>Rap God - 9:10</li>
-          <li>Rap God - 9:10</li>
-          <li>Rap God - 9:10</li>
+          <li className="'sang-card">
+            <img src={sang1} alt="rap-god" className="sang-image" />
+            <div className="song-details">
+              <p className="song-title">Rap God</p>
+              <p className="song-time">9:10</p>
+              <p className="song-rating">Rating: 5/10</p>
+            </div>
+          </li>
+          <li className="sange-card">
+            <img src={sang1} alt="rap-god" className="sang-image" />
+            <div className="song-details">
+              <p className="song-title">Rap God</p>
+              <p className="song-time">9:10</p>
+              <p className="song-rating">Rating: 5/10</p>
+            </div>
+          </li>
+          <li className="sange-card">
+            <img src={sang1} alt="rap-god" className="sang-image" />
+            <div className="song-details">
+              <p className="song-title">Rap God</p>
+              <p className="song-time">9:10</p>
+              <p className="song-rating">Rating: 5/10</p>
+            </div>
+          </li>
+          <li className="sange-card">
+            <img src={sang1} alt="rap-god" className="sang-image" />
+            <div className="song-details">
+              <p className="song-title">Rap God</p>
+              <p className="song-time">9:10</p>
+              <p className="song-rating">Rating: 5/10</p>
+            </div>
+          </li>
         </ul>
       </div>
 
