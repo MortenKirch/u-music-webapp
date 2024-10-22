@@ -252,22 +252,92 @@
   /* William */
 
   /* Explore */
-  .searchbar {
-    border-radius: 10px;
+  .explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
   }
-  /* Explore Album */
+
+  .searchbar-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input-container {
+    position: relative;
+    align-items: center; /* Center the icon and input */
+    width: 100%; /* Adjust as needed */
+  }
+
+  .search-icon {
+    position: absolute; /* Position the icon within the input */
+    left: 1rem; /* Adjust this value as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the icon */
+    color: var(--white); /* Icon color */
+    pointer-events: none; /* Prevent clicks on the icon */
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 1px groove white;
+    background: transparent;
+    color: white;
+  }
+
+  .browse-container {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .browse-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .browse-item {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    color: white; /* Ensures text color is white */
+    text-decoration: none; /* Removes underline */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   /* Explore Artist */
+  .artist-explore-container {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(99, 0, 90, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
 
-  /* Explore Concerts */
+  /* Explore Genres */
 
-  /* Explore Genre */
+  /* Explore Subgenres */
 
-  /* Explore Subgenre */
+  /* Genres */
+
+  /* Explore Album */
 
   /* Explore Song */
 
-  /* Genrer */
+  /* Explore Concerts */
 
   /* Artilon */
 
@@ -394,6 +464,8 @@
     color: white;
     font-size: 20px;
     margin-bottom: 16px;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .sange-list {
@@ -412,6 +484,17 @@
     gap: 12px;
   }
 
+  .song-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .song-title {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+  }
+
   .sangnavn {
     color: white;
   }
@@ -424,8 +507,16 @@
   }
 
   .song-details {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     color: white;
+  }
+
+  .timestamp {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 2px 0;
   }
 
   .song-details p {
@@ -506,6 +597,9 @@
     background-color: #2a2525;
     padding: 16px;
     border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 100px;
   }
 
   .review-box h4 {
@@ -524,6 +618,68 @@
     color: #9ca3af;
   }
 
+  .review-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .reviewer-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .review-box h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .review-box p {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .review-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review-rating {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 8px;
+    margin: 2px 0;
+  }
+
+  .heart-reply {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .heart-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: red;
+  }
+
+  .reply-thread {
+    font-size: 14px;
+    color: #9ca3af;
+    cursor: pointer;
+  }
+
+  .reply-thread:hover {
+    color: #ffffff;
+  }
   /* Album */
   /* ArtistProfile */
   /* BandProfile */
