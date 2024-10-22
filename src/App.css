@@ -306,8 +306,7 @@
     padding: 1rem;
     border-bottom: 1px solid #555;
     cursor: pointer;
-    color: white; /* Ensures text color is white */
-    text-decoration: none; /* Removes underline */
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -338,8 +337,13 @@
   .artists-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
     width: 100%;
+  }
+
+  .artist-card {
+    width: fit-content;
+    justify-self: center;
+    padding-bottom: 1.5rem;
   }
 
   .artists-grid h3 {
@@ -347,7 +351,6 @@
     font-size: 0.6rem;
     justify-self: start;
     width: fit-content;
-    margin-left: 0.6rem;
   }
 
   .artist-image {
@@ -357,6 +360,74 @@
   }
 
   /* Explore Genres */
+  .explore-genres-container {
+    color: white;
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .explore-genres-container h2 {
+    padding-bottom: 1rem;
+  }
+
+  .genres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .genre-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .genre-image {
+    width: 8rem;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .genre-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .genre-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+
+  .show-subgenres {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+
+  .subgenres-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding around the list */
+    margin-top: 10px; /* Space between the genre card and the subgenres box */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack subgenres vertically */
+  }
+
+  .subgenres-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .subgenres-list li {
+    margin-bottom: 5px;
+  }
 
   /* Explore Subgenres */
 
