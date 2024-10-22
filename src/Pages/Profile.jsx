@@ -117,11 +117,11 @@ export default function Profile() {
         <button>Reviews</button>
         <button>Ratings</button>
         <button>Want to Listen</button>
-        <div className="review-box">
-          <h4>Overskrift</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-          <div>Rating 5/10</div>
-        </div>
+      </div>
+      <div className="review-box">
+        <h4>Overskrift</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+        <div>Rating 5/10</div>
       </div>
     </div>
   );
