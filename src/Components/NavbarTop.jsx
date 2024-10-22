@@ -1,17 +1,19 @@
 import NotiIcon from "../images/notification-icon.svg";
+import { NavLink } from "react-router-dom";
 
 export default function NavTop() {
   return (
-    <nav className="topnav">
-      <ul>
-        <ul className="topnav-links">
-          <li>Concerts</li>
-          <li>Reviews</li>
-        </ul>
-        <li>
-          <img src={NotiIcon} alt="Notification icon" />
-        </li>
-      </ul>
-    </nav>
+    <div className="top-nav">
+      <div className="nav-links">
+        <NavLink to="/Concerts">Concerts</NavLink>
+        <NavLink to="/Reviews">Reviews</NavLink>
+      </div>
+      <div className="notifications">
+        <NavLink to="/Notifications">
+          <img src={NotiIcon} alt="" />
+        </NavLink>
+        <span className="notification-dot"></span>
+      </div>
+    </div>
   );
 }
