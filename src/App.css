@@ -52,10 +52,7 @@
     font-size: 8vw;
     font-family: "audiowide", sans-serif;
   }
-  .tempnav {
-    font-size: 2rem;
-    color: white;
-  }
+
   /* Morten */
   /* onboarding login */
   .login-section {
@@ -245,28 +242,102 @@
   .nav--item img {
     width: 1.5rem; /* Adjust icon size */
     height: 1.5rem;
-    margin-bottom: 0.5rem;
   }
+  .nav-button-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Home screen */
 
   /* William */
 
   /* Explore */
-  .searchbar {
-    border-radius: 10px;
+  .explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
   }
-  /* Explore Album */
+
+  .searchbar-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input-container {
+    position: relative;
+    align-items: center; /* Center the icon and input */
+    width: 100%; /* Adjust as needed */
+  }
+
+  .search-icon {
+    position: absolute; /* Position the icon within the input */
+    left: 1rem; /* Adjust this value as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the icon */
+    color: var(--white); /* Icon color */
+    pointer-events: none; /* Prevent clicks on the icon */
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 1px groove white;
+    background: transparent;
+    color: white;
+  }
+
+  .browse-container {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .browse-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .browse-item {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    color: white; /* Ensures text color is white */
+    text-decoration: none; /* Removes underline */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   /* Explore Artist */
+  .artist-explore-container {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(99, 0, 90, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
 
-  /* Explore Concerts */
+  /* Explore Genres */
 
-  /* Explore Genre */
+  /* Explore Subgenres */
 
-  /* Explore Subgenre */
+  /* Genres */
+
+  /* Explore Album */
 
   /* Explore Song */
 
-  /* Genrer */
+  /* Explore Concerts */
 
   /* Artilon */
 
@@ -623,7 +694,68 @@
   /* Create Account 3 */
   /* Reviews */
   /* Full Review */
-  /* HomeScreen */
+  /* HomeScreen - rune */
+  .recommendations-container {
+    color: white;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  .recommendations-container section {
+    margin-bottom: 40px;
+  }
+
+  .recommendations-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .albums-grid {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  .album-card {
+    width: 32%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .album-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .album-info {
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .album-info p {
+    font-size: 0.7rem;
+    color: #bbb;
+  }
+
+  .album-info h3 {
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .rating {
+    margin-top: 5px;
+  }
+
+  .rating button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   /* Notifications */
   /* Song */
 }
