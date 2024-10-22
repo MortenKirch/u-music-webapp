@@ -393,6 +393,8 @@
     color: white;
     font-size: 20px;
     margin-bottom: 16px;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .sange-list {
@@ -411,6 +413,17 @@
     gap: 12px;
   }
 
+  .song-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .song-title {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+  }
+
   .sangnavn {
     color: white;
   }
@@ -423,8 +436,16 @@
   }
 
   .song-details {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     color: white;
+  }
+
+  .timestamp {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 2px 0;
   }
 
   .song-details p {
@@ -505,6 +526,9 @@
     background-color: #2a2525;
     padding: 16px;
     border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 100px;
   }
 
   .review-box h4 {
@@ -523,6 +547,68 @@
     color: #9ca3af;
   }
 
+  .review-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .reviewer-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .review-box h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .review-box p {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .review-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review-rating {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 8px;
+    margin: 2px 0;
+  }
+
+  .heart-reply {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .heart-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: red;
+  }
+
+  .reply-thread {
+    font-size: 14px;
+    color: #9ca3af;
+    cursor: pointer;
+  }
+
+  .reply-thread:hover {
+    color: #ffffff;
+  }
   /* Album */
   /* ArtistProfile */
   /* BandProfile */
