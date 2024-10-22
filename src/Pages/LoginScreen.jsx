@@ -1,26 +1,36 @@
-import { useNavigate} from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../Components/Firebase/Firebase-config"; // Import the auth instance from firebase.js
+import { signInWithEmailAndPassword } from "firebase/auth";
 import Logo from "../images/logo.png";
 
+export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
+  const [email, setEmail] = useState(""); // State for email
+  const [password, setPassword] = useState(""); // State for password
+  const navigate = useNavigate();
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
 
 
-export default function LoginScreen() {
-
-  const navigate = useNavigate(); // Initialize the hook
-
-  const handleLogin = (event) => {
-    event.preventDefault()
-    navigate('/'); 
+      // Sign in using Firebase Authentication
+      await signInWithEmailAndPassword(auth, email, password);
+      setIsAuth(true); // Set authentication state
+      setOnboardingComplete(true)
+      localStorage.setItem("isAuth", true); // Store authentication state
+      navigate('/'); // Navigate to the home screen
+ 
   };
 
-
   const handleSignUp = () => {
-    
-    navigate('/create-account'); 
+    navigate('/create-account'); // Navigate to sign-up page
   };
 
   const handleContinue = () => {
-    
-    navigate('/'); 
+    setIsAuth(true); // Simulate guest login
+    localStorage.setItem("isAuth", true);
+    setOnboardingComplete(true)
+    navigate('/'); // Navigate to the private routes
   };
 
   return (
@@ -28,21 +38,39 @@ export default function LoginScreen() {
       <img src={Logo} alt="logo for uMusic" className="logo" />
       <h1 className="logoName logo-margin">uMusic</h1>
 
-      <input type="text" placeholder="Username" className="Username input-login" />
+      <input 
+        type="email" 
+        placeholder="Email" 
+        className="Username input-login" 
+        value={email} 
+        onChange={(e) => setEmail(e.target.value)} // Update email state
+      />
       <div className="input-container">
-        <p>Forgotten your Username?</p> 
+        <p>Forgotten your Email?</p> 
         <a href="#">Click here</a>
       </div>
       
-      <input type="password" placeholder="Password" className="Password input-login" />
+      <input 
+        type="password" 
+        placeholder="Password" 
+        className="Password input-login" 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} // Update password state
+      />
       <div className="input-container">
         <p>Forgotten your password?</p> 
         <a href="#">Click here</a>
       </div>
       <div className="button-container">
-      <button className="login-button sign-in-button" type="submit" onClick={handleLogin}>SIGN IN</button>
-      <button className="login-button create-button" type="button" onClick={handleSignUp}>CREATE ACCOUNT</button>
-      <button className="login-button continue-button" type="button" onClick={handleContinue}>CONTINUE AS GUEST</button>
+        <button className="login-button sign-in-button" type="submit" onClick={handleLogin}>
+          SIGN IN
+        </button>
+        <button className="login-button create-button" type="button" onClick={handleSignUp}>
+          CREATE ACCOUNT
+        </button>
+        <button className="login-button continue-button" type="button" onClick={handleContinue}>
+          CONTINUE AS GUEST
+        </button>
       </div>
     </section>
   );
