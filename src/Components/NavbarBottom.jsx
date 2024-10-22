@@ -9,24 +9,34 @@ export default function NavBotNavbarBottom() {
   return (
     <nav className="Nav--bar--bottom">
       <NavLink to="/" className="nav--item" activeClassName="active">
-        <img src={HomeIcon} alt="Home" />
-        Home
+        <div>
+          <img src={HomeIcon} alt="Home" />
+          <p>Home</p>
+        </div>
       </NavLink>
-      <NavLink to="/search" className="nav--item" activeClassName="active">
-        <img src={SearchIcon} alt="Search" />
-        Search
+      <NavLink to="/Explore" className="nav--item" activeClassName="active">
+        <div>
+          <img src={SearchIcon} alt="Search" />
+          <p>Search</p>
+        </div>
       </NavLink>
       <NavLink to="/charts" className="nav--item" activeClassName="active">
-        <img src={ChartsIcon} alt="Charts" />
-        Charts
+        <div>
+          <img src={ChartsIcon} alt="Charts" />
+          <p>Charts</p>
+        </div>
       </NavLink>
       <NavLink to="/activity" className="nav--item" activeClassName="active">
-        <img src={ActivityIcon} alt="Activity" />
-        Activity
+        <div>
+          <img src={ActivityIcon} alt="Activity" />
+          <p>Activity</p>
+        </div>
       </NavLink>
       <NavLink to="/profile" className="nav--item" activeClassName="active">
-        <img src={ProfileIcon} alt="Profile" />
-        Profile
+        <div>
+          <img src={ProfileIcon} alt="Profile" />
+          <p>Profile</p>
+        </div>
       </NavLink>
     </nav>
   );

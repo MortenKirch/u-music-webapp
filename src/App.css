@@ -11,9 +11,9 @@
   /* Colors */
   --white: #ffffff;
   --background-image: url(/src/images/background.png);
-  --trans-black:rgba(45, 45, 45, 0.5);
-  --gray:#D6D6D6;
-  --dark-gray:#2A2525;
+  --trans-black: rgba(45, 45, 45, 0.5);
+  --gray: #d6d6d6;
+  --dark-gray: #2a2525;
 }
 
 @media (max-width: 500px) {
@@ -52,84 +52,78 @@
     font-size: 8vw;
     font-family: "audiowide", sans-serif;
   }
-  .tempnav {
-    font-size: 2rem;
-    color: white;
-  }
+
   /* Morten */
   /* onboarding login */
-  .login-section{
+  .login-section {
     color: var(--white);
     display: flex;
     align-items: center;
     flex-direction: column;
-    
   }
-  .button-container{
+  .button-container {
     display: flex;
     flex-direction: column;
   }
-  .input-login{
+  .input-login {
     width: 80%;
-   font-size: 1.2rem;
-   padding: 0.8rem;
-   margin-top: 4%;
-   background-color: var(--trans-black) ;
-   border: none;
-   border-radius: 10px;
-   color: var(--white);
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    margin-top: 4%;
+    background-color: var(--trans-black);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
   }
-  .input-login::placeholder{
-    color:var(--gray);
+  .input-login::placeholder {
+    color: var(--gray);
   }
-  .input-container{
+  .input-container {
     display: flex;
-    font-size:0.8rem;
+    font-size: 0.8rem;
     width: 80%;
   }
-  .input-container a{
+  .input-container a {
     color: var(--white);
     text-decoration: underline;
   }
-  .login-button{
+  .login-button {
     background-color: var(--dark-gray);
     border: none;
     border-radius: 10px;
     color: var(--white);
   }
-  .sign-in-button{
+  .sign-in-button {
     padding: 15px 10px;
     margin-top: 5vh;
     font-size: 1.2rem;
   }
-  .create-button{
+  .create-button {
     padding: 5px 25px;
     margin: 10px;
   }
-  .continue-button{
+  .continue-button {
     padding: 10px 10px;
     margin-top: 5vh;
-   
   }
-  .logo-margin{
+  .logo-margin {
     margin-bottom: 15vh;
   }
-  .navigate-button-container{
+  .navigate-button-container {
     display: flex;
     justify-content: space-between;
     width: 70vw;
     margin-bottom: 1rem;
   }
-  .logo-create-margin{
+  .logo-create-margin {
     margin-bottom: 10vh;
-
   }
-  .navigate-button{
+  .navigate-button {
     padding: 8px;
     margin-top: 5vh;
     font-size: 1.2rem;
   }
-  .placeholder-bar{
+  .placeholder-bar {
     border-radius: 20px;
     background-color: var(--gray);
     color: var(--dark-gray);
@@ -141,7 +135,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .image-placeholder {
     width: 200px; /* Adjust the size as needed */
     height: 200px;
@@ -153,17 +147,17 @@
     overflow: hidden; /* Ensures any overflow is hidden */
     cursor: pointer; /* Indicates the user can click */
   }
-  
+
   .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the entire area */
   }
-  
+
   .placeholder-text {
     color: var(--white); /* Placeholder text color */
   }
-  .radio-container{
+  .radio-container {
     width: 80%;
   }
 .checkbox-container{
@@ -209,6 +203,22 @@ input[type="checkbox"]::before{
 .bubble.selected {
   background-color: orange;
 }
+  .checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .check-style {
+    width: 20px;
+    height: 20px;
+    background-color: var(--trans-black);
+  }
+  input[type="checkbox"]:checked {
+    accent-color: var(--gray);
+  }
+  input[type="checkbox"]::before {
+    background-color: var(--trans-black);
+  }
   /* Rune */
   /* navbar */
   .top-nav {
@@ -275,25 +285,202 @@ input[type="checkbox"]::before{
   .nav--item img {
     width: 1.5rem; /* Adjust icon size */
     height: 1.5rem;
-    margin-bottom: 0.5rem;
   }
+  .nav-button-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Home screen */
 
   /* William */
+
   /* Explore */
+  .explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+
+  .searchbar-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input-container {
+    position: relative;
+    align-items: center; /* Center the icon and input */
+    width: 100%; /* Adjust as needed */
+  }
+
+  .search-icon {
+    position: absolute; /* Position the icon within the input */
+    left: 1rem; /* Adjust this value as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the icon */
+    color: var(--white); /* Icon color */
+    pointer-events: none; /* Prevent clicks on the icon */
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 1px groove white;
+    background: transparent;
+    color: white;
+  }
+
+  .browse-container {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .browse-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .browse-item {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Explore Artist */
+  .artist-explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(99, 0, 90, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
+
+  .artist-explore-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .artist-card {
+    width: fit-content;
+    justify-self: center;
+    padding-bottom: 1.5rem;
+  }
+
+  .artists-grid h3 {
+    font-weight: 500;
+    font-size: 0.6rem;
+    justify-self: start;
+    width: fit-content;
+  }
+
+  .artist-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Explore Genres */
+  .explore-genres-container {
+    color: white;
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .explore-genres-container h2 {
+    padding-bottom: 1rem;
+  }
+
+  .genres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .genre-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .genre-image {
+    width: 8rem;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .genre-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .genre-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+
+  .show-subgenres {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+
+  .subgenres-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding around the list */
+    margin-top: 10px; /* Space between the genre card and the subgenres box */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack subgenres vertically */
+  }
+
+  .subgenres-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .subgenres-list li {
+    margin-bottom: 5px;
+  }
+
+  /* Explore Subgenres */
+
+  /* Genres */
 
   /* Explore Album */
 
-  /* Explore Artist */
-
-  /* Explore Concerts */
-
-  /* Explore Genre */
-
-  /* Explore Subgenre */
-
   /* Explore Song */
 
-  /* Genrer */
+  /* Explore Concerts */
 
   /* Artilon */
 
@@ -315,23 +502,26 @@ input[type="checkbox"]::before{
 
   .profile-image {
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
 
   .profile-name {
     margin-top: 10px;
     font-size: 45px;
+    margin-bottom: 8px;
   }
 
   .followme-button {
-    padding: 10px 20px;
+    padding: 10px 50px;
     background-color: #2a2525;
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 20px;
   }
 
   .followme-button h1 {
@@ -340,18 +530,23 @@ input[type="checkbox"]::before{
 
   .followingsection {
     display: flex;
-    justify-content: space-between;
-    width: 180px;
+    justify-content: center;
+    gap: 16px;
     margin: 10px 0;
   }
 
+  .followers,
+  .following {
+    font-size: 14px;
+  }
+
   .followers {
-    font-size: 30px;
+    font-size: 20px;
     text-align: left;
   }
 
   .following {
-    font-size: 30px;
+    font-size: 20px;
     text-align: right;
   }
 
@@ -359,48 +554,61 @@ input[type="checkbox"]::before{
 
   .favorit-sektion-artist {
     margin: 20px 0;
-    text-align: center;
+    padding: 0 20px;
   }
 
   .favorit-sektion-artist h2 {
     color: white;
     text-align: left;
     font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .favorit-songs {
+    color: white;
+    font-size: 30px;
     margin-left: 30px;
   }
 
   .artist-favorit {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
   }
 
   .artist-card {
+    flex-shrink: 0;
     text-align: center;
     color: white;
   }
 
   .artist-card p {
     font-size: 15px;
-    margin-top: 5px;
+    margin-top: 8px;
+    color: white;
   }
 
   .artist-image {
     width: 100px;
     height: 100px;
     border-radius: 9px;
+    object-fit: cover;
   }
 
   /*sange sektion */
 
   .favorit-sange-sektion {
-    margin: 20px;
+    margin: 32px 0;
+    padding: 0 20px;
   }
 
-  .favorit-sange-sektion h2 {
+  .favorit-songs {
     color: white;
-    text-align: left;
+    font-size: 20px;
+    margin-bottom: 16px;
     font-size: 30px;
+    margin-left: 0;
   }
 
   .sange-list {
@@ -409,14 +617,34 @@ input[type="checkbox"]::before{
     margin: 0;
   }
 
-  .sange-list li {
+  .sange-card {
+    margin-bottom: 16px;
+  }
+
+  .sang-content {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    font-size: 14px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .song-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .song-title {
     color: white;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .sangnavn {
+    color: white;
+  }
+
+  .singer-name {
+    color: #9ca3af;
   }
 
   .sang-image {
@@ -429,29 +657,364 @@ input[type="checkbox"]::before{
   .song-details {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+
+    align-items: flex-start;
+    color: white;
   }
 
-  .song-title {
+  .timestamp {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 2px 0;
+  }
+
+  .song-details p {
+    margin: 2px 0;
+    font-size: 14px;
+  }
+
+  /*album sektion */
+
+  .favorit-albums {
+    margin: 32px 0;
+    padding: 0 20px;
+  }
+
+  .favorit-albums-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    margin-left: 0;
+  }
+
+  .album-list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .album-item {
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .album-list li {
     font-size: 16px;
-    font-weight: bold;
     color: #fff;
   }
 
-  .song-time {
+  .album-image {
+    height: 160px;
+    width: 160px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .albumnavn {
+    color: white;
+    margin-top: 8px;
     font-size: 14px;
-    color: #aaa;
   }
 
-  .song-rating {
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 2px;
+  .album-label,
+  .release-date,
+  .album-rating {
+    color: #9ca3af;
+    display: inline;
+    font-size: 10px;
+  }
+  .album-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
   }
 
+  /* review sektion */
+
+  .reviews-sektion {
+    margin: 32px 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .reviews-sektion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    padding: 0 20;
+  }
+
+  .reviews-sektion button {
+    padding: 12px 16px;
+    background-color: #2a2525;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  .review-box {
+    background-color: #2a2525;
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 250px;
+  }
+
+  .review-box h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+  }
+
+  .review-box p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .review-box div {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .reviewer-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .review-box h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .review-box p {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .review-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review-rating {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 8px;
+    margin: 2px 0;
+  }
+
+  .heart-reply {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .heart-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: red;
+  }
+
+  .reply-thread {
+    font-size: 14px;
+    color: #9ca3af;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .reply-thread:hover {
+    color: #ffffff;
+  }
   /* Album */
-  /* ArtistProfile */
+  /* ArtistProfile - Rune */
+  .artist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .artist-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .artist-info {
+    color: white;
+  }
+
+  .artist-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .artist-info p {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  .top-albums-section h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .song-entry {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .song-entry img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  .song-info {
+    flex-grow: 1;
+    color: white;
+  }
+
+  .song-info p {
+    font-size: 1rem;
+    margin: 3px 0;
+  }
+  .album-entry {
+  }
+  .album-entry img {
+  }
+  .album-info {
+  }
+  .album-info p {
+  }
+
   /* BandProfile */
-  /* Charts */
+  /* Charts - Rune */
+  .albums-list-container {
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .albums-list-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .albums-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .albums-navigation span {
+    font-size: 1rem;
+    cursor: pointer;
+    color: #bbb;
+  }
+
+  /* .albums-navigation .active {
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  } */
+
+  .sort-by {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #bbb;
+    margin-bottom: 20px;
+  }
+
+  .sort-by p {
+    margin-right: 5px;
+  }
+
+  .sort-icon {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .album-entry {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 20px;
+  }
+
+  .album-rank {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-right: 15px;
+    color: #bbb;
+  }
+
+  .album-entry img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+
+  .album-info {
+    flex-grow: 1;
+  }
+
+  .album-info h3 {
+    font-size: 1rem;
+    color: white;
+  }
+  .album-info h4 {
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+
+  .album-info p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 3px 0;
+  }
+
   /* ChartsFilter */
   /* Concerts */
   /* ConcertsLandingPage */
@@ -462,7 +1025,68 @@ input[type="checkbox"]::before{
   /* Create Account 3 */
   /* Reviews */
   /* Full Review */
-  /* HomeScreen */
+  /* HomeScreen - rune */
+  .recommendations-container {
+    color: white;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  .recommendations-container section {
+    margin-bottom: 40px;
+  }
+
+  .recommendations-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .albums-grid {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  .album-card {
+    width: 32%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .album-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .album-info {
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .album-info p {
+    font-size: 0.7rem;
+    color: #bbb;
+  }
+
+  .album-info h3 {
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .rating {
+    margin-top: 5px;
+  }
+
+  .rating button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   /* Notifications */
   /* Song */
 }
