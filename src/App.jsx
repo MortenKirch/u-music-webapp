@@ -1,6 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
-// import NavBarTemp from "./Components/NavBarTemp";
+import { Routes, Route, Navigate } from "react-router-dom";
 import LoginScreen from "./pages/LoginScreen";
 import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
@@ -22,41 +21,72 @@ import ExploreAlbum from "./Pages/ExploreAlbum";
 import ExploreSong from "./Pages/ExploreSong";
 import ExploreConcerts from "./Pages/ExploreConcerts";
 import ArtistProfile from "./pages/ArtistProfile";
+import "./Components/Firebase/Firebase-config";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useState, useEffect } from "react";
 
-/* EXPLORE SUBGENRES HALLØJ NÅR JEG KOMMER DERTIL */
 
-function App() {
-  return (
+export default function App() {
+  const auth = getAuth();
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
+  const [onboardingComplete, setOnboardingComplete] = useState(false);
+
+  useEffect(() => {
+    const accountCreation = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsAuth(true); // Set to true if user is authenticated
+        localStorage.setItem("isAuth", "true");
+      } else {
+        setIsAuth(false);
+        localStorage.removeItem("isAuth");
+      }
+    });
+
+    return () => accountCreation(); // Cleanup subscription on unmount
+  }, [auth]);
+
+  const privateRoutes = (
     <>
       <NavTop />
-
       <NavbarBottom />
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/concerts" element={<Concerts />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/explore-artists" element={<ExploreArtists />} />
+        <Route path="/explore-genres" element={<ExploreGenres />} />
+        <Route path="/explore-subgenres" element={<ExploreSubGenres />} />
+        <Route path="/explore-album" element={<ExploreAlbum />} />
+        <Route path="/explore-song" element={<ExploreSong />} />
+        <Route path="/explore-concerts" element={<ExploreConcerts />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </>
+  );
 
+  const publicRoutes = (
+    <Routes>
+      <Route path="/login" element={<LoginScreen setIsAuth={setIsAuth} setOnboardingComplete={setOnboardingComplete} />} />
+      <Route path="/create-account" element={<CreateAccount setOnboardingComplete={setOnboardingComplete} />} />
+      <Route path="/choose-genre" element={<ChooseGenre setOnboardingComplete={setOnboardingComplete} />} />
+      <Route path="/finish-profile" element={<CompleteProfile setOnboardingComplete={setOnboardingComplete}/>} />
+      <Route path="*" element={<Navigate to="/login" />} />
+    </Routes>
+  );
+
+  // Allow authenticated users who haven't completed onboarding to see the onboarding routes
+  return (
+    <>
       <main>
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="ArtistProfile" element={<ArtistProfile />} />
-          <Route path="/Charts" element={<Charts />} />
-          <Route path="/Concerts" element={<Concerts />} />
-          <Route path="/Notifications" element={<Notifications />} />
-          <Route path="/Reviews" element={<Reviews />} />
-          <Route path="/Explore" element={<Explore />} />
-          <Route path="/Login" element={<LoginScreen />} />
-          <Route path="/Profile" element={<Profile />} />
-          <Route path="/Genres" element={<Genres />} />
-          <Route path="/create-account" element={<CreateAccount />} />
-          <Route path="/choose-genre" element={<ChooseGenre />} />
-          <Route path="/finish-profile" element={<CompleteProfile />} />
-          <Route path="/explore-artists" element={<ExploreArtists />} />
-          <Route path="/explore-genres" element={<ExploreGenres />} />
-          <Route path="/explore-subgenres" element={<ExploreSubGenres />} />
-          <Route path="/explore-album" element={<ExploreAlbum />} />
-          <Route path="/explore-song" element={<ExploreSong />} />
-          <Route path="/explore-concerts" element={<ExploreConcerts />} />
-        </Routes>
+
+        {isAuth && onboardingComplete ? privateRoutes : publicRoutes}
       </main>
     </>
   );
 }
 
-export default App;
+
+
