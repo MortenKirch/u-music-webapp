@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 // import NavBarTemp from "./Components/NavBarTemp";
 import LoginScreen from "./pages/LoginScreen";
-import Explore from "./pages/Explore";
+import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
 import Profile from "./pages/Profile";
 import NavTop from "./Components/NavbarTop";

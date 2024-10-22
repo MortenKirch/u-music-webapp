@@ -1,3 +1,4 @@
 export default function Explore() {
-  return <></>;
+  console.log("pis");
+  return <input className="searchbar" type="text" placeholder="Search..." />;
 }

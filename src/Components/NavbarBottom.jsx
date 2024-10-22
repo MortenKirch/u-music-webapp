@@ -14,7 +14,7 @@ export default function NavBotNavbarBottom() {
           <p>Home</p>
         </div>
       </NavLink>
-      <NavLink to="/search" className="nav--item" activeClassName="active">
+      <NavLink to="/Explore" className="nav--item" activeClassName="active">
         <div>
           <img src={SearchIcon} alt="Search" />
           <p>Search</p>
