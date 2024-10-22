@@ -1,13 +1,26 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
-import NavBarTemp from "./Components/NavBarTemp";
 import LoginScreen from "./pages/LoginScreen";
-import Explore from "./pages/Explore";
+import Explore from "./Pages/Explore";
+import HomeScreen from "./pages/HomeScreen";
+import Profile from "./pages/Profile";
+import NavTop from "./Components/NavbarTop";
+import Concerts from "./pages/Concerts";
+import Reviews from "./pages/Reviews";
+import Notifications from "./pages/Notifications";
 import NavbarBottom from "./Components/NavbarBottom";
 import CreateAccount from "./Pages/CreateAccount";
 import ChooseGenre from "./Pages/ChooseGenre";
 import CompleteProfile from "./Pages/CompleteProfile";
+import Charts from "./pages/Charts";
+import ExploreArtists from "./Pages/ExploreArtists";
+import ExploreGenres from "./Pages/ExploreGenres";
+import ExploreSubGenres from "./Pages/ExploreSubGenres";
+import Genres from "./Pages/Genres";
+import ExploreAlbum from "./Pages/ExploreAlbum";
+import ExploreSong from "./Pages/ExploreSong";
+import ExploreConcerts from "./Pages/ExploreConcerts";
+import ArtistProfile from "./pages/ArtistProfile";
 import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
@@ -35,7 +48,6 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-      <NavBarTemp />
       <NavbarBottom />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
@@ -44,6 +56,12 @@ export default function App() {
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/explore-artists" element={<ExploreArtists />} />
+        <Route path="/explore-genres" element={<ExploreGenres />} />
+        <Route path="/explore-subgenres" element={<ExploreSubGenres />} />
+        <Route path="/explore-album" element={<ExploreAlbum />} />
+        <Route path="/explore-song" element={<ExploreSong />} />
+        <Route path="/explore-concerts" element={<ExploreConcerts />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
@@ -69,4 +87,6 @@ export default function App() {
     </>
   );
 }
+
+
 
