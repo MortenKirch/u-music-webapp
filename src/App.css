@@ -251,22 +251,92 @@
   /* William */
 
   /* Explore */
-  .searchbar {
-    border-radius: 10px;
+  .explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
   }
-  /* Explore Album */
+
+  .searchbar-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input-container {
+    position: relative;
+    align-items: center; /* Center the icon and input */
+    width: 100%; /* Adjust as needed */
+  }
+
+  .search-icon {
+    position: absolute; /* Position the icon within the input */
+    left: 1rem; /* Adjust this value as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the icon */
+    color: var(--white); /* Icon color */
+    pointer-events: none; /* Prevent clicks on the icon */
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 1px groove white;
+    background: transparent;
+    color: white;
+  }
+
+  .browse-container {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .browse-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .browse-item {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    color: white; /* Ensures text color is white */
+    text-decoration: none; /* Removes underline */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   /* Explore Artist */
+  .artist-explore-container {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(99, 0, 90, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
 
-  /* Explore Concerts */
+  /* Explore Genres */
 
-  /* Explore Genre */
+  /* Explore Subgenres */
 
-  /* Explore Subgenre */
+  /* Genres */
+
+  /* Explore Album */
 
   /* Explore Song */
 
-  /* Genrer */
+  /* Explore Concerts */
 
   /* Artilon */
 
