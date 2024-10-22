@@ -165,25 +165,23 @@ export default function ExploreGenres() {
 
       <div className="genres-list">
         {genres.map((genre, index) => (
-          <div
-            className={`genre-card ${
-              expandedGenreIndex === index ? "expanded" : ""
-            }`}
-            key={index}
-          >
-            <img src={genre.image} alt={genre.name} className="genre-image" />
-            <div className="genre-info">
-              <h3>{genre.name}</h3>
-              <p>{truncateText(genre.description, 75)}</p>
-              <button
-                className="show-subgenres"
-                onClick={() => toggleSubgenres(index)}
-              >
-                {expandedGenreIndex === index
-                  ? `Hide ${genre.subgenres.length} subgenres`
-                  : `Show ${genre.subgenres.length} subgenres`}
-              </button>
+          <div key={index}>
+            <div className="genre-card">
+              <img src={genre.image} alt={genre.name} className="genre-image" />
+              <div className="genre-info">
+                <h3>{genre.name}</h3>
+                <p>{truncateText(genre.description, 75)}</p>
+                <button
+                  className="show-subgenres"
+                  onClick={() => toggleSubgenres(index)}
+                >
+                  {expandedGenreIndex === index
+                    ? `Hide ${genre.subgenres.length} subgenres`
+                    : `Show ${genre.subgenres.length} subgenres`}
+                </button>
+              </div>
             </div>
+            {/* Subgenres container directly underneath the genre card */}
             {expandedGenreIndex === index && (
               <div className="subgenres-container">
                 <ul className="subgenres-list">

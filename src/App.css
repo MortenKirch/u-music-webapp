@@ -385,6 +385,17 @@
     gap: 15px;
   }
 
+  .genre-card.expanded {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subgenres-container li {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
   .genre-image {
     width: 8rem;
     height: auto;
