@@ -710,7 +710,72 @@
     color: #ffffff;
   }
   /* Album */
-  /* ArtistProfile */
+  /* ArtistProfile - Rune */
+  .artist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .artist-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .artist-info {
+    color: white;
+  }
+
+  .artist-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .artist-info p {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  .top-albums-section h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .song-entry {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .song-entry img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  .song-info {
+    flex-grow: 1;
+    color: white;
+  }
+
+  .song-info p {
+    font-size: 1rem;
+    margin: 3px 0;
+  }
+  .album-entry {
+  }
+  .album-entry img {
+  }
+  .album-info {
+  }
+  .album-info p {
+  }
+
   /* BandProfile */
   /* Charts - Rune */
   .albums-list-container {

@@ -21,6 +21,7 @@ import Genres from "./Pages/Genres";
 import ExploreAlbum from "./Pages/ExploreAlbum";
 import ExploreSong from "./Pages/ExploreSong";
 import ExploreConcerts from "./Pages/ExploreConcerts";
+import ArtistProfile from "./pages/ArtistProfile";
 
 /* EXPLORE SUBGENRES HALLØJ NÅR JEG KOMMER DERTIL */
 
@@ -34,6 +35,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
+          <Route path="ArtistProfile" element={<ArtistProfile />} />
           <Route path="/Charts" element={<Charts />} />
           <Route path="/Concerts" element={<Concerts />} />
           <Route path="/Notifications" element={<Notifications />} />
