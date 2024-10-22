@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import NavBarTemp from "./Components/NavBarTemp";
+// import NavBarTemp from "./Components/NavBarTemp";
 import LoginScreen from "./pages/LoginScreen";
 import Explore from "./pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <NavTop />
-      <NavBarTemp />
+
       <NavbarBottom />
 
       <main>
@@ -32,7 +32,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/choose-genre" element={<ChooseGenre />} />
-          <Route path="/finish-profile" element={<CompleteProfile/>} />
+          <Route path="/finish-profile" element={<CompleteProfile />} />
         </Routes>
       </main>
     </>

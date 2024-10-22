@@ -11,9 +11,9 @@
   /* Colors */
   --white: #ffffff;
   --background-image: url(/src/images/background.png);
-  --trans-black:rgba(45, 45, 45, 0.5);
-  --gray:#D6D6D6;
-  --dark-gray:#2A2525;
+  --trans-black: rgba(45, 45, 45, 0.5);
+  --gray: #d6d6d6;
+  --dark-gray: #2a2525;
 }
 
 @media (max-width: 500px) {
@@ -52,84 +52,78 @@
     font-size: 8vw;
     font-family: "audiowide", sans-serif;
   }
-  .tempnav {
-    font-size: 2rem;
-    color: white;
-  }
+
   /* Morten */
   /* onboarding login */
-  .login-section{
+  .login-section {
     color: var(--white);
     display: flex;
     align-items: center;
     flex-direction: column;
-    
   }
-  .button-container{
+  .button-container {
     display: flex;
     flex-direction: column;
   }
-  .input-login{
+  .input-login {
     width: 80%;
-   font-size: 1.2rem;
-   padding: 0.8rem;
-   margin-top: 4%;
-   background-color: var(--trans-black) ;
-   border: none;
-   border-radius: 10px;
-   color: var(--white);
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    margin-top: 4%;
+    background-color: var(--trans-black);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
   }
-  .input-login::placeholder{
-    color:var(--gray);
+  .input-login::placeholder {
+    color: var(--gray);
   }
-  .input-container{
+  .input-container {
     display: flex;
-    font-size:0.8rem;
+    font-size: 0.8rem;
     width: 80%;
   }
-  .input-container a{
+  .input-container a {
     color: var(--white);
     text-decoration: underline;
   }
-  .login-button{
+  .login-button {
     background-color: var(--dark-gray);
     border: none;
     border-radius: 10px;
     color: var(--white);
   }
-  .sign-in-button{
+  .sign-in-button {
     padding: 15px 10px;
     margin-top: 5vh;
     font-size: 1.2rem;
   }
-  .create-button{
+  .create-button {
     padding: 5px 25px;
     margin: 10px;
   }
-  .continue-button{
+  .continue-button {
     padding: 10px 10px;
     margin-top: 5vh;
-   
   }
-  .logo-margin{
+  .logo-margin {
     margin-bottom: 15vh;
   }
-  .navigate-button-container{
+  .navigate-button-container {
     display: flex;
     justify-content: space-between;
     width: 70vw;
     margin-bottom: 1rem;
   }
-  .logo-create-margin{
+  .logo-create-margin {
     margin-bottom: 10vh;
-
   }
-  .navigate-button{
+  .navigate-button {
     padding: 8px;
     margin-top: 5vh;
     font-size: 1.2rem;
   }
-  .placeholder-bar{
+  .placeholder-bar {
     border-radius: 20px;
     background-color: var(--gray);
     color: var(--dark-gray);
@@ -141,7 +135,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .image-placeholder {
     width: 200px; /* Adjust the size as needed */
     height: 200px;
@@ -153,37 +147,35 @@
     overflow: hidden; /* Ensures any overflow is hidden */
     cursor: pointer; /* Indicates the user can click */
   }
-  
+
   .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the entire area */
   }
-  
+
   .placeholder-text {
     color: var(--white); /* Placeholder text color */
   }
-  .radio-container{
+  .radio-container {
     width: 80%;
   }
-.checkbox-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
- 
-}
-.check-style{
-  width: 20px;
-  height: 20px;
-  background-color: var(--trans-black);
-}
-input[type="checkbox"]:checked {
-  accent-color: var(--gray);
-
-}
-input[type="checkbox"]::before{
-  background-color: var(--trans-black);
-}
+  .checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .check-style {
+    width: 20px;
+    height: 20px;
+    background-color: var(--trans-black);
+  }
+  input[type="checkbox"]:checked {
+    accent-color: var(--gray);
+  }
+  input[type="checkbox"]::before {
+    background-color: var(--trans-black);
+  }
   /* Rune */
   /* navbar */
   .top-nav {
@@ -250,8 +242,12 @@ input[type="checkbox"]::before{
   .nav--item img {
     width: 1.5rem; /* Adjust icon size */
     height: 1.5rem;
-    margin-bottom: 0.5rem;
   }
+  .nav-button-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Home screen */
 
   /* William */
   /* Explore */
@@ -437,7 +433,68 @@ input[type="checkbox"]::before{
   /* Create Account 3 */
   /* Reviews */
   /* Full Review */
-  /* HomeScreen */
+  /* HomeScreen - rune */
+  .recommendations-container {
+    color: white;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  .recommendations-container section {
+    margin-bottom: 40px;
+  }
+
+  .recommendations-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .albums-grid {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  .album-card {
+    width: 32%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .album-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .album-info {
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .album-info p {
+    font-size: 0.7rem;
+    color: #bbb;
+  }
+
+  .album-info h3 {
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .rating {
+    margin-top: 5px;
+  }
+
+  .rating button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   /* Notifications */
   /* Song */
 }
