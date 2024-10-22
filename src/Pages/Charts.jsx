@@ -1,6 +1,7 @@
-import charlixcx from "../images/charli-xcx.png";
-import nisemono from "../images/nisemono.png";
-import rapgod from "../images/rap-god.png";
+import TooPimpAButterfly from "../images/to-pimp-a-butterfly.png";
+import WishYouWereHere from "../images/wish-you-were-here.png";
+import OkComputer from "../images/ok-computer.png";
+import InRainbows from "../images/in-rainbows.png";
 import sortIcon from "../images/sort.svg";
 
 export default function Charts() {
@@ -22,7 +23,7 @@ export default function Charts() {
 
       <div className="album-entry">
         <div className="album-rank">1</div>
-        <img src={charlixcx} alt="To Pimp a Butterfly" />
+        <img src={TooPimpAButterfly} alt="To Pimp a Butterfly" />
         <div className="album-info">
           <h3>To Pimp a Butterfly</h3>
           <h4>Kendrick Lamar</h4>
@@ -34,7 +35,7 @@ export default function Charts() {
 
       <div className="album-entry">
         <div className="album-rank">2</div>
-        <img src={nisemono} alt="OK Computer" />
+        <img src={OkComputer} alt="OK Computer" />
         <div className="album-info">
           <h3>OK Computer</h3>
           <h4>Radiohead</h4>
@@ -46,7 +47,7 @@ export default function Charts() {
 
       <div className="album-entry highlighted">
         <div className="album-rank">3</div>
-        <img src={rapgod} alt="In Rainbows" />
+        <img src={InRainbows} alt="In Rainbows" />
         <div className="album-info">
           <h3>In Rainbows</h3>
           <h4>Radiohead</h4>
@@ -58,7 +59,7 @@ export default function Charts() {
 
       <div className="album-entry">
         <div className="album-rank">4</div>
-        <img src={nisemono} alt="Wish You Were Here" />
+        <img src={WishYouWereHere} alt="Wish You Were Here" />
         <div className="album-info">
           <h3>Wish You Were Here</h3>
           <h4>Pink Floyd</h4>
