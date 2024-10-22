@@ -306,8 +306,7 @@
     padding: 1rem;
     border-bottom: 1px solid #555;
     cursor: pointer;
-    color: white; /* Ensures text color is white */
-    text-decoration: none; /* Removes underline */
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -338,8 +337,13 @@
   .artists-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
     width: 100%;
+  }
+
+  .artist-card {
+    width: fit-content;
+    justify-self: center;
+    padding-bottom: 1.5rem;
   }
 
   .artists-grid h3 {
@@ -347,7 +351,6 @@
     font-size: 0.6rem;
     justify-self: start;
     width: fit-content;
-    margin-left: 0.6rem;
   }
 
   .artist-image {
@@ -357,6 +360,74 @@
   }
 
   /* Explore Genres */
+  .explore-genres-container {
+    color: white;
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .explore-genres-container h2 {
+    padding-bottom: 1rem;
+  }
+
+  .genres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .genre-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .genre-image {
+    width: 8rem;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .genre-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .genre-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+
+  .show-subgenres {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+
+  .subgenres-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding around the list */
+    margin-top: 10px; /* Space between the genre card and the subgenres box */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack subgenres vertically */
+  }
+
+  .subgenres-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .subgenres-list li {
+    margin-bottom: 5px;
+  }
 
   /* Explore Subgenres */
 
@@ -407,7 +478,7 @@
     border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .followme-button h1 {
@@ -427,12 +498,12 @@
   }
 
   .followers {
-    font-size: 30px;
+    font-size: 20px;
     text-align: left;
   }
 
   .following {
-    font-size: 30px;
+    font-size: 20px;
     text-align: right;
   }
 
@@ -476,8 +547,8 @@
   }
 
   .artist-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 9px;
     object-fit: cover;
   }
@@ -494,7 +565,7 @@
     font-size: 20px;
     margin-bottom: 16px;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .sange-list {
@@ -516,6 +587,7 @@
   .song-info {
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
   }
 
   .song-title {
@@ -528,6 +600,10 @@
     color: white;
   }
 
+  .singer-name {
+    color: #9ca3af;
+  }
+
   .sang-image {
     width: 100px;
     height: 100px;
@@ -538,6 +614,9 @@
   .song-details {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+
     align-items: flex-start;
     color: white;
   }
@@ -561,8 +640,10 @@
   }
 
   .favorit-albums-title {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    margin-left: 0;
   }
 
   .album-list {
@@ -595,6 +676,19 @@
     font-size: 14px;
   }
 
+  .album-label,
+  .release-date,
+  .album-rating {
+    color: #9ca3af;
+    display: inline;
+    font-size: 10px;
+  }
+  .album-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
   /* review sektion */
 
   .reviews-sektion {
@@ -604,12 +698,16 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    justify-content: center;
   }
 
   .reviews-sektion {
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    padding: 0 20;
   }
 
   .reviews-sektion button {
@@ -620,15 +718,17 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
+    margin: 0 10px;
   }
 
   .review-box {
     background-color: #2a2525;
     padding: 16px;
     border-radius: 12px;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
-    margin-bottom: 100px;
+    margin: 0 auto;
+    margin-bottom: 250px;
   }
 
   .review-box h4 {
@@ -704,6 +804,7 @@
     font-size: 14px;
     color: #9ca3af;
     cursor: pointer;
+    text-decoration: underline;
   }
 
   .reply-thread:hover {

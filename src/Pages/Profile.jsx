@@ -55,14 +55,15 @@ export default function Profile() {
       <div className="favorit-sange-sektion">
         <h2 className="favorit-songs">Favorite Songs</h2>
         <ul className="sange-list">
-          <li className="'sange-card">
+          <li className="sange-card">
+            {" "}
+            {/* Fixed here */}
             <div className="sang-content">
               <img src={sang1} alt="rap-god" className="sang-image" />
               <div className="song-info">
                 <p className="song-title">Rap God</p>
-                <p className="singer-name">Eminem, Juiceworld </p>
+                <p className="singer-name">Eminem, Juiceworld</p>
               </div>
-
               <div className="song-details">
                 <p className="timestamp">9:10</p>
                 <p className="review-rating">Rating: 5/10</p>
@@ -74,10 +75,11 @@ export default function Profile() {
               <img src={sang1} alt="rap-god" className="sang-image" />
               <div className="song-info">
                 <p className="song-title">Rap God</p>
-                <div className="song-details">
-                  <p className="timestamp">9:10</p>
-                  <p className="review-rating">Rating: 5/10</p>
-                </div>
+                <p className="singer-name">Eminem, Juiceworld</p>
+              </div>
+              <div className="song-details">
+                <p className="timestamp">9:10</p>
+                <p className="review-rating">Rating: 5/10</p>
               </div>
             </div>
           </li>
@@ -86,10 +88,11 @@ export default function Profile() {
               <img src={sang1} alt="rap-god" className="sang-image" />
               <div className="song-info">
                 <p className="song-title">Rap God</p>
-                <div className="song-details">
-                  <p className="timestamp">9:10</p>
-                  <p className="review-rating">Rating: 5/10</p>
-                </div>
+                <p className="singer-name">Eminem, Juiceworld</p>
+              </div>
+              <div className="song-details">
+                <p className="timestamp">9:10</p>
+                <p className="review-rating">Rating: 5/10</p>
               </div>
             </div>
           </li>
@@ -98,10 +101,11 @@ export default function Profile() {
               <img src={sang1} alt="rap-god" className="sang-image" />
               <div className="song-info">
                 <p className="song-title">Rap God</p>
-                <div className="song-details">
-                  <p className="timestamp">9:10</p>
-                  <p className="review-rating">Rating: 5/10</p>
-                </div>
+                <p className="singer-name">Eminem, Juiceworld</p>
+              </div>
+              <div className="song-details">
+                <p className="timestamp">9:10</p>
+                <p className="review-rating">Rating: 5/10</p>
               </div>
             </div>
           </li>
@@ -110,13 +114,28 @@ export default function Profile() {
 
       <div className="favorit-albums">
         <h2 className="favorit-albums-title">Favorite Albums</h2>
-        <ul className="album-list">
-          <img src={album1} alt="the eninem show" className="album-image" />
-          <li className="Albumnavn">The Eminem Show</li>
-
-          <img src={album1} alt="the eninem show" className="album-image" />
-          <li className="albumnavn">The Eminem Show</li>
-        </ul>
+        <div className="album-list">
+          <div className="album-item">
+            <img src={album1} alt="The Eminem Show" className="album-image" />
+            <p className="albumnavn">The Eminem Show</p>
+            <div className="album-details">
+              <p className="release-date">
+                2009 <span className="album-label">Album</span>
+              </p>
+              <p className="album-rating">Rating: 5/10</p>
+            </div>
+          </div>
+          <div className="album-item">
+            <img src={album1} alt="The Eminem Show" className="album-image" />
+            <p className="albumnavn">The Eminem Show</p>
+            <div className="album-details">
+              <p className="release-date">
+                2009 <span className="album-label">Album</span>
+              </p>
+              <p className="album-rating">Rating: 5/10</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="reviews-sektion">
