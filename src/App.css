@@ -527,7 +527,100 @@
   /* Album */
   /* ArtistProfile */
   /* BandProfile */
-  /* Charts */
+  /* Charts - Rune */
+  .albums-list-container {
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .albums-list-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .albums-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .albums-navigation span {
+    font-size: 1rem;
+    cursor: pointer;
+    color: #bbb;
+  }
+
+  /* .albums-navigation .active {
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  } */
+
+  .sort-by {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #bbb;
+    margin-bottom: 20px;
+  }
+
+  .sort-by p {
+    margin-right: 5px;
+  }
+
+  .sort-icon {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .album-entry {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 20px;
+  }
+
+  .album-rank {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-right: 15px;
+    color: #bbb;
+  }
+
+  .album-entry img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+
+  .album-info {
+    flex-grow: 1;
+  }
+
+  .album-info h3 {
+    font-size: 1rem;
+    color: white;
+  }
+  .album-info h4 {
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+
+  .album-info p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 3px 0;
+  }
+
   /* ChartsFilter */
   /* Concerts */
   /* ConcertsLandingPage */
