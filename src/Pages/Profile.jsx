@@ -58,44 +58,50 @@ export default function Profile() {
           <li className="'sange-card">
             <div className="sang-content">
               <img src={sang1} alt="rap-god" className="sang-image" />
+              <div className="song-info">
+                <p className="song-title">Rap God</p>
+                <p className="singer-name">Eminem, Juiceworld </p>
+              </div>
 
-              <p>Rap God</p>
               <div className="song-details">
-                <p>9:10</p>
-                <p>Rating: 5/10</p>
+                <p className="timestamp">9:10</p>
+                <p className="review-rating">Rating: 5/10</p>
               </div>
             </div>
           </li>
           <li className="sange-card">
             <div className="sang-content">
               <img src={sang1} alt="rap-god" className="sang-image" />
-
-              <p>Rap God</p>
-              <div className="song-details">
-                <p>9:10</p>
-                <p>Rating: 5/10</p>
+              <div className="song-info">
+                <p className="song-title">Rap God</p>
+                <div className="song-details">
+                  <p className="timestamp">9:10</p>
+                  <p className="review-rating">Rating: 5/10</p>
+                </div>
               </div>
             </div>
           </li>
           <li className="sange-card">
             <div className="sang-content">
               <img src={sang1} alt="rap-god" className="sang-image" />
-
-              <p>Rap God</p>
-              <div className="song-details">
-                <p>9:10</p>
-                <p>Rating: 5/10</p>
+              <div className="song-info">
+                <p className="song-title">Rap God</p>
+                <div className="song-details">
+                  <p className="timestamp">9:10</p>
+                  <p className="review-rating">Rating: 5/10</p>
+                </div>
               </div>
             </div>
           </li>
           <li className="sange-card">
             <div className="sang-content">
               <img src={sang1} alt="rap-god" className="sang-image" />
-
-              <p>Rap God</p>
-              <div className="song-details">
-                <p>9:10</p>
-                <p>Rating: 5/10</p>
+              <div className="song-info">
+                <p className="song-title">Rap God</p>
+                <div className="song-details">
+                  <p className="timestamp">9:10</p>
+                  <p className="review-rating">Rating: 5/10</p>
+                </div>
               </div>
             </div>
           </li>
@@ -119,9 +125,25 @@ export default function Profile() {
         <button>Want to Listen</button>
       </div>
       <div className="review-box">
+        <div className="review-header">
+          <img src={profilePic} alt="Reviewer" className="reviewer-pic" />
+          <div className="reviewer-details">
+            <p>Pug Fartmeister</p>
+            <div className="review-rating">
+              <span>Rating 5/10</span>
+            </div>
+          </div>
+        </div>
+
         <h4>Overskrift</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-        <div>Rating 5/10</div>
+        <div className="review-actions">
+          <div className="heart-reply">
+            <button className="heart-button">❤️</button>
+            <span className="like-count">206</span>
+            <span className="reply-thread">See Thread Reply</span>
+          </div>
+        </div>
       </div>
     </div>
   );
