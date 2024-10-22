@@ -478,7 +478,7 @@
     border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .followme-button h1 {
@@ -498,12 +498,12 @@
   }
 
   .followers {
-    font-size: 30px;
+    font-size: 20px;
     text-align: left;
   }
 
   .following {
-    font-size: 30px;
+    font-size: 20px;
     text-align: right;
   }
 
@@ -547,8 +547,8 @@
   }
 
   .artist-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 9px;
     object-fit: cover;
   }
@@ -565,7 +565,7 @@
     font-size: 20px;
     margin-bottom: 16px;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .sange-list {
@@ -587,6 +587,7 @@
   .song-info {
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
   }
 
   .song-title {
@@ -599,6 +600,10 @@
     color: white;
   }
 
+  .singer-name {
+    color: #9ca3af;
+  }
+
   .sang-image {
     width: 100px;
     height: 100px;
@@ -609,6 +614,9 @@
   .song-details {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+
     align-items: flex-start;
     color: white;
   }
@@ -632,8 +640,10 @@
   }
 
   .favorit-albums-title {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    margin-left: 0;
   }
 
   .album-list {
@@ -666,6 +676,19 @@
     font-size: 14px;
   }
 
+  .album-label,
+  .release-date,
+  .album-rating {
+    color: #9ca3af;
+    display: inline;
+    font-size: 10px;
+  }
+  .album-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
   /* review sektion */
 
   .reviews-sektion {
@@ -675,12 +698,16 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    justify-content: center;
   }
 
   .reviews-sektion {
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    padding: 0 20;
   }
 
   .reviews-sektion button {
@@ -691,15 +718,17 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
+    margin: 0 10px;
   }
 
   .review-box {
     background-color: #2a2525;
     padding: 16px;
     border-radius: 12px;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
-    margin-bottom: 100px;
+    margin: 0 auto;
+    margin-bottom: 250px;
   }
 
   .review-box h4 {
@@ -775,6 +804,7 @@
     font-size: 14px;
     color: #9ca3af;
     cursor: pointer;
+    text-decoration: underline;
   }
 
   .reply-thread:hover {
