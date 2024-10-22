@@ -13,6 +13,7 @@ import NavbarBottom from "./Components/NavbarBottom";
 import CreateAccount from "./Pages/CreateAccount";
 import ChooseGenre from "./Pages/ChooseGenre";
 import CompleteProfile from "./Pages/CompleteProfile";
+import Charts from "./pages/Charts";
 import ExploreArtists from "./Pages/ExploreArtists";
 import ExploreGenres from "./Pages/ExploreGenres";
 import ExploreSubGenres from "./Pages/ExploreSubGenres";
@@ -33,6 +34,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
+          <Route path="/Charts" element={<Charts />} />
           <Route path="/Concerts" element={<Concerts />} />
           <Route path="/Notifications" element={<Notifications />} />
           <Route path="/Reviews" element={<Reviews />} />
