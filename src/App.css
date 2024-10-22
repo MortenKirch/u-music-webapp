@@ -315,6 +315,10 @@
 
   /* Explore Artist */
   .artist-explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(
       180deg,
       rgba(2, 0, 36, 1) 0%,
@@ -322,9 +326,34 @@
       rgba(0, 0, 0, 1) 100%
     );
     color: white;
-    padding: 20px;
     font-family: Arial, sans-serif;
     height: 100vh;
+  }
+
+  .artist-explore-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .artists-grid h3 {
+    font-weight: 500;
+    font-size: 0.6rem;
+    justify-self: start;
+    width: fit-content;
+    margin-left: 0.6rem;
+  }
+
+  .artist-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 
   /* Explore Genres */
