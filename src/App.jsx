@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import NavBarTemp from "./Components/NavBarTemp";
+// import NavBarTemp from "./Components/NavBarTemp";
 import LoginScreen from "./pages/LoginScreen";
 import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <NavTop />
-      <NavBarTemp />
+
       <NavbarBottom />
 
       <main>
