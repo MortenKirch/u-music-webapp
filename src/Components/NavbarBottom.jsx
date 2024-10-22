@@ -12,7 +12,7 @@ export default function NavBotNavbarBottom() {
         <img src={HomeIcon} alt="Home" />
         Home
       </NavLink>
-      <NavLink to="/search" className="nav--item" activeClassName="active">
+      <NavLink to="/Explore" className="nav--item" activeClassName="active">
         <img src={SearchIcon} alt="Search" />
         Search
       </NavLink>
