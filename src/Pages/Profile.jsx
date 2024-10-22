@@ -11,6 +11,10 @@ import artist4 from "../images/Eminem.jpeg";
 
 import sang1 from "../images/Rap god.png";
 
+// albums
+
+import album1 from "../images/Album1.jpg";
+
 export default function Profile() {
   return (
     <div>
@@ -49,55 +53,70 @@ export default function Profile() {
       </div>
 
       <div className="favorit-sange-sektion">
-        <h2>Favorite Songs</h2>
+        <h2 className="favorit-songs">Favorite Songs</h2>
         <ul className="sange-list">
-          <li className="'sang-card">
-            <img src={sang1} alt="rap-god" className="sang-image" />
-            <div className="song-details">
-              <p className="song-title">Rap God</p>
-              <p className="song-time">9:10</p>
-              <p className="song-rating">Rating: 5/10</p>
+          <li className="'sange-card">
+            <div className="sang-content">
+              <img src={sang1} alt="rap-god" className="sang-image" />
+
+              <p>Rap God</p>
+              <div className="song-details">
+                <p>9:10</p>
+                <p>Rating: 5/10</p>
+              </div>
             </div>
           </li>
           <li className="sange-card">
-            <img src={sang1} alt="rap-god" className="sang-image" />
-            <div className="song-details">
-              <p className="song-title">Rap God</p>
-              <p className="song-time">9:10</p>
-              <p className="song-rating">Rating: 5/10</p>
+            <div className="sang-content">
+              <img src={sang1} alt="rap-god" className="sang-image" />
+
+              <p>Rap God</p>
+              <div className="song-details">
+                <p>9:10</p>
+                <p>Rating: 5/10</p>
+              </div>
             </div>
           </li>
           <li className="sange-card">
-            <img src={sang1} alt="rap-god" className="sang-image" />
-            <div className="song-details">
-              <p className="song-title">Rap God</p>
-              <p className="song-time">9:10</p>
-              <p className="song-rating">Rating: 5/10</p>
+            <div className="sang-content">
+              <img src={sang1} alt="rap-god" className="sang-image" />
+
+              <p>Rap God</p>
+              <div className="song-details">
+                <p>9:10</p>
+                <p>Rating: 5/10</p>
+              </div>
             </div>
           </li>
           <li className="sange-card">
-            <img src={sang1} alt="rap-god" className="sang-image" />
-            <div className="song-details">
-              <p className="song-title">Rap God</p>
-              <p className="song-time">9:10</p>
-              <p className="song-rating">Rating: 5/10</p>
+            <div className="sang-content">
+              <img src={sang1} alt="rap-god" className="sang-image" />
+
+              <p>Rap God</p>
+              <div className="song-details">
+                <p>9:10</p>
+                <p>Rating: 5/10</p>
+              </div>
             </div>
           </li>
         </ul>
       </div>
 
       <div className="favorit-albums">
-        <h2>Favorite Albums</h2>
+        <h2 className="favorit-albums-title">Favorite Albums</h2>
         <ul className="album-list">
-          <li>The Eminem Show</li>
-          <li>The Eminem Show</li>
+          <img src={album1} alt="the eninem show" className="album-image" />
+          <li className="Albumnavn">The Eminem Show</li>
+
+          <img src={album1} alt="the eninem show" className="album-image" />
+          <li className="albumnavn">The Eminem Show</li>
         </ul>
       </div>
 
       <div className="reviews-sektion">
-        <h2>Reviews</h2>
-        <h2>Ratings</h2>
-        <h2>Want to Listen</h2>
+        <button>Reviews</button>
+        <button>Ratings</button>
+        <button>Want to Listen</button>
         <div className="review-box">
           <h4>Overskrift</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
