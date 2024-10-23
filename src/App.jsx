@@ -69,9 +69,8 @@ export default function App() {
         <Route path="/explore-concerts" element={<ExploreConcerts />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
-        <Route path="/genre" element={<Genre />} />
-        <Route path="/album" element={<Album />} />
-        <Route path="/song" element={<Song />} />
+        <Route path="/genres" element={<Genres />} />
+
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
@@ -80,6 +79,8 @@ export default function App() {
 
   const publicRoutes = (
     <Routes>
+      <Route path="/song" element={<Song />} />
+      <Route path="/album" element={<Album />} />
       <Route
         path="/login"
         element={
