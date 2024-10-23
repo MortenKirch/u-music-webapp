@@ -25,6 +25,7 @@ import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import Album from "./Pages/Album";
+import Song from "./Pages/Song";
 
 export default function App() {
   const auth = getAuth();
@@ -69,6 +70,7 @@ export default function App() {
         <Route path="/genres" element={<Genres />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/album" element={<Album />} />
+        <Route path="/song" element={<Song />} />
       </Routes>
     </>
   );

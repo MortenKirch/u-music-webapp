@@ -1145,7 +1145,8 @@
   /* Create Account 1 */
   /* Create Account 2 */
   /* Create Account 3 */
-  /* Reviews */
+  /* Reviews  */
+
   /* Full Review */
   /* HomeScreen - rune */
   .recommendations-container {
@@ -1210,5 +1211,170 @@
   }
 
   /* Notifications */
-  /* Song */
+  /* Song - Artilon */
+
+  .song-container {
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+  }
+
+  .song-header-section {
+    display: flex;
+    gap: 20px;
+  }
+
+  .song-cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  .song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .song-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .song-meta,
+  .song-artist,
+  .song-rating {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .music-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  /* lyrics */
+
+  .lyrics-section {
+    margin-top: 30px;
+  }
+
+  .lyrics-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .lyrics-box {
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .lyrics-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .see-all-lyrics {
+    color: #a5a5a5;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Reviews section */
+
+  .reviews-section {
+    margin-top: 30px;
+  }
+
+  .reviews-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .review-controls {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #a5a5a5;
+  }
+
+  .review-list {
+    margin-top: 20px;
+  }
+
+  .review-box {
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .review-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .reviewer-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .reviewer-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .review-date {
+    font-size: 12px;
+    color: #a5a5a5;
+  }
+
+  .review-content {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .review-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .review-rating {
+    font-weight: bold;
+  }
+
+  .heart-reply {
+    display: flex;
+    gap: 10px;
+  }
+
+  .heart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 16px;
+  }
+
+  .reply-thread {
+    color: #a5a5a5;
+    cursor: pointer;
+    font-size: 12px;
+  }
 }
