@@ -31,6 +31,7 @@ export default function App() {
   const [isAuth, setIsAuth] = useState(
     localStorage.getItem("isAuth") === "true"
   );
+  
   const [onboardingComplete, setOnboardingComplete] = useState(false);
  //makes a use effect to check if users are authenticated or not if not setIsAuth is false
   useEffect(() => {
@@ -67,10 +68,11 @@ export default function App() {
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genres" element={<Genres />} />
-         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
-        <Route path="*" element={<Navigate to="/" />} />
         <Route path="/album" element={<Album />} />
         <Route path="/song" element={<Song />} />
+         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
+        <Route path="*" element={<Navigate to="/" />} />
+
       </Routes>
     </>
   );
