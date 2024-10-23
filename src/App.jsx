@@ -24,12 +24,14 @@ import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import Album from "./Pages/Album";
+import Song from "./Pages/Song";
 
 export default function App() {
   const auth = getAuth();
   const [isAuth, setIsAuth] = useState(
     localStorage.getItem("isAuth") === "true"
   );
+  
   const [onboardingComplete, setOnboardingComplete] = useState(false);
  //makes a use effect to check if users are authenticated or not if not setIsAuth is false
   useEffect(() => {
@@ -44,7 +46,7 @@ export default function App() {
     });
 
     return () => accountCreation(); // Cleanup accountCreating function
-  }, //buts auth at the end to tell the function to run everytime auth is changed
+  }, //puts auth at the end to tell the function to run everytime auth is changed
   [auth]);
 
   const privateRoutes = (
@@ -66,9 +68,11 @@ export default function App() {
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genres" element={<Genres />} />
+        <Route path="/album" element={<Album />} />
+        <Route path="/song" element={<Song />} />
          {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/album" element={<Album />} />
+
       </Routes>
     </>
   );
