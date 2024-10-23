@@ -15,7 +15,6 @@ import CompleteProfile from "./Pages/CompleteProfile";
 import Charts from "./pages/Charts";
 import ExploreArtists from "./Pages/ExploreArtists";
 import ExploreGenres from "./Pages/ExploreGenres";
-import ExploreSubGenres from "./Pages/ExploreSubGenres";
 import Genres from "./Pages/Genres";
 import ExploreAlbum from "./Pages/ExploreAlbums";
 import ExploreSong from "./Pages/ExploreSong";
@@ -59,7 +58,6 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/explore-artists" element={<ExploreArtists />} />
         <Route path="/explore-genres" element={<ExploreGenres />} />
-        <Route path="/explore-subgenres" element={<ExploreSubGenres />} />
         <Route path="/explore-albums" element={<ExploreAlbum />} />
         <Route path="/explore-songs" element={<ExploreSong />} />
         <Route path="/explore-concerts" element={<ExploreConcerts />} />
