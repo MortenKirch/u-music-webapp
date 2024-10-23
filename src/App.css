@@ -301,7 +301,7 @@
   }
 
   .searchbar-container {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -309,17 +309,17 @@
 
   .search-input-container {
     position: relative;
-    align-items: center; /* Center the icon and input */
-    width: 100%; /* Adjust as needed */
+    align-items: center;
+    width: 100%;
   }
 
   .search-icon {
-    position: absolute; /* Position the icon within the input */
-    left: 1rem; /* Adjust this value as needed */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center the icon */
-    color: var(--white); /* Icon color */
-    pointer-events: none; /* Prevent clicks on the icon */
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+    pointer-events: none;
   }
 
   input {
