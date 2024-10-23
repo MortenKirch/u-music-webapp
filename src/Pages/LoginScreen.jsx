@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../Components/Firebase/Firebase-config"; // Import the auth instance from firebase.js
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth"; // imports firebase method
 import Logo from "../images/logo.png";
-
+//makes function for login screen, passed data from app.jsx "setIsAuth and setOnboardingComplete States"
 export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
   const [email, setEmail] = useState(""); // State for email
   const [password, setPassword] = useState(""); // State for password
@@ -13,12 +13,12 @@ export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
     event.preventDefault();
 
 
-      // Sign in using Firebase Authentication
+      // Sign in using Firebase Authentication checks if email and password is the same as the databases
       await signInWithEmailAndPassword(auth, email, password);
       setIsAuth(true); // Set authentication state
-      setOnboardingComplete(true)
+      setOnboardingComplete(true) // sets onboarding state
       localStorage.setItem("isAuth", true); // Store authentication state
-      navigate('/'); // Navigate to the home screen
+      navigate('/'); // Navigate to the home screen "private routes"
  
   };
 
@@ -29,7 +29,7 @@ export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
   const handleContinue = () => {
     setIsAuth(true); // Simulate guest login
     localStorage.setItem("isAuth", true);
-    setOnboardingComplete(true)
+    setOnboardingComplete(true) // sets onboarding state
     navigate('/'); // Navigate to the private routes
   };
 

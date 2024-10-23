@@ -31,7 +31,7 @@ export default function App() {
     localStorage.getItem("isAuth") === "true"
   );
   const [onboardingComplete, setOnboardingComplete] = useState(false);
-
+ //makes a use effect to check if users are authenticated or not if not setIsAuth is false
   useEffect(() => {
     const accountCreation = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -43,8 +43,9 @@ export default function App() {
       }
     });
 
-    return () => accountCreation(); // Cleanup subscription on unmount
-  }, [auth]);
+    return () => accountCreation(); // Cleanup accountCreating function
+  }, //buts auth at the end to tell the function to run everytime auth is changed
+  [auth]);
 
   const privateRoutes = (
     <>
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genres" element={<Genres />} />
+         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/album" element={<Album />} />
       </Routes>
@@ -98,11 +100,13 @@ export default function App() {
           <CompleteProfile setOnboardingComplete={setOnboardingComplete} />
         }
       />
+      {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its login screen"*/}
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
 
-  // Allow authenticated users who haven't completed onboarding to see the onboarding routes
+  // makes a shorhand if statement that says that isAuth and onboardingComplete has to be true to acces
+  // private routes if not you only have acces to public routes
   return (
     <>
       <main>{isAuth && onboardingComplete ? privateRoutes : publicRoutes}</main>
