@@ -15,15 +15,15 @@ import CompleteProfile from "./Pages/CompleteProfile";
 import Charts from "./pages/Charts";
 import ExploreArtists from "./Pages/ExploreArtists";
 import ExploreGenres from "./Pages/ExploreGenres";
-import ExploreSubGenres from "./Pages/ExploreSubGenres";
 import Genres from "./Pages/Genres";
-import ExploreAlbum from "./Pages/ExploreAlbum";
+import ExploreAlbum from "./Pages/ExploreAlbums";
 import ExploreSong from "./Pages/ExploreSong";
 import ExploreConcerts from "./Pages/ExploreConcerts";
 import ArtistProfile from "./pages/ArtistProfile";
 import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
+import Album from "./Pages/Album";
 
 export default function App() {
   const auth = getAuth();
@@ -60,15 +60,15 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/explore-artists" element={<ExploreArtists />} />
         <Route path="/explore-genres" element={<ExploreGenres />} />
-        <Route path="/explore-subgenres" element={<ExploreSubGenres />} />
-        <Route path="/explore-album" element={<ExploreAlbum />} />
-        <Route path="/explore-song" element={<ExploreSong />} />
+        <Route path="/explore-albums" element={<ExploreAlbum />} />
+        <Route path="/explore-songs" element={<ExploreSong />} />
         <Route path="/explore-concerts" element={<ExploreConcerts />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genres" element={<Genres />} />
          {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/album" element={<Album />} />
       </Routes>
     </>
   );

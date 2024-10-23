@@ -1,14 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import KendrickLamar from "../images/explore-artists/kendrick-lamar.png";
-import Drake from "../images/explore-artists/drake.png";
-import Sza from "../images/explore-artists/sza.png";
-import TaylorSwift from "../images/explore-artists/taylor-swift.png";
-import EdSheeran from "../images/explore-artists/ed-sheeran.png";
-import BillieEilish from "../images/explore-artists/billie-eilish.png";
-import TheWeeknd from "../images/explore-artists/the-weeknd.png";
-import PostMalone from "../images/explore-artists/post-malone.png";
-import ArianaGrande from "../images/explore-artists/ariana-grande.png";
+import KendrickLamar from "../images/artist-image/kendrick-lamar.png";
+import Drake from "../images/artist-image/drake.png";
+import Sza from "../images/artist-image/sza.png";
+import TaylorSwift from "../images/artist-image/taylor-swift.png";
+import EdSheeran from "../images/artist-image/ed-sheeran.png";
+import BillieEilish from "../images/artist-image/billie-eilish.png";
+import TheWeeknd from "../images/artist-image/the-weeknd.png";
+import PostMalone from "../images/artist-image/post-malone.png";
+import ArianaGrande from "../images/artist-image/ariana-grande.png";
 
 export default function ExploreArtists() {
   const artists = [
@@ -23,7 +23,7 @@ export default function ExploreArtists() {
     { name: "Ariana Grande", image: ArianaGrande },
   ];
   return (
-    <div className="artist-explore-container">
+    <div className="explore-genres-container">
       <div className="searchbar-container">
         <div className="search-input-container">
           <input type="text" placeholder="Search the library..." />

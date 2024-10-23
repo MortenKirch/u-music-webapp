@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import HipHopImage from "../images/explore-genres/hip-hop.png";
-import MetalImage from "../images/explore-genres/metal.png";
-import PopImage from "../images/explore-genres/pop.png";
-import ElectronicImage from "../images/explore-genres/electronic.png";
+import HipHopImage from "../images/album-covers/tpab.png";
+import MetalImage from "../images/album-covers/paranoid.png";
+import PopImage from "../images/album-covers/abbey-road.png";
+import ElectronicImage from "../images/album-covers/mezzanine.png";
 
 export default function ExploreGenres() {
   const truncateText = (text, maxLength) => {

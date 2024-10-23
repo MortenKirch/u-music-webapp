@@ -4,7 +4,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Explore() {
   return (
-    <div className="explore-container">
+    <div className="explore-genres-container">
       <div className="searchbar-container">
         <div className="search-input-container">
           <input type="text" placeholder="Search the library..." />
