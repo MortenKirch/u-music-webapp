@@ -31,25 +31,23 @@ export default function App() {
   const [isAuth, setIsAuth] = useState(
     localStorage.getItem("isAuth") === "true"
   );
-
+  
   const [onboardingComplete, setOnboardingComplete] = useState(false);
-  //makes a use effect to check if users are authenticated or not if not setIsAuth is false
-  useEffect(
-    () => {
-      const accountCreation = onAuthStateChanged(auth, (user) => {
-        if (user) {
-          setIsAuth(true); // Set to true if user is authenticated
-          localStorage.setItem("isAuth", "true");
-        } else {
-          setIsAuth(false);
-          localStorage.removeItem("isAuth");
-        }
-      });
+ //makes a use effect to check if users are authenticated or not if not setIsAuth is false
+  useEffect(() => {
+    const accountCreation = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsAuth(true); // Set to true if user is authenticated
+        localStorage.setItem("isAuth", "true");
+      } else {
+        setIsAuth(false);
+        localStorage.removeItem("isAuth");
+      }
+    });
 
-      return () => accountCreation(); // Cleanup accountCreating function
-    }, //puts auth at the end to tell the function to run everytime auth is changed
-    [auth]
-  );
+    return () => accountCreation(); // Cleanup accountCreating function
+  }, //puts auth at the end to tell the function to run everytime auth is changed
+  [auth]);
 
   const privateRoutes = (
     <>
@@ -70,17 +68,17 @@ export default function App() {
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genres" element={<Genres />} />
-
-        {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
+        <Route path="/album" element={<Album />} />
+        <Route path="/song" element={<Song />} />
+         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
+
       </Routes>
     </>
   );
 
   const publicRoutes = (
     <Routes>
-      <Route path="/song" element={<Song />} />
-      <Route path="/album" element={<Album />} />
       <Route
         path="/login"
         element={
