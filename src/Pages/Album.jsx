@@ -101,8 +101,6 @@ export default function Album() {
               <p>Rating: 4.8/10</p>
             </div>
           </li>
-
-          {/* Add more songs as needed */}
         </ul>
       </div>
     </div>
