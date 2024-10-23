@@ -11,6 +11,13 @@ import TheGlow from "../images/album-covers/the-glow.png";
 import Solkongen from "../images/album-covers/solkongen.png";
 
 export default function ExploreAlbums() {
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    }
+    return text;
+  };
+
   const albums = [
     {
       title: "Ants From Up There",
@@ -81,9 +88,9 @@ export default function ExploreAlbums() {
         {albums.map((album, index) => (
           <div className="album-card" key={index}>
             <img src={album.image} alt={album.title} className="album-image" />
-            <h3>{album.title}</h3>
-            <p>{album.artist}</p>
-            <p>{album.genre}</p>
+            <h3>{truncateText(album.title, 14)}</h3>
+            <p className="artist-text">{truncateText(album.artist, 20)}</p>
+            <p className="genre-text">{album.genre}</p>
           </div>
         ))}
       </div>

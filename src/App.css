@@ -491,13 +491,63 @@
     margin-bottom: 1.5rem;
   }
 
-  /* Genres */
-
   /* Explore Album */
+  .explore-albums-container {
+    padding: 20px;
+    color: white;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    height: 11rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .albums-grid h3 {
+    font-size: 0.8rem;
+  }
+
+  .artist-text {
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+
+  .genre-text {
+    font-size: 0.5rem;
+    font-weight: 200;
+  }
+
+  .album-image {
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
 
   /* Explore Song */
 
   /* Explore Concerts */
+
+  /* Genres */
 
   /* Artilon */
 
