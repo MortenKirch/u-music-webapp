@@ -215,14 +215,12 @@
   input[type="checkbox"]::before {
     background-color: var(--trans-black);
   }
-  .notification-section{
+  .notification-section {
     color: var(--white);
    
     text-align: center;
   }
-<<<<<<< HEAD
-
-  .notification-div {
+  .notification-div{
     display: flex;
     
   }
@@ -236,20 +234,29 @@
   margin-right: 5vw;
   margin-top: 4vw;
   }
-  .notification-div{
-    display: flex;
+  .notification-icons{
+    width: 30%;
+    align-self: center;
   }
-  .notification-profile-container{
-display: flex;
-flex-direction: column;
->>>>>>> parent of c8b280d (Album, song update)
+  
+  .notification-profile-img{
+    border-radius: 100%;
+  } 
+  .notification-p-text{
+   display: flex;
+   align-items: center;
+   
+   
   }
-  .notification-profile-img {
-    width: 15%;
-    border-radius: 50%;
-    height: auto;
+  .notification-p-text p{
+    padding: 15px 0;
+    background-color: var(--trans-black);
+    width: 70vw;
+    border-radius: 15px;
   }
-  .notification-p-text {
+  .notification-header-margin{
+    margin: 2rem;
+
   }
   /* Rune */
   /* navbar */
@@ -1010,106 +1017,171 @@ flex-direction: column;
   /* Album * - Artilon */
 
   /* Album Display Section */
-  .album-display-section {
-    margin: 20px;
+
+  .album-container-album {
+    background-color: #121212;
     color: white;
+    padding: 16px;
+    min-height: 100vh;
   }
 
-  .album-header-info {
+  .album-display-section-album {
+    margin-bottom: 32px;
+  }
+
+  .album-header-info-album {
     display: flex;
-    gap: 20px;
-    align-items: center;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
   }
 
-  .album-cover {
+  .album-cover-album {
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 4px;
   }
 
-  .album-details-info {
+  .album-details-info-album {
     display: flex;
     flex-direction: column;
+    gap: 8px;
   }
 
-  .album-title-heading {
+  .album-title-heading-album {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
+    margin: 0;
   }
 
-  .album-meta {
-    color: #9ca3af;
-    margin-bottom: 8px;
+  .album-meta-album {
+    color: #71767b;
+    font-size: 14px;
+    margin: 0;
   }
 
-  .music-icons {
+  .music-icons-album {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 16px;
   }
 
-  .icon {
-    width: 30px;
-    height: 30px;
+  .icon-album {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
   }
 
   /* Songs Section */
-  .songs-section {
-    margin-top: 20px;
+  .album-songs-section-album {
+    margin-bottom: 32px;
   }
 
-  .songs-title {
+  .album-songs-title-album {
     font-size: 20px;
-    margin-bottom: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
 
-  .songs-list {
+  .album-songs-list-album {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
-  .song-item {
+  .album-song-row-album {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    gap: 12px;
+  }
+
+  .album-song-cover-album {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+
+  .album-song-info-text-album {
+    flex-grow: 1;
+  }
+
+  .album-song-title-album {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  .album-singer-name-album {
+    font-size: 12px;
+    color: #71767b;
+    margin: 2px 0 0 0;
+  }
+
+  .album-song-details-info-album {
+    text-align: right;
+  }
+
+  .album-timestamp-album {
+    font-size: 14px;
+    color: #71767b;
+  }
+
+  .album-review-rating-album {
+    font-size: 12px;
+    color: #71767b;
+  }
+
+  /* Reviews Section */
+  .album-reviews-section-album {
+    padding-top: 16px;
+  }
+
+  .album-reviews-title-album {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .album-review-controls-album {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2a2525;
-    padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #71767b;
+  }
+
+  .album-review-box-album {
+    background-color: #1a1a1a;
     border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
   }
 
-  .song-cover {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-  }
-
-  .song-info {
-    flex-grow: 1;
-    margin-left: 15px;
-  }
-
-  .song-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  .singer-name {
-    font-size: 14px;
-    color: #9ca3af;
-    margin: 0;
-  }
-
-  .song-details {
+  .album-review-header-album {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
   }
 
-  .timestamp,
-  .rating {
+  .album-reviewer-pic-album {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .album-reviewer-name-album {
     font-size: 14px;
-    color: #9ca3af;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .album-review-date-album {
+    font-size: 12px;
+    color: #71767b;
   }
 
   /* ArtistProfile */
@@ -1349,168 +1421,186 @@ flex-direction: column;
   /* Notifications */
   /* Song - Artilon */
 
-  .song-container {
-    background-color: #121212;
+  /* Song Display Section */
+  .song-container-new {
     color: white;
-    padding: 20px;
+    padding: 16px;
   }
 
-  .song-header-section {
+  .song-header-section-new {
     display: flex;
-    gap: 20px;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
   }
 
-  .song-cover {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
+  .song-cover-new {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
   }
 
-  .song-details {
+  .song-details-new {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 4px;
   }
 
-  .song-title {
-    font-size: 28px;
-    font-weight: bold;
+  .song-title-new {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
   }
 
-  .song-meta,
-  .song-artist,
-  .song-rating {
+  .song-meta-new {
+    color: #71767b;
     font-size: 14px;
-    margin-top: 5px;
+    margin: 0;
   }
 
-  .music-icons {
+  .song-artist-new {
+    color: #71767b;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .song-rating-new {
+    color: #71767b;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .music-icons-new {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 12px;
+    margin-top: 16px;
   }
 
-  .icon {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+  .icon-new {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
   }
 
-  /* lyrics */
-
-  .lyrics-section {
-    margin-top: 30px;
+  /* Lyrics Section */
+  .lyrics-section-new {
+    margin-top: 32px;
   }
 
-  .lyrics-title {
+  .lyrics-title-new {
     font-size: 20px;
-    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
 
-  .lyrics-box {
-    background-color: #2d2d2d;
-    padding: 15px;
-    border-radius: 10px;
+  .lyrics-box-new {
+    padding: 0;
+    border-radius: 0;
   }
 
-  .lyrics-text {
+  .lyrics-text-new {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
   }
 
-  .see-all-lyrics {
-    color: #a5a5a5;
-    font-size: 12px;
-    text-decoration: underline;
-    cursor: pointer;
+  .see-all-lyrics-new {
     display: block;
-    margin-top: 10px;
-  }
-
-  /* Reviews section */
-
-  .reviews-section {
-    margin-top: 30px;
-  }
-
-  .reviews-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .review-controls {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 16px;
+    color: #71767b;
+    text-decoration: none;
     font-size: 14px;
-    color: #a5a5a5;
   }
 
-  .review-list {
-    margin-top: 20px;
+  /* Reviews Section */
+  .reviews-section-new {
+    margin-top: 32px;
+    padding-bottom: 72px;
   }
 
-  .review-box {
-    background-color: #2d2d2d;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  .reviews-title-new {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
 
-  .review-header {
+  .review-controls-new {
     display: flex;
-    gap: 10px;
-    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 16px;
   }
 
-  .reviewer-pic {
-    width: 40px;
-    height: 40px;
+  .sort-by-new {
+    font-size: 14px;
+    color: #71767b;
+  }
+
+  .sort-option-new {
+    font-size: 14px;
+    color: #71767b;
+  }
+
+  .review-list-new {
+    margin-top: 16px;
+  }
+
+  .review-box-new {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .review-header-new {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .reviewer-pic-new {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
   }
 
-  .reviewer-name {
-    font-size: 16px;
-    font-weight: bold;
+  .reviewer-name-new {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
   }
 
-  .review-date {
+  .review-date-new {
     font-size: 12px;
-    color: #a5a5a5;
+    color: #71767b;
   }
 
-  .review-content {
-    margin-top: 10px;
+  .review-content-new {
     font-size: 14px;
     line-height: 1.5;
+    margin: 0;
   }
 
-  .review-actions {
+  .heart-reply-new {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 14px;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
   }
 
-  .review-rating {
-    font-weight: bold;
-  }
-
-  .heart-reply {
-    display: flex;
-    gap: 10px;
-  }
-
-  .heart-button {
+  .heart-button-new {
     background: none;
     border: none;
-    cursor: pointer;
-    color: red;
-    font-size: 16px;
+    padding: 0;
+    color: #71767b;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
-  .reply-thread {
-    color: #a5a5a5;
-    cursor: pointer;
-    font-size: 12px;
+  .reply-thread-new {
+    color: #71767b;
+    font-size: 14px;
   }
 }

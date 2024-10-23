@@ -9,97 +9,105 @@ import spotify from "../images/Spotify.png";
 
 export default function Album() {
   return (
-    <div className="album-container">
-      <div className="album-display-section">
-        <div className="album-header-info">
+    <div className="album-container-album">
+      <div className="album-display-section-album">
+        <div className="album-header-info-album">
           <img
             src={albumcover}
             alt="to-pimp-a-butterfly-album"
-            className="album-cover"
+            className="album-cover-album"
           />
-          <div className="album-details-info">
-            <h1 className="album-title-heading">To Pimp A Butterfly</h1>
-            <p className="album-meta">Avg Rating: 3.45</p>
-            <div className="music-icons">
-              <img src={soundcloud} alt="soundcloud" className="icon" />
-              <img src={apple} alt="apple" className="icon" />
-              <img src={spotify} alt="spotify" className="icon" />
+          <div className="album-details-info-album">
+            <h1 className="album-title-heading-album">To Pimp A Butterfly</h1>
+            <p className="album-meta-album">Avg Rating: 3.45</p>
+            <div className="music-icons-album">
+              <img src={soundcloud} alt="soundcloud" className="icon-album" />
+              <img src={apple} alt="apple" className="icon-album" />
+              <img src={spotify} alt="spotify" className="icon-album" />
             </div>
           </div>
         </div>
 
-        <div className="songs-section-album">
-          <h2 className="songs-title-header">Songs</h2>
-          <ul className="songs-list-items">
+        <div className="album-songs-section-album">
+          <h2 className="album-songs-title-album">Songs</h2>
+          <ul className="album-songs-list-album">
             {/* Song 1 */}
-            <li className="song-row-item">
+            <li className="album-song-row-album">
               <img
                 src={albumcover}
                 alt="Wesley's Theory"
-                className="song-cover"
+                className="album-song-cover-album"
               />
-              <div className="song-info-text">
-                <p className="song-title">Wesley's Theory</p>
-                <p className="singer-name-text">Kendrick Lamar</p>
+              <div className="album-song-info-text-album">
+                <p className="album-song-title-album">Wesley's Theory</p>
+                <p className="album-singer-name-album">Kendrick Lamar</p>
               </div>
-              <div className="song-details-info">
-                <p className="timestamp">4:47</p>
+              <div className="album-song-details-info-album">
+                <p className="album-timestamp-album">4:47</p>
                 <p>Rating: 3.5/10</p>
               </div>
             </li>
 
-            <li className="song-row-item">
+            <li className="album-song-row-album">
               <img
                 src={albumcover}
                 alt="For Free? (Interlude)"
-                className="song-cover"
+                className="album-song-cover-album"
               />
-              <div className="song-info-text">
-                <p className="song-title">For Free? (Interlude)</p>
-                <p className="singer-name-text">Kendrick Lamar</p>
+              <div className="album-song-info-text-album">
+                <p className="album-song-title-album">For Free? (Interlude)</p>
+                <p className="album-singer-name-album">Kendrick Lamar</p>
               </div>
-              <div className="song-details-info">
-                <p className="timestamp">:10</p>
+              <div className="album-song-details-info-album">
+                <p className="album-timestamp-album">:10</p>
                 <p>Rating: 4.0/10</p>
               </div>
             </li>
 
-            <li className="song-row-item">
-              <img src={albumcover} alt="King Kunta" className="song-cover" />
-              <div className="song-info-text">
-                <p className="song-title">King Kunta</p>
-                <p className="singer-name-text">Kendrick Lamar</p>
+            <li className="album-song-row-album">
+              <img
+                src={albumcover}
+                alt="King Kunta"
+                className="album-song-cover-album"
+              />
+              <div className="album-song-info-text-album">
+                <p className="album-song-title-album">King Kunta</p>
+                <p className="album-singer-name-album">Kendrick Lamar</p>
               </div>
-              <div className="song-details-info">
-                <p className="timestamp">3:54</p>
+              <div className="album-song-details-info-album">
+                <p className="album-timestamp-album">3:54</p>
                 <p>Rating: 4.7/10</p>
               </div>
             </li>
 
-            <li className="song-row-item">
+            <li className="album-song-row-album">
               <img
                 src={albumcover}
                 alt="Institutionalized"
-                className="song-cover"
+                className="album-song-cover-album"
               />
-              <div className="song-info-text">
-                <p className="song-title">Institutionalized</p>
-                <p className="singer-name-text">Kendrick Lamar</p>
+              <div className="album-song-info-text-album">
+                <p className="album-song-title-album">Institutionalized</p>
+                <p className="album-singer-name-album">Kendrick Lamar</p>
               </div>
-              <div className="song-details-info">
-                <p className="timestamp">4:31</p>
+              <div className="album-song-details-info-album">
+                <p className="album-timestamp-album">4:31</p>
                 <p>Rating: 4.6/10</p>
               </div>
             </li>
 
-            <li className="song-row-item">
-              <img src={albumcover} alt="These Walls" className="song-cover" />
-              <div className="song-info-text">
-                <p className="song-title">These Walls</p>
-                <p className="singer-name-text">Kendrick Lamar</p>
+            <li className="album-song-row-album">
+              <img
+                src={albumcover}
+                alt="These Walls"
+                className="album-song-cover-album"
+              />
+              <div className="album-song-info-text-album">
+                <p className="album-song-title-album">These Walls</p>
+                <p className="album-singer-name-album">Kendrick Lamar</p>
               </div>
-              <div className="song-details-info">
-                <p className="timestamp">5:00</p>
+              <div className="album-song-details-info-album">
+                <p className="album-timestamp-album">5:00</p>
                 <p>Rating: 4.8/10</p>
               </div>
             </li>
@@ -107,33 +115,37 @@ export default function Album() {
         </div>
       </div>
 
-      <div className="reviews-section">
-        <h2 className="reviews-title">Reviews</h2>
-        <div className="review-controls">
-          <p className="sort-by">Sort by:</p>
-          <p className="sort-option">Date</p>
+      <div className="album-reviews-section-album">
+        <h2 className="album-reviews-title-album">Reviews</h2>
+        <div className="album-review-controls-album">
+          <p className="album-sort-by-album">Sort by:</p>
+          <p className="album-sort-option-album">Date</p>
         </div>
-        <div className="review-list">
+        <div className="album-review-list-album">
           {/* Individual review */}
-          <div className="review-box">
-            <div className="review-header">
-              <img src={profilePic} alt="Profile" className="reviewer-pic" />
+          <div className="album-review-box-album">
+            <div className="album-review-header-album">
+              <img
+                src={profilePic}
+                alt="Profile"
+                className="album-reviewer-pic-album"
+              />
               <div>
-                <h4 className="reviewer-name">User Name</h4>
-                <p className="review-date">Date: 2024</p>
+                <h4 className="album-reviewer-name-album">User Name</h4>
+                <p className="album-review-date-album">Date: 2024</p>
               </div>
             </div>
-            <div className="review-content">
+            <div className="album-review-content-album">
               <p>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </p>
             </div>
-            <div className="review-actions">
-              <p className="review-rating">Rating: 3.5/10</p>
-              <div className="heart-reply">
-                <button className="heart-button">❤️</button>
-                <p className="reply-thread">Reply</p>
+            <div className="album-review-actions-album">
+              <p className="album-review-rating-album">Rating: 3.5/10</p>
+              <div className="album-heart-reply-album">
+                <button className="album-heart-button-album">❤️</button>
+                <p className="album-reply-thread-album">Reply</p>
               </div>
             </div>
           </div>
