@@ -160,49 +160,45 @@
   .radio-container {
     width: 80%;
   }
-.checkbox-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
- 
-}
-.check-style{
-  width: 20px;
-  height: 20px;
-  background-color: var(--trans-black);
-}
-input[type="checkbox"]:checked {
-  accent-color: var(--gray);
+  .checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .check-style {
+    width: 20px;
+    height: 20px;
+    background-color: var(--trans-black);
+  }
+  input[type="checkbox"]:checked {
+    accent-color: var(--gray);
+  }
+  input[type="checkbox"]::before {
+    background-color: var(--trans-black);
+  }
 
-}
-input[type="checkbox"]::before{
-  background-color: var(--trans-black);
-}
+  .bubble-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  .bubble {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
 
-
-.bubble-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.bubble {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.bubble.selected {
-  background-color: orange;
-}
+  .bubble.selected {
+    background-color: orange;
+  }
   .checkbox-container {
     display: flex;
     justify-content: space-between;
@@ -434,11 +430,6 @@ input[type="checkbox"]::before{
     text-align: center;
   }
 
-  .subgenres-container li {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
   .genre-image {
     width: 8rem;
     height: auto;
@@ -465,11 +456,26 @@ input[type="checkbox"]::before{
 
   .subgenres-container {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Padding around the list */
-    margin-top: 10px; /* Space between the genre card and the subgenres box */
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack subgenres vertically */
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subgenres-container h2 {
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 300;
+  }
+
+  .subgenres-container h2 {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .subgenres-container p {
+    font-size: 0.7rem;
   }
 
   .subgenres-list {
@@ -480,7 +486,7 @@ input[type="checkbox"]::before{
   }
 
   .subgenres-list li {
-    margin-bottom: 5px;
+    margin-bottom: 1.5rem;
   }
 
   /* Explore Subgenres */

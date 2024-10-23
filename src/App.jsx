@@ -25,10 +25,11 @@ import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 
-
 export default function App() {
   const auth = getAuth();
-  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
+  const [isAuth, setIsAuth] = useState(
+    localStorage.getItem("isAuth") === "true"
+  );
   const [onboardingComplete, setOnboardingComplete] = useState(false);
 
   useEffect(() => {
@@ -62,6 +63,9 @@ export default function App() {
         <Route path="/explore-album" element={<ExploreAlbum />} />
         <Route path="/explore-song" element={<ExploreSong />} />
         <Route path="/explore-concerts" element={<ExploreConcerts />} />
+        <Route path="/charts" element={<Charts />} />
+        <Route path="/artist-profile" element={<ArtistProfile />} />
+        <Route path="/genres" element={<Genres />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
@@ -69,10 +73,31 @@ export default function App() {
 
   const publicRoutes = (
     <Routes>
-      <Route path="/login" element={<LoginScreen setIsAuth={setIsAuth} setOnboardingComplete={setOnboardingComplete} />} />
-      <Route path="/create-account" element={<CreateAccount setOnboardingComplete={setOnboardingComplete} />} />
-      <Route path="/choose-genre" element={<ChooseGenre setOnboardingComplete={setOnboardingComplete} />} />
-      <Route path="/finish-profile" element={<CompleteProfile setOnboardingComplete={setOnboardingComplete}/>} />
+      <Route
+        path="/login"
+        element={
+          <LoginScreen
+            setIsAuth={setIsAuth}
+            setOnboardingComplete={setOnboardingComplete}
+          />
+        }
+      />
+      <Route
+        path="/create-account"
+        element={
+          <CreateAccount setOnboardingComplete={setOnboardingComplete} />
+        }
+      />
+      <Route
+        path="/choose-genre"
+        element={<ChooseGenre setOnboardingComplete={setOnboardingComplete} />}
+      />
+      <Route
+        path="/finish-profile"
+        element={
+          <CompleteProfile setOnboardingComplete={setOnboardingComplete} />
+        }
+      />
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
@@ -80,13 +105,7 @@ export default function App() {
   // Allow authenticated users who haven't completed onboarding to see the onboarding routes
   return (
     <>
-      <main>
-
-        {isAuth && onboardingComplete ? privateRoutes : publicRoutes}
-      </main>
+      <main>{isAuth && onboardingComplete ? privateRoutes : publicRoutes}</main>
     </>
   );
 }
-
-
-
