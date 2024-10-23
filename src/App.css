@@ -543,10 +543,62 @@
     margin-bottom: 0.5rem;
   }
 
-  /* Explore Song */
-
   /* Explore Concerts */
+  .explore-concerts-container {
+    padding: 20px;
+    color: white;
+  }
 
+  .concerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .concert-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .concert-image {
+    width: 10rem;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .concert-info {
+    display: flex;
+    height: 13rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .concert-info h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .tour-name,
+  .concert-dates,
+  .concert-location {
+    margin: 5px 0; /* Add space between lines */
+    font-size: 0.9rem; /* Font size for details */
+  }
+
+  .see-tour-button {
+    margin-top: 2rem;
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: #2a2525;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+  }
   /* Genres */
 
   /* Artilon */
