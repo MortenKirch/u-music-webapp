@@ -1,19 +1,19 @@
-import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation to access passed state
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation to access passed state "uid"
 import ProfileImageUpload from "../Components/ProfileImageUpload";
 import { useState } from "react";
 
 export default function CompleteProfile({ setOnboardingComplete }) {
     const navigate = useNavigate();
     const location = useLocation(); // Get the location object
-    const { uid, username, email } = location.state; // Retrieve the user data
-
+    const { uid } = location.state; // Retrieve the uid
+// makes useState for the last information about the user.
     const [bio, setBio] = useState("");
     const [birthday, setBirthday] = useState("");
     const [pronouns, setPronouns] = useState("");
     const [countryLanguage, setCountryLanguage] = useState("");
     const [newsletter, setNewsletter] = useState(false);
     const [termsAccepted, setTermsAccepted] = useState(false);
-
+    // calls our database to patch more data into the user "uses patch to add data into existing data instead of overwriting"
     const updateUserProfile = async (uid) => {
         const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
         const response = await fetch(url, {
@@ -27,22 +27,21 @@ export default function CompleteProfile({ setOnboardingComplete }) {
                 termsAccepted
             })
         });
+        //simple error if respise is not ok
         if (!response.ok) {
-            console.log("Sorry, something went wrong while updating the user profile.");
+            console.log("Sorry, something went wrong");
         }
     };
-
+// handle finish button prevents default to make sure the function is completed, sets onboarding complete to true to acces the private routes
     const handleSubmit = async (event) => {
         event.preventDefault();
         await updateUserProfile(uid); // Use the UID from the state
         setOnboardingComplete(true);
-        navigate("/"); // Redirect to home or dashboard
+        navigate("/"); // navigates to Home Page
     };
 
-    const handleGoBack = () => {
-        navigate(-1);
-    };
-
+   
+//jsx for user imput makes sure to take all the values the user puts down.
     return (
         <section className="login-section"> 
             <h1>Personal Information</h1>           
@@ -101,7 +100,7 @@ export default function CompleteProfile({ setOnboardingComplete }) {
                         name="terms" 
                         className="check-style" 
                         checked={termsAccepted}
-                        onChange={() => setTermsAccepted(!termsAccepted)} // Toggle terms accepted state
+                        onChange={() => setTermsAccepted(!termsAccepted)} // Toggle terms state
                     />
                 </label>
             </div>
@@ -110,7 +109,9 @@ export default function CompleteProfile({ setOnboardingComplete }) {
                 <button
                     className="login-button sign-in-button navigate-button"
                     type="button"
-                    onClick={handleGoBack}
+                    onClick={() => {
+                        navigate(-1);
+                    }}
                 >
                     Go back
                 </button>

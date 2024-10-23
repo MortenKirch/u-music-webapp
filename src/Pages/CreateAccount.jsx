@@ -5,40 +5,43 @@ import { auth } from "../Components/Firebase/Firebase-config"; // Firebase confi
 import Logo from "../images/logo.png";
 
 export default function CreateAccount({ setOnboardingComplete }) {
-  const navigate = useNavigate(); // Initialize the navigate hook
-  const [email, setEmail] = useState(""); // State for email
-  const [password, setPassword] = useState(""); // State for password
-  const [repeatPassword, setRepeatPassword] = useState(""); // State for repeat password
-  const [username, setUsername] = useState(""); // State for username
-  const [errorMessage, setErrorMessage] = useState(""); // State for error message
-  
+  //setting up states to keep information about the user when creating a profile
+  const navigate = useNavigate(); 
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState(""); 
+  const [repeatPassword, setRepeatPassword] = useState(""); 
+  const [username, setUsername] = useState(""); 
+  const [errorMessage, setErrorMessage] = useState(""); 
+
+  //handles a go back button using useNavigate to navigate -1 to the previus page
   const handleGoBack = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1); 
   };
-
+//handle continue button, prevent default so it doesnt submit before the rest of the function is completed
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    // Check if passwords match
+    // Check if passwords matches repleat password
     if (password !== repeatPassword) {
       setErrorMessage("Passwords do not match!"); // Set error message if passwords don't match
-      return; // Exit the function to prevent further action
+      return; 
     }
 
     // Clear the error message since passwords match
     setErrorMessage("");
 
     try {
-      // Create account using Firebase Authentication
+      // Create account using Firebase Authentication and method createUserWithEmailAndPassword
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user; // Get user object
 
-      // Call function to create user data in the database
+      // Call function to create user data in the database takes
       await createUser(user.uid, username, email);
 
-      // Complete onboarding after successful account creation
+      // setting onboarding complete to false since they arent done with the create account
         setOnboardingComplete(false)
-        navigate("/choose-genre", { state: { uid: user.uid} }); // Navigate to the next page
+      //navigates to the next page in the account creation passes uid to the next page
+        navigate("/choose-genre", { state: { uid: user.uid} }); 
     } catch (error) {
       // Handle any errors during account creation
       setErrorMessage(error.message);
@@ -49,15 +52,14 @@ export default function CreateAccount({ setOnboardingComplete }) {
   const createUser = async (uid, username, email) => {
     const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`; // URL to store user data
     const response = await fetch(url, {
-      method: "PUT", // Use PUT to create or update the user data
+      method: "PUT", // Use PUT to create the user data
       body: JSON.stringify({ username, email }) // Include username and email in the body
     });
     if (!response.ok) {
-      console.log("Sorry, something went wrong"); // Handle errors
-      setErrorMessage("Failed to create user data."); // Set error message
+      console.log("Sorry, something went wrong"); // checks for error
     }
   };
-
+//jsx for the create account page, 
   return (
     <section className="login-section">
       <img src={Logo} alt="logo for uMusic" className="logo " />
@@ -103,7 +105,7 @@ export default function CreateAccount({ setOnboardingComplete }) {
       <div className="navigate-button-container">
         <button
           className="login-button sign-in-button navigate-button"
-          type="button" // Use type="button" to prevent default form submission
+          type="button" 
           onClick={handleGoBack} // Go back to the previous page
         >
           Go back
@@ -117,6 +119,7 @@ export default function CreateAccount({ setOnboardingComplete }) {
         </button>
       </div>
       <div>
+        {/* current placeholder for progressbar*/}
         <p className="placeholder-bar">placeholder for onboarding bar</p>
       </div>
     </section>
