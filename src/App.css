@@ -220,7 +220,7 @@
    
     text-align: center;
   }
-
+<<<<<<< HEAD
 
   .notification-div {
     display: flex;
@@ -242,7 +242,7 @@
   .notification-profile-container{
 display: flex;
 flex-direction: column;
-
+>>>>>>> parent of c8b280d (Album, song update)
   }
   .notification-profile-img {
     width: 15%;
