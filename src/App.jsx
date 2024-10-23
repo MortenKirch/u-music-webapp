@@ -69,7 +69,7 @@ export default function App() {
         <Route path="/explore-concerts" element={<ExploreConcerts />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
-        <Route path="/genres" element={<Genres />} />
+        <Route path="/genre" element={<Genre />} />
 
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
