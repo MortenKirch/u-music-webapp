@@ -16,8 +16,9 @@ export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
       try{// Sign in using Firebase Authentication checks if email and password is the same as the databases
       await signInWithEmailAndPassword(auth, email, password);
       setIsAuth(true); // Set authentication state
-      setOnboardingComplete(true) // sets onboarding state
-      localStorage.setItem("isAuth", true); // Store authentication state
+      setOnboardingComplete(true)
+      localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is complete.
+      localStorage.setItem("isAuth", JSON.stringify(true)); // Store authentication state
       navigate('/'); // Navigate to the home screen "private routes"
     } catch{
       console.log("error")
