@@ -89,7 +89,7 @@ export default function ExploreAlbums() {
           <div className="album-card" key={index}>
             <img src={album.image} alt={album.title} className="album-image" />
             <h3>{truncateText(album.title, 14)}</h3>
-            <p className="artist-text">{truncateText(album.artist, 20)}</p>
+            <p className="artist-text">{truncateText(album.artist, 15)}</p>
             <p className="genre-text">{album.genre}</p>
           </div>
         ))}

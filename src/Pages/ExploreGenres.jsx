@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import HipHopImage from "../images/album-covers/tpab.png";
 import MetalImage from "../images/album-covers/paranoid.png";
 import PopImage from "../images/album-covers/abbey-road.png";
 import ElectronicImage from "../images/album-covers/mezzanine.png";
 
 export default function ExploreGenres() {
+  const navigate = useNavigate();
+
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + "...";
@@ -526,6 +529,10 @@ export default function ExploreGenres() {
       setExpandedGenreIndex(index);
     }
   };
+
+  const handleGenreClick = () => {
+    navigate("/genre");
+  };
   return (
     <div className="explore-genres-container">
       <div className="searchbar-container">
@@ -545,11 +552,17 @@ export default function ExploreGenres() {
                 flexDirection: expandedGenreIndex === index ? "column" : "row",
               }}
             >
-              <img src={genre.image} alt={genre.name} className="genre-image" />
+              <img
+                src={genre.image}
+                alt={genre.name}
+                className="genre-image"
+                onClick={() => handleGenreClick(genre)}
+              />
               <div className="genre-info">
                 <h3
+                  onClick={() => handleGenreClick(genre)}
                   style={{
-                    textAlign: expandedGenreIndex === index ? "center" : "left",
+                    textAlign: expandedGenreIndex === index ? "left" : "left",
                   }}
                 >
                   {genre.name}
