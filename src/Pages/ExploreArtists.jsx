@@ -23,7 +23,7 @@ export default function ExploreArtists() {
     { name: "Ariana Grande", image: ArianaGrande },
   ];
   return (
-    <div className="artist-explore-container">
+    <div className="explore-genres-container">
       <div className="searchbar-container">
         <div className="search-input-container">
           <input type="text" placeholder="Search the library..." />

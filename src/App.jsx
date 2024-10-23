@@ -17,7 +17,7 @@ import ExploreArtists from "./Pages/ExploreArtists";
 import ExploreGenres from "./Pages/ExploreGenres";
 import ExploreSubGenres from "./Pages/ExploreSubGenres";
 import Genres from "./Pages/Genres";
-import ExploreAlbum from "./Pages/ExploreAlbum";
+import ExploreAlbum from "./Pages/ExploreAlbums";
 import ExploreSong from "./Pages/ExploreSong";
 import ExploreConcerts from "./Pages/ExploreConcerts";
 import ArtistProfile from "./pages/ArtistProfile";
@@ -60,8 +60,8 @@ export default function App() {
         <Route path="/explore-artists" element={<ExploreArtists />} />
         <Route path="/explore-genres" element={<ExploreGenres />} />
         <Route path="/explore-subgenres" element={<ExploreSubGenres />} />
-        <Route path="/explore-album" element={<ExploreAlbum />} />
-        <Route path="/explore-song" element={<ExploreSong />} />
+        <Route path="/explore-albums" element={<ExploreAlbum />} />
+        <Route path="/explore-songs" element={<ExploreSong />} />
         <Route path="/explore-concerts" element={<ExploreConcerts />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
