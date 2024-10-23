@@ -44,7 +44,7 @@ export default function App() {
     });
 
     return () => accountCreation(); // Cleanup accountCreating function
-  }, //buts auth at the end to tell the function to run everytime auth is changed
+  }, //puts auth at the end to tell the function to run everytime auth is changed
   [auth]);
 
   const privateRoutes = (

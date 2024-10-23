@@ -215,6 +215,27 @@
   input[type="checkbox"]::before {
     background-color: var(--trans-black);
   }
+  .notification-section{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .notification-div{
+    display: flex;
+  }
+  .notification-profile-container{
+display: flex;
+flex-direction: column;
+  }
+  .notification-profile-img{
+    width: 15%;
+    border-radius: 50%;
+    height: auto;
+  }
+  .notification-p-text{
+
+  }
   /* Rune */
   /* navbar */
   .top-nav {
