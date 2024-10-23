@@ -217,23 +217,46 @@
   }
   .notification-section {
     color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   
+    text-align: center;
   }
-  .notification-div {
+  .notification-div{
     display: flex;
+    
   }
-  .notification-profile-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .notification-profile-img {
+   
+  .notification-profile-container{
+  display: flex;
+  flex-direction: column;
     width: 15%;
-    border-radius: 50%;
-    height: auto;
+    
+  margin-left:5vw;
+  margin-right: 5vw;
+  margin-top: 4vw;
   }
-  .notification-p-text {
+  .notification-icons{
+    width: 30%;
+    align-self: center;
+  }
+  
+  .notification-profile-img{
+    border-radius: 100%;
+  } 
+  .notification-p-text{
+   display: flex;
+   align-items: center;
+   
+   
+  }
+  .notification-p-text p{
+    padding: 15px 0;
+    background-color: var(--trans-black);
+    width: 70vw;
+    border-radius: 15px;
+  }
+  .notification-header-margin{
+    margin: 2rem;
+
   }
   /* Rune */
   /* navbar */
