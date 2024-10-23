@@ -216,7 +216,7 @@
     background-color: var(--trans-black);
   }
   .notification-section {
-  .notification-section {
+  
     color: var(--white);
 
     text-align: center;
@@ -227,14 +227,12 @@
   .notification-profile-container {
     display: flex;
     flex-direction: column;
-  }
-  .notification-profile-img {
     width: 15%;
-
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 4vw;
   }
+
   .notification-icons {
     width: 30%;
     align-self: center;
