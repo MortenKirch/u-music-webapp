@@ -3,7 +3,7 @@ import profilePic from "../images/cat.jpg";
 
 // Import album cover and music icons
 import albumcover from "../images/to-pimp-a-butterfly.png";
-import soundcloud from "../images/Soundcloud.jpg";
+import soundcloud from "../images/Soundclouds.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
@@ -20,6 +20,7 @@ export default function Album() {
           <div className="album-details-info-album">
             <h1 className="album-title-heading-album">To Pimp A Butterfly</h1>
             <p className="album-meta-album">Avg Rating: 3.45</p>
+            <p className="album-meta-album">2009 - Album</p>
             <div className="music-icons-album">
               <img src={soundcloud} alt="soundcloud" className="icon-album" />
               <img src={apple} alt="apple" className="icon-album" />
@@ -118,11 +119,9 @@ export default function Album() {
       <div className="album-reviews-section-album">
         <h2 className="album-reviews-title-album">Reviews</h2>
         <div className="album-review-controls-album">
-          <p className="album-sort-by-album">Sort by:</p>
-          <p className="album-sort-option-album">Date</p>
+          <p className="album-sort-by-album">Sort by: Date</p>
         </div>
         <div className="album-review-list-album">
-          {/* Individual review */}
           <div className="album-review-box-album">
             <div className="album-review-header-album">
               <img
@@ -131,8 +130,8 @@ export default function Album() {
                 className="album-reviewer-pic-album"
               />
               <div>
-                <h4 className="album-reviewer-name-album">User Name</h4>
-                <p className="album-review-date-album">Date: 2024</p>
+                <h4 className="album-reviewer-name-album">Pug Fartmeiser</h4>
+                <p className="album-review-date-album">Rating: 3.5/10</p>
               </div>
             </div>
             <div className="album-review-content-album">
@@ -142,10 +141,9 @@ export default function Album() {
               </p>
             </div>
             <div className="album-review-actions-album">
-              <p className="album-review-rating-album">Rating: 3.5/10</p>
               <div className="album-heart-reply-album">
                 <button className="album-heart-button-album">❤️</button>
-                <p className="album-reply-thread-album">Reply</p>
+                <p className="album-reply-thread-album">See thread - Reply</p>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ export default function NavTop() {
   return (
     <div className="top-nav">
       <div className="nav-links">
-        <NavLink to="/Concerts">Concerts</NavLink>
+        <NavLink to="/concerts-landing-page">Concerts</NavLink>
         <NavLink to="/Reviews">Reviews</NavLink>
       </div>
       <div className="notifications">
