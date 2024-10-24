@@ -1224,7 +1224,6 @@
   /* Album Display Section */
 
   .album-container-album {
-    background-color: #121212;
     color: white;
     padding: 16px;
     min-height: 100vh;
@@ -1237,14 +1236,16 @@
   .album-header-info-album {
     display: flex;
     gap: 16px;
-    align-items: flex-start;
-    margin-bottom: 24px;
+    align-items: center;
+    margin-bottom: 32px;
   }
 
   .album-cover-album {
-    width: 150px;
-    height: 150px;
-    border-radius: 4px;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 35px;
   }
 
   .album-details-info-album {
@@ -1254,26 +1255,27 @@
   }
 
   .album-title-heading-album {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: bold;
     margin: 0;
+    margin-top: 55px;
   }
 
   .album-meta-album {
     color: #71767b;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
 
   .music-icons-album {
     display: flex;
-    gap: 12px;
-    margin-top: 16px;
+    gap: 20px;
+    margin-top: 20px;
   }
 
   .icon-album {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 4px;
   }
 
@@ -1283,8 +1285,8 @@
   }
 
   .album-songs-title-album {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: bold;
     margin-bottom: 16px;
   }
 
@@ -1302,8 +1304,8 @@
   }
 
   .album-song-cover-album {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     border-radius: 4px;
   }
 
@@ -1312,14 +1314,14 @@
   }
 
   .album-song-title-album {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     margin: 0;
     color: #ffffff;
   }
 
   .album-singer-name-album {
-    font-size: 12px;
+    font-size: 15px;
     color: #71767b;
     margin: 2px 0 0 0;
   }
@@ -1331,10 +1333,11 @@
   .album-timestamp-album {
     font-size: 14px;
     color: #71767b;
+    margin-bottom: 40px;
   }
 
   .album-review-rating-album {
-    font-size: 12px;
+    font-size: 14px;
     color: #71767b;
   }
 
@@ -1344,7 +1347,7 @@
   }
 
   .album-reviews-title-album {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 16px;
   }
@@ -1354,15 +1357,15 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    font-size: 14px;
+    font-size: 15px;
     color: #71767b;
   }
 
   .album-review-box-album {
     background-color: #1a1a1a;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 100px;
   }
 
   .album-review-header-album {
@@ -1379,82 +1382,129 @@
   }
 
   .album-reviewer-name-album {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     margin: 0;
   }
 
   .album-review-date-album {
-    font-size: 12px;
+    font-size: 15px;
     color: #71767b;
   }
 
   /* ArtistProfile */
   /* ArtistProfile - Rune */
-  .artist-section {
+  .artist-profile-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .artist-profile-header {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 20px;
-    max-width: 80%;
-    margin: 0 auto;
+    color: white;
   }
 
-  .artist-image img {
-    width: 100%;
-    height: 100%;
+  .artist-profile-img {
+    width: 40%;
+    height: 40%;
     border-radius: 50%;
+    margin-right: 0.7rem;
   }
 
-  .artist-info {
+  .artist-profile-name {
+    font-size: 1.3rem;
+  }
+
+  .artist-profile-bio,
+  .artist-profile-genres {
+    margin: 0.4rem 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .artist-profile-top-songs {
+    padding: 20px;
     color: white;
   }
 
-  .artist-info h2 {
+  .artist-profile-section-title {
     font-size: 1.5rem;
-  }
-
-  .artist-info p {
-    font-size: 1rem;
-    color: #bbb;
-  }
-  .top-albums-section h3 {
-    font-size: 1.2rem;
     color: white;
-    margin-bottom: 15px;
+    padding-left: 1.3rem;
   }
 
-  .song-entry {
+  .artist-profile-song {
     display: flex;
     align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  .song-entry img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 15px;
-  }
-  .song-info {
-    flex-grow: 1;
-    color: white;
+    margin-bottom: 0.9rem;
   }
 
-  .song-info p {
+  .artist-profile-song-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .artist-profile-song-info {
+    flex-grow: 1;
+  }
+
+  .artist-profile-song-title {
     font-size: 1rem;
-    margin: 3px 0;
+    font-weight: bold;
   }
-  .album-entry {
+
+  .artist-profile-song-artist {
+    font-size: 0.9rem;
   }
-  .album-entry img {
+
+  .artist-profile-song-meta {
+    text-align: right;
   }
-  .album-info {
+
+  .artist-profile-song-duration,
+  .artist-profile-song-rating {
+    font-size: 0.9rem;
   }
-  .album-info p {
+
+  .artist-profile-top-albums {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
   }
+
+  .artist-profile-album {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  .artist-profile-album-img {
+    width: 80%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .artist-profile-album-info {
+    flex-grow: 1;
+  }
+
+  .artist-profile-album-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .artist-profile-album-year,
+  .artist-profile-album-rating {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
   /* BandProfile */
   /* Charts - Rune */
   .albums-list-container {

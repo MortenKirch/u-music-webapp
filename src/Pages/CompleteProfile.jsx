@@ -37,6 +37,7 @@ export default function CompleteProfile({ setOnboardingComplete }) {
         event.preventDefault();
         await updateUserProfile(uid); // Use the UID from the state
         setOnboardingComplete(true);
+        localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is set to true.
         navigate("/"); // navigates to Home Page
     };
 

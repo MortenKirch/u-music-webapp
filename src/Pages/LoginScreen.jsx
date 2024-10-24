@@ -17,7 +17,7 @@ export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
       await signInWithEmailAndPassword(auth, email, password);
       setIsAuth(true); // Set authentication state
       setOnboardingComplete(true)
-      localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is complete.
+      localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is set to true.
       localStorage.setItem("isAuth", JSON.stringify(true)); // Store authentication state
       navigate('/'); // Navigate to the home screen "private routes"
     } catch{
@@ -33,6 +33,7 @@ export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
     setIsAuth(true); // Simulate guest login
     localStorage.setItem("isAuth", true);
     setOnboardingComplete(true) // sets onboarding state
+    localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is set to true.
     navigate('/'); // Navigate to the private routes
   };
 
