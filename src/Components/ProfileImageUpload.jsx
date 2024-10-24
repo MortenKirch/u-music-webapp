@@ -1,6 +1,6 @@
 import { useState } from "react";
 import placeholder from "../images/image-placeholder.png";
-
+//passes uid as a prop to make sure you upload the picture to your own profile
 export default function ProfileImageUpload({ uid }) {
   const [image, setImage] = useState(null); // State for the uploaded image
 
@@ -30,7 +30,7 @@ export default function ProfileImageUpload({ uid }) {
           profileImage: imageData, // Store the image data URL in Firebase
         }),
       });
-
+// error handling for response
       if (!response.ok) {
         console.error("Error uploading image to Firebase");
       } else {
@@ -43,6 +43,7 @@ export default function ProfileImageUpload({ uid }) {
     <div className="image-upload-container">
       <label htmlFor="upload">
         <div className="image-placeholder">
+          {/*short hand if statement if uploaded picture doesnt exist show placeholder */}
           {image ? (
             <img src={image} alt="Profile" className="profile-image" />
           ) : (

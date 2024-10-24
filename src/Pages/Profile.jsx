@@ -18,7 +18,7 @@ export default function Profile({setOnboardingComplete}) {
   const [userData, setUserData] = useState(null); // State for user data
   const uid = localStorage.getItem('uid'); // Get UID from local storage
 const navigate = useNavigate();
-
+//function for navigating to create account of you try to go to profile whe nyou havent registered
 function handleClick(){
   setOnboardingComplete(false)
   navigate("/create-account")
@@ -39,6 +39,7 @@ function handleClick(){
           if (data.profileImage) {
             setImageUrl(data.profileImage); // Set profile image if available
           }
+          //error handling
         } else {
           console.log("No user data found.");
         }
@@ -49,7 +50,7 @@ function handleClick(){
 
     fetchUserData(); // Call the fetch function
   }, [uid]); // Run this effect when uid changes
-
+// if user data doesnt exist return dont have a user jsx
   if (!userData) {
     return <>
     <div>You dont have one, Create a user here</div>

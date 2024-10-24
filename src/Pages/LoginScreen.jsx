@@ -7,7 +7,7 @@ import Logo from "../images/logo.png";
 export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
   const [email, setEmail] = useState(""); // State for email
   const [password, setPassword] = useState(""); // State for password
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // used to navigate the different components and pages
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -17,6 +17,7 @@ export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
       const userCredentials = await signInWithEmailAndPassword(auth, email, password);
       setIsAuth(true); // Set authentication state
       setOnboardingComplete(true)
+      //Store user id in a variable so that we can set the data of uid to local storage
       const user = userCredentials.user
       const uid = user.uid
       localStorage.setItem("uid", uid); // Store the UID
