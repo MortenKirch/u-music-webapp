@@ -737,7 +737,143 @@
     margin-top: 1rem;
   }
 
-  /* Concert */
+  /* Concert - Artilon*/
+
+  .top-sang-container {
+    color: white;
+    padding: 16px;
+    min-height: 100vh;
+  }
+
+  .concert-header-section {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .concert-cover {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .concert-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .concert-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .concert-data {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .concert-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #b3b3b3;
+  }
+
+  .concert-flag {
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  .concert-date-button {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 16px;
+  }
+
+  .setlist-section {
+    margin-top: 32px;
+  }
+
+  .setlist-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .setlist-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #ffffff;
+  }
+
+  .setlist-song {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .setlist-song-title {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .setlist-song-data {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+  }
+
+  .setlist-rating {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+  }
+
+  .see-full-list {
+    display: block;
+    margin: 16px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .warmup-section {
+    margin-top: 32px;
+  }
+
+  .warmup-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .warmup-box {
+    display: flex;
+    gap: 16px;
+  }
+
+  .warmup-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+  }
+
+  .warmup-cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
 
   /* Reviews */
   .reviews-container {
