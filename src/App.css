@@ -639,6 +639,87 @@
     width: 50%;
   }
   /* Genres */
+  .genres-container {
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .genres-container h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .genres-container p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .read-more {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .genres-container h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .popular-artists,
+  .top-rated-albums {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popular-artists-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular-artists-card img,
+  .top-rated-albums-card img {
+    width: 6rem;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .popular-artists-card h3 {
+    font-size: 0.7rem;
+    text-align: left;
+    margin-left: 0.3rem;
+  }
+
+  .top-rated-albums-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-rated-albums-card h3 {
+    font-size: 0.6rem;
+  }
+
+  .top-rated-albums-card p {
+    font-size: 0.6rem;
+  }
+
+  .see-more-albums,
+  .see-more-artists {
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
 
   /* Artilon */
 
