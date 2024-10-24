@@ -4,53 +4,57 @@ import SomebodySaveMe from "../images/eminem-sombody-save-me.png";
 import Houdini from "../images/eminem-houdini.png";
 
 export default function ArtistProfileSongs() {
+  const songs = [
+    {
+      title: "Fuel",
+      artist: "Eminem, JID",
+      duration: "3:43",
+      rating: "8.3/10",
+      image: Fuel,
+    },
+    {
+      title: "Rap God",
+      artist: "Eminem, JuiceWrld",
+      duration: "3:43",
+      rating: "8.3/10",
+      image: RapGod,
+    },
+    {
+      title: "Rap God",
+      artist: "Eminem, JuiceWrld",
+      duration: "3:43",
+      rating: "8.3/10",
+      image: SomebodySaveMe,
+    },
+    {
+      title: "Rap God",
+      artist: "Eminem, JuiceWrld",
+      duration: "3:43",
+      rating: "8.3/10",
+      image: Houdini,
+    },
+  ];
+
   return (
-    <div className="top-songs-section">
-      <h3>Top Songs</h3>
-      <div className="song-entry">
-        <img src={Fuel} alt="Fuel" />
-        <div className="song-info">
-          <p>Fuel</p>
-          <p>Eminem, JID</p>
-        </div>
-        <div className="song-details">
-          <p>3:43</p>
-          <p>Rating: 8.3/10</p>
-        </div>
+    <>
+      <h2 className="artist-profile-section-title">Top Songs</h2>
+      <div className="artist-profile-top-songs">
+        {songs.map((song, index) => (
+          <div key={index} className="artist-profile-song">
+            <img src={song.image} alt="" className="artist-profile-song-img" />
+            <div className="artist-profile-song-info">
+              <p className="artist-profile-song-title">{song.title}</p>
+              <p className="artist-profile-song-artist">{song.artist}</p>
+            </div>
+            <div className="artist-profile-song-meta">
+              <p className="artist-profile-song-duration">{song.duration}</p>
+              <p className="artist-profile-song-rating">
+                Rating: {song.rating}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="song-entry">
-        <img src={RapGod} alt="Rap God" />
-        <div className="song-info">
-          <p>Rap God</p>
-          <p>Eminem, JuiceWrld</p>
-        </div>
-        <div className="song-details">
-          <p>3:43</p>
-          <p>Rating: 8.3/10</p>
-        </div>
-      </div>
-      <div className="song-entry">
-        <img src={SomebodySaveMe} alt="Some body save me" />
-        <div className="song-info">
-          <p>Somebody save me</p>
-          <p>Eminem, Jelly roll</p>
-        </div>
-        <div className="song-details">
-          <p>3:50</p>
-          <p>Rating: 8.6/10</p>
-        </div>
-      </div>
-      <div className="song-entry">
-        <img src={Houdini} alt="Rap God" />
-        <div className="song-info">
-          <p>Houdini</p>
-          <p>Eminem</p>
-        </div>
-        <div className="song-details">
-          <p>3:47</p>
-          <p>Rating: 9.1/10</p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
