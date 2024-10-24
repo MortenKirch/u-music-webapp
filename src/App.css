@@ -1505,6 +1505,7 @@
   .song-container-new {
     color: white;
     padding: 16px;
+    min-height: 100vh;
   }
 
   .song-header-section-new {
@@ -1515,15 +1516,15 @@
   }
 
   .song-cover-new {
-    width: 120px;
-    height: 120px;
-    border-radius: 4px;
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
   }
 
   .song-details-new {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
   }
 
   .song-title-new {
@@ -1534,13 +1535,13 @@
 
   .song-meta-new {
     color: #71767b;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
 
   .song-artist-new {
     color: #71767b;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
 
@@ -1552,14 +1553,14 @@
 
   .music-icons-new {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     margin-top: 16px;
   }
 
   .icon-new {
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
   }
 
   /* Lyrics Section */
@@ -1574,12 +1575,13 @@
   }
 
   .lyrics-box-new {
-    padding: 0;
-    border-radius: 0;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #2e2e2e;
   }
 
   .lyrics-text-new {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     color: #ffffff;
     margin: 0;
@@ -1639,19 +1641,19 @@
   }
 
   .reviewer-pic-new {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
   }
 
   .reviewer-name-new {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0;
   }
 
   .review-date-new {
-    font-size: 12px;
+    font-size: 14px;
     color: #71767b;
   }
 
@@ -1673,7 +1675,7 @@
     border: none;
     padding: 0;
     color: #71767b;
-    font-size: 14px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 4px;
