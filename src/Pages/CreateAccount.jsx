@@ -37,7 +37,7 @@ export default function CreateAccount({ setOnboardingComplete }) {
 
       // Call function to create user data in the database takes
       await createUser(user.uid, username, email);
-
+      localStorage.setItem("uid", uid); // Store the UID
       // setting onboarding complete to false since they arent done with the create account
         setOnboardingComplete(false)
       //navigates to the next page in the account creation passes uid to the next page
@@ -53,6 +53,7 @@ export default function CreateAccount({ setOnboardingComplete }) {
     const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`; // URL to store user data
     const response = await fetch(url, {
       method: "PUT", // Use PUT to create the user data
+      
       body: JSON.stringify({ username, email }) // Include username and email in the body
     });
     if (!response.ok) {

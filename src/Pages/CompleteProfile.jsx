@@ -46,7 +46,7 @@ export default function CompleteProfile({ setOnboardingComplete }) {
     return (
         <section className="login-section"> 
             <h1>Personal Information</h1>           
-            <ProfileImageUpload/>
+            <ProfileImageUpload uid={uid}/>
 
             <textarea
                 value={bio}

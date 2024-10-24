@@ -26,6 +26,7 @@ import { useState, useEffect } from "react";
 import Album from "./Pages/Album";
 import Song from "./Pages/Song";
 
+
 export default function App() {
   const auth = getAuth();
   const [isAuth, setIsAuth] = useState(
@@ -68,7 +69,7 @@ export default function App() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile setOnboardingComplete={setOnboardingComplete}/>} />
         <Route path="/explore-artists" element={<ExploreArtists />} />
         <Route path="/explore-genres" element={<ExploreGenres />} />
         <Route path="/explore-albums" element={<ExploreAlbum />} />
