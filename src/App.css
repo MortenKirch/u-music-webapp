@@ -582,10 +582,26 @@
     margin-bottom: 0.5rem;
   }
 
-  /* Explore Concerts */
+  /* Concerts landing page */
   .explore-concerts-container {
     padding: 20px;
     color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .explore-concerts-container h1 {
+    text-align: center;
+  }
+
+  .change-location {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    text-decoration: underline;
   }
 
   .concerts-list {
@@ -719,6 +735,118 @@
     cursor: pointer;
     text-decoration: underline;
     margin-top: 1rem;
+  }
+
+  /* Concert */
+
+  /* Reviews */
+  .reviews-container {
+    padding: 20px;
+    color: white;
+  }
+
+  .reviews-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .review-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .review-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-profile-image {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .review-profile-name {
+    font-size: 0.7rem;
+  }
+
+  .star {
+    color: gray;
+  }
+
+  .star.gold {
+    color: gold;
+  }
+
+  .main-review {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .review-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-album-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .review-album-year {
+    font-size: 0.8rem;
+  }
+
+  .review-artist-name {
+    font-size: 1rem;
+  }
+
+  .review-genres {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .main-review-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-album-image {
+    width: 10rem;
+    object-fit: cover;
+    margin-bottom: 0.7rem;
+    margin-top: 2rem;
+  }
+
+  .full-review-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .full-review-button {
+    background-color: #2a2525;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .review-likes {
+    text-align: right;
   }
 
   /* Artilon */

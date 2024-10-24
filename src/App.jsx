@@ -5,7 +5,8 @@ import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
 import Profile from "./pages/Profile";
 import NavTop from "./Components/NavbarTop";
-import Concerts from "./pages/Concerts";
+import Concert from "./Pages/Concert";
+import ConcertsLandingPage from "./Pages/ConcertsLandingPage";
 import Reviews from "./pages/Reviews";
 import Notifications from "./pages/Notifications";
 import NavbarBottom from "./Components/NavbarBottom";
@@ -18,7 +19,6 @@ import ExploreGenres from "./Pages/ExploreGenres";
 import Genre from "./Pages/Genre";
 import ExploreAlbum from "./Pages/ExploreAlbums";
 import ExploreSong from "./Pages/ExploreSong";
-import ExploreConcerts from "./Pages/ExploreConcerts";
 import ArtistProfile from "./pages/ArtistProfile";
 import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -33,20 +33,17 @@ export default function App() {
   );
 
   const [onboardingComplete, setOnboardingComplete] = useState(
-  localStorage.getItem("onboardingComplete") === "true"
+    localStorage.getItem("onboardingComplete") === "true"
   );
-  
 
   //makes a use effect to check if users are authenticated or not if not setIsAuth is false
   useEffect(
     () => {
       const accountCreation = onAuthStateChanged(auth, (user) => {
-        console.log(isAuth)
+        console.log(isAuth);
         if (user) {
           setIsAuth(true); // Set to true if user is authenticated
           localStorage.setItem("isAuth", "true");
-          
-        
         } else {
           setIsAuth(false);
           localStorage.removeItem("isAuth");
@@ -64,7 +61,11 @@ export default function App() {
       <NavbarBottom />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
-        <Route path="/concerts" element={<Concerts />} />
+        <Route path="/concert" element={<Concert />} />
+        <Route
+          path="/concerts-landing-page"
+          element={<ConcertsLandingPage />}
+        />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/explore" element={<Explore />} />
@@ -73,7 +74,6 @@ export default function App() {
         <Route path="/explore-genres" element={<ExploreGenres />} />
         <Route path="/explore-albums" element={<ExploreAlbum />} />
         <Route path="/explore-songs" element={<ExploreSong />} />
-        <Route path="/explore-concerts" element={<ExploreConcerts />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genre" element={<Genre />} />
@@ -88,7 +88,6 @@ export default function App() {
 
   const publicRoutes = (
     <Routes>
-
       <Route
         path="/login"
         element={

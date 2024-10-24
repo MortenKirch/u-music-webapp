@@ -26,7 +26,7 @@ export default function Explore() {
         <NavLink to="/explore-songs" className="browse-item">
           Song
         </NavLink>
-        <NavLink to="/explore-concerts" className="browse-item">
+        <NavLink to="/concerts-landing-page" className="browse-item">
           Concerts
         </NavLink>
       </div>

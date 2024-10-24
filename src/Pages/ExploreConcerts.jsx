@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import EminemTour from "../images/concert-posters/eminem-poster.png";
 import KendrickTour from "../images/concert-posters/kendrick-poster.png";
 
@@ -29,7 +30,11 @@ export default function ExploreConcerts() {
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
-      <h2>Concerts</h2>
+
+      <h1>Concerts near Denmark</h1>
+      <button className="change-location">
+        Change Location <FontAwesomeIcon icon={faChevronDown} />{" "}
+      </button>
 
       <div className="concerts-list">
         {concerts.map((concert, index) => (
