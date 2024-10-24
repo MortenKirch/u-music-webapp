@@ -7,18 +7,23 @@ import Logo from "../images/logo.png";
 export default function LoginScreen({ setIsAuth, setOnboardingComplete }) {
   const [email, setEmail] = useState(""); // State for email
   const [password, setPassword] = useState(""); // State for password
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // used to navigate the different components and pages
 
   const handleLogin = async (event) => {
     event.preventDefault();
 
 
       try{// Sign in using Firebase Authentication checks if email and password is the same as the databases
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredentials = await signInWithEmailAndPassword(auth, email, password);
       setIsAuth(true); // Set authentication state
       setOnboardingComplete(true)
+      //Store user id in a variable so that we can set the data of uid to local storage
+      const user = userCredentials.user
+      const uid = user.uid
+      localStorage.setItem("uid", uid); // Store the UID
       localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is set to true.
       localStorage.setItem("isAuth", JSON.stringify(true)); // Store authentication state
+      
       navigate('/'); // Navigate to the home screen "private routes"
     } catch{
       console.log("error")
