@@ -2,15 +2,13 @@ import Eminem from "../images/Eminem.jpeg";
 
 export default function ArtistProfileArtist() {
   return (
-    <div className="artist-section">
-      <div className="artist-image">
-        <img src={Eminem} alt="Eminem" />
-      </div>
-      <div className="artist-info">
-        <h2>Eminem</h2>
-        <p>Born: Detroit, ML, United States</p>
-        <p>Member of: D12, Bad Mee..</p>
-        <p>Genres: Pop Rap, Hardcore Hi..</p>
+    <div className="artist-profile-header">
+      <img src={Eminem} alt="Artist Image" className="artist-profile-img" />
+      <div className="artist-profile-info">
+        <h1 className="artist-profile-name">Eminem</h1>
+        <p className="artist-profile-bio">Born: Detroit, MI, United States</p>
+        <p className="artist-profile-bio">Member of: D12, Bad Mee..</p>
+        <p className="artist-profile-genres">Genres: Pop Rap, Hardcore Hi..</p>
       </div>
     </div>
   );

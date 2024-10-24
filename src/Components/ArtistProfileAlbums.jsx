@@ -2,25 +2,42 @@ import Fuel from "../images/eminem-fuel.png";
 import RapGod from "../images/rap-god.png";
 
 export default function ArtistProfileAlbum() {
+  const albums = [
+    {
+      title: "Encore",
+      year: 2009,
+      rating: "8.3/10",
+      img: Fuel,
+    },
+    {
+      title: "Rap God",
+      year: 2008,
+      rating: "9.1/10",
+      img: RapGod,
+    },
+  ];
+
   return (
-    <div className="top-albums-section">
-      <h3>Top Albums</h3>
-      <div className="album-entry">
-        <img src={Fuel} alt="Encore" />
-        <div className="album-info">
-          <p>Encore</p>
-          <p>2009 - Album</p>
-          <p>Rating: 8.3/10</p>
-        </div>
+    <>
+      <h2 className="artist-profile-section-title">Top Albums</h2>
+      <div className="artist-profile-top-albums">
+        {albums.map((albums, index) => (
+          <div key={index} className="artist-profile-album">
+            <img
+              src={albums.img}
+              alt="Album 1"
+              className="artist-profile-album-img"
+            />
+            <div className="artist-profile-album-info">
+              <p className="artist-profile-album-title">{albums.title}</p>
+              <p className="artist-profile-album-year">{albums.year} - Album</p>
+              <p className="artist-profile-album-rating">
+                Rating: {albums.rating}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="album-entry">
-        <img src={RapGod} alt="The Eminem Show" />
-        <div className="album-info">
-          <p>The Eminem Show</p>
-          <p>2009 - Album</p>
-          <p>Rating: 8.3/10</p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

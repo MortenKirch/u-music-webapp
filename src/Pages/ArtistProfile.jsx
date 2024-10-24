@@ -4,10 +4,10 @@ import ArtistProfileSongs from "../Components/ArtistProfileSongs";
 
 export default function ArtistProfile() {
   return (
-    <>
+    <div className="artist-profile-container">
       <ArtistProfileArtist />
       <ArtistProfileSongs />
       <ArtistProfileAlbum />
-    </>
+    </div>
   );
 }

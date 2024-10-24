@@ -33,20 +33,17 @@ export default function App() {
   );
 
   const [onboardingComplete, setOnboardingComplete] = useState(
-  localStorage.getItem("onboardingComplete") === "true"
+    localStorage.getItem("onboardingComplete") === "true"
   );
-  
 
   //makes a use effect to check if users are authenticated or not if not setIsAuth is false
   useEffect(
     () => {
       const accountCreation = onAuthStateChanged(auth, (user) => {
-        console.log(isAuth)
+        console.log(isAuth);
         if (user) {
           setIsAuth(true); // Set to true if user is authenticated
           localStorage.setItem("isAuth", "true");
-          
-        
         } else {
           setIsAuth(false);
           localStorage.removeItem("isAuth");
@@ -88,7 +85,6 @@ export default function App() {
 
   const publicRoutes = (
     <Routes>
-
       <Route
         path="/login"
         element={
