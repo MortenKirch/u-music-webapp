@@ -1,0 +1,69 @@
+[
+  {
+    "artistId": "artist_001",
+    "name": "Bob Dylan",
+    "genreIds": ["folk", "blues_rock"],
+    "rating": 4.9,
+    "albumIds": ["album_001"],
+    "description": {
+      "born": "1941-05-24",
+      "formed": null,
+      "members": ["Bob Dylan"],
+      "genres": ["folk", "blues_rock"]
+    },
+    "image": "https://example.com/bob_dylan.jpg"
+  },
+  {
+    "artistId": "artist_002",
+    "name": "Pixies",
+    "genreIds": ["pop", "indie_pop"],
+    "rating": 4.5,
+    "albumIds": ["album_002"],
+    "description": {
+      "born": null,
+      "formed": "1986-01-01",
+      "members": [
+        "Black Francis",
+        "Joey Santiago",
+        "Kim Deal",
+        "David Lovering"
+      ],
+      "genres": ["pop", "indie_pop"]
+    },
+    "image": "https://example.com/pixies.jpg"
+  },
+  {
+    "artistId": "artist_003",
+    "name": "Pink Floyd",
+    "genreIds": ["progressive", "rock"],
+    "rating": 4.8,
+    "albumIds": ["album_003"],
+    "description": {
+      "born": null,
+      "formed": "1965-01-01",
+      "members": [
+        "Syd Barrett",
+        "David Gilmour",
+        "Roger Waters",
+        "Nick Mason",
+        "Richard Wright"
+      ],
+      "genres": ["progressive", "rock"]
+    },
+    "image": "https://example.com/pink_floyd.jpg"
+  },
+  {
+    "artistId": "artist_004",
+    "name": "Kendrick Lamar",
+    "genreIds": ["conscious", "hip_hop"],
+    "rating": 4.7,
+    "albumIds": ["album_004"],
+    "description": {
+      "born": "1987-06-17",
+      "formed": null,
+      "members": ["Kendrick Lamar"],
+      "genres": ["conscious", "hip_hop"]
+    },
+    "image": "https://example.com/kendrick_lamar.jpg"
+  }
+]

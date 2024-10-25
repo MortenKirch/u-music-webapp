@@ -5,6 +5,7 @@ import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
 import Profile from "./pages/Profile";
 import NavTop from "./Components/NavbarTop";
+import Activity from "./Pages/Activity";
 import Concert from "./Pages/Concert";
 import ConcertsLandingPage from "./Pages/ConcertsLandingPage";
 import Reviews from "./pages/Reviews";
@@ -25,7 +26,6 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import Album from "./Pages/Album";
 import Song from "./Pages/Song";
-
 
 export default function App() {
   const auth = getAuth();
@@ -63,11 +63,18 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
-        <Route path="/concerts-landing-page"element={<ConcertsLandingPage />}/>
+        <Route
+          path="/concerts-landing-page"
+          element={<ConcertsLandingPage />}
+        />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/activity" element={<Activity />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/profile" element={<Profile setOnboardingComplete={setOnboardingComplete}/>} />
+        <Route
+          path="/profile"
+          element={<Profile setOnboardingComplete={setOnboardingComplete} />}
+        />
         <Route path="/explore-artists" element={<ExploreArtists />} />
         <Route path="/explore-genres" element={<ExploreGenres />} />
         <Route path="/explore-albums" element={<ExploreAlbum />} />

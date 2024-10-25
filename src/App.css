@@ -150,7 +150,7 @@
 
   .profile-image {
     width: 75%;
-    
+
     object-fit: cover; /* Ensures the image covers the entire area */
   }
 
@@ -595,12 +595,12 @@
     color: white;
   }
 
-  h2 {
+  .explore-albums-container h2 {
     margin-bottom: 20px;
     text-align: left;
   }
 
-  .albums-grid {
+  .explore-albums-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -608,7 +608,7 @@
     justify-content: center;
   }
 
-  .album-card {
+  .explore-album-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -617,28 +617,28 @@
     height: 11rem;
     border-radius: 10px;
     margin-bottom: 2rem;
+    color: var(--white);
   }
 
-  .albums-grid h3 {
+  .explore-albums-grid h3 {
     font-size: 0.7rem;
-    white-space: nowrap;
+    font-weight: 700;
   }
 
-  .artist-text {
+  .explore-album-artist-text {
     font-size: 0.6rem;
     font-weight: 400;
     white-space: nowrap;
   }
 
-  .genre-text {
+  .explore-album-genre-text {
     font-size: 0.5rem;
     font-weight: 200;
     white-space: nowrap;
   }
 
-  .album-image {
-    width: 80%;
-    height: 70%;
+  .explore-album-image {
+    width: 100%;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 0.5rem;
@@ -799,7 +799,236 @@
     margin-top: 1rem;
   }
 
-  /* Concert - Artilon*/
+  /* Reviews */
+  .reviews-container {
+    padding: 20px;
+    color: white;
+  }
+
+  .reviews-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .review-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .review-card.expanded .review-likes {
+    margin-top: 0.5rem;
+  }
+
+  .rating-stars {
+    margin-top: 0.5rem;
+  }
+
+  .review-rating h3 {
+    color: var(--white);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .review-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-profile-image {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .review-profile-name {
+    font-size: 0.7rem;
+  }
+
+  .star {
+    color: gray;
+  }
+
+  .star.gold {
+    color: gold;
+  }
+
+  .main-review {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .review-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .review-album-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-album-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .review-album-year {
+    font-size: 0.8rem;
+  }
+
+  .review-artist-name {
+    font-size: 1rem;
+  }
+
+  .review-genres {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  .main-review-text {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .review-album-image {
+    width: 10rem;
+    object-fit: cover;
+    margin-bottom: 0.7rem;
+    margin-top: 2rem;
+  }
+
+  .full-review-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .full-review-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-top: 0.7rem;
+    text-decoration: underline;
+  }
+
+  .review-likes {
+    text-align: right;
+  }
+
+  /* Activity */
+  .activity-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+  }
+
+  .activity-page h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+
+  .activity-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .activity-tab {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .activity-tab.active {
+    text-decoration: underline;
+  }
+
+  .activity-feed {
+    padding: 1rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    color: var(--white);
+    font-size: 0.8rem;
+  }
+
+  .activity-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .activity-item p {
+    width: fit-content;
+    line-height: 1.5;
+  }
+
+  .profile-pic {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .activity-content {
+    flex-grow: 1;
+  }
+
+  .activity-review {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .activity-review p {
+    font-size: 0.7rem;
+  }
+
+  .album-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  .activity-text-and-stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .activity-rating-stars {
+    font-size: 0.8rem;
+  }
+
+  /* Artilon */
+
+  /* Concert */
 
   .top-sang-container {
     color: white;
@@ -979,119 +1208,6 @@
     margin: 0;
   }
 
-  /* Reviews */
-  .reviews-container {
-    padding: 20px;
-    color: white;
-  }
-
-  .reviews-container h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .review-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  .review-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
-  .review-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .review-profile-image {
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-  }
-
-  .review-profile-name {
-    font-size: 0.7rem;
-  }
-
-  .star {
-    color: gray;
-  }
-
-  .star.gold {
-    color: gold;
-  }
-
-  .main-review {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .review-album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .review-album-title {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  .review-album-year {
-    font-size: 0.8rem;
-  }
-
-  .review-artist-name {
-    font-size: 1rem;
-  }
-
-  .review-genres {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    font-weight: 600;
-  }
-
-  .main-review-text {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .review-album-image {
-    width: 10rem;
-    object-fit: cover;
-    margin-bottom: 0.7rem;
-    margin-top: 2rem;
-  }
-
-  .full-review-button-container {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .full-review-button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    margin-top: 1rem;
-    text-decoration: underline;
-  }
-
-  .review-likes {
-    text-align: right;
-  }
-
-  /* Artilon */
-
   /* Profile */
 
   /* profil sektionen */
@@ -1167,7 +1283,7 @@
   .favorit-sektion-artist h2 {
     color: white;
     text-align: left;
-    
+
     margin-bottom: 16px;
   }
 
@@ -1208,14 +1324,14 @@
 
   .favorit-sange-sektion {
     width: 90vw;
-   margin: auto;
+    margin: auto;
   }
 
   .favorit-songs {
     color: white;
-  
+
     margin-bottom: 16px;
- 
+
     margin-left: 0;
   }
 
@@ -1239,13 +1355,11 @@
   .song-info {
     display: flex;
     flex-direction: column;
-    
   }
 
   .song-title {
     color: white;
     margin: 0;
-    
   }
 
   .sangnavn {
@@ -1267,11 +1381,9 @@
   .song-details {
     display: flex;
     flex-direction: column;
-   align-items: end;
-   justify-content: space-between;
-   width: 100%;
-   
-   
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .timestamp {
@@ -1281,7 +1393,6 @@
   }
 
   .song-details p {
-   
     margin: 2px 0;
     font-size: 14px;
   }
@@ -1294,7 +1405,6 @@
   }
 
   .favorit-albums-title {
-  
     margin-bottom: 20px;
     color: white;
     margin-left: 0;
@@ -1421,7 +1531,6 @@
   }
 
   .review-box p {
-   
     color: var(--gray);
   }
 
@@ -1432,7 +1541,6 @@
   }
 
   .review-rating {
-    
     color: #9ca3af;
     margin-top: 8px;
     margin: 2px 0;

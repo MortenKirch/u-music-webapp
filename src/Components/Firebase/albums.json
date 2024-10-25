@@ -1,0 +1,42 @@
+[
+  {
+    "albumId": "album_001",
+    "name": "Bring It All Back Home",
+    "image": "https://example.com/album_cover1.jpg",
+    "year": 1965,
+    "artistId": "artist_001",
+    "genreId": ["genre_folk", "genre_blues_rock"],
+    "songId": ["song_001", "song_002"],
+    "description": "A folk album that blends nostalgic elements with storytelling lyrics."
+  },
+  {
+    "albumId": "album_002",
+    "name": "The Queen Is Dead",
+    "image": "https://example.com/album_cover2.jpg",
+    "year": 1986,
+    "artistId": "artist_002",
+    "genreId": ["genre_rock", "genre_indie"],
+    "songId": ["song_003", "song_004"],
+    "description": "An indie rock classic by The Smiths, exploring themes of love and melancholy."
+  },
+  {
+    "albumId": "album_003",
+    "name": "Wish You Were Here",
+    "image": "https://example.com/album_cover3.jpg",
+    "year": 1975,
+    "artistId": "artist_003",
+    "genreId": ["genre_progressive", "genre_rock"],
+    "songId": ["song_005", "song_006"],
+    "description": "A smooth, melancholic progressive rock album with Pink Floyd's signature sound."
+  },
+  {
+    "albumId": "album_004",
+    "name": "To Pimp a Butterfly",
+    "image": "https://example.com/album_cover4.jpg",
+    "year": 2015,
+    "artistId": "artist_004",
+    "genreId": ["genre_hiphop", "genre_conscious"],
+    "songId": ["song_007", "song_008"],
+    "description": "Kendrick Lamar’s acclaimed album blending jazz, funk, and socially conscious hip-hop."
+  }
+]
