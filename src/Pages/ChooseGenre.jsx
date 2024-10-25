@@ -1,88 +1,93 @@
-import { useNavigate, useLocation } from "react-router-dom"; // Importing hooks for navigation and location
-import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 import Logo from "../images/logo.png";
 
-export default function ChooseGenre({ setOnboardingComplete }) {
+export default function ChooseGenre() {
     const navigate = useNavigate();
-    //useLocation is used to pass the uid into this page from the last 
     const location = useLocation();
-    const { uid} = location.state; // Get the passed data
-    //useState to store new data about genres you choose
+    const { uid } = location.state;
     const [selectedGenres, setSelectedGenres] = useState([]);
+    const containerRef = useRef(null);
 
-    // placeholder list of available genres
-    const genres = ["Pop", "Rock", "Jazz", "Hip-Hop", "Classical", "Electronic", "Blues", "Reggae", "Country"];
+    const genres = ["Pop", "Rock", "Jazz", "Hip-Hop", "Classical", "Electronic", "Blues", "Reggae", "Country", "Metal", "Folk", "Soul", "R&B", "Punk", "Funk", "Disco"];
 
-    // Handle genre selection/deselection
     const handleGenreClick = (genre) => {
         if (selectedGenres.includes(genre)) {
-            setSelectedGenres(selectedGenres.filter(g => g !== genre)); // Deselect genre
-        } else if (selectedGenres.length < 3) {
-            setSelectedGenres([...selectedGenres, genre]); // Select genre
+            setSelectedGenres(selectedGenres.filter(g => g !== genre));
+        } else {
+            setSelectedGenres([...selectedGenres, genre]);
         }
     };
 
-       // Function to update user data in Firebase database
-       const updateUserGenres = async (uid, genres) => {
+    const updateUserGenres = async (uid, genres) => {
         const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
         const response = await fetch(url, {
-            method: "PATCH", // Use PATCH to update existing user data
-            body: JSON.stringify({ genres }) // Add selected genres to the user data
+            method: "PATCH",
+            body: JSON.stringify({ genres })
         });
-        //simple error handling
         if (!response.ok) {
             console.log("Sorry, something went wrong");
         }
     };
-    // Check if the user chose 3 genres
-    const canProceed = selectedGenres.length >= 3;
 
+    const canProceed = selectedGenres.length >= 3; // At least 3 genres to proceed
 
-    // Handle continue button
     const handleSubmit = async (event) => {
         event.preventDefault();
-        await updateUserGenres(uid, selectedGenres); // Update user data with selected genres
-        
-        navigate("/finish-profile", { state: { uid} }); // Navigate to the next page making sure to pass the uid on to the last page in create onboarding
+        if (canProceed) {
+            await updateUserGenres(uid, selectedGenres);
+            navigate("/finish-profile", { state: { uid } });
+        }
     };
 
- 
-//jsx for genre page
+    // useEffect to handle scroll position after the component mounts
+    useEffect(() => {
+        const dragContainer = document.querySelector(".bubble-drag-container");
+        const bubbleContainer = document.querySelector(".bubble-container");
+    
+        if (dragContainer && bubbleContainer) {
+            // Calculate the center points for both horizontal and vertical scroll
+            dragContainer.scrollLeft = (bubbleContainer.scrollWidth - dragContainer.clientWidth) / 2.5;
+            dragContainer.scrollTop = (bubbleContainer.scrollHeight - dragContainer.clientHeight) / 3;
+        }
+    }, []); // Empty dependency array means this runs once after the initial render
+
+    const totalSteps = 3; // Total onboarding steps
+    const completedSteps = 1; // Current completed step (this step)
+    const progressPercentage = ((completedSteps / totalSteps) * 100) + '%';
+    
     return (
-        <section className="login-section">
+        <section className="login-section locked-section">
             <img src={Logo} alt="logo for uMusic" className="logo" />
             <h1 className="logoName logo-margin">uMusic</h1>
             <h2>Choose Your Favorite Genres</h2>
-            <div className="bubble-container">
-                {genres.map((genre, index) => (
-                    <div
-                        key={index}
-                        className={`bubble ${selectedGenres.includes(genre) ? 'selected' : ''}`}
-                        onClick={() => handleGenreClick(genre)} // Handle genre selection
-                    >
-                        {genre}
-                    </div>
-                ))}
+            <div className="bubble-drag-container">
+                <div
+                    className="bubble-container"
+                    ref={containerRef}
+                >
+                    {genres.map((genre, index) => (
+                        <div
+                            key={index}
+                            className={`bubble ${selectedGenres.includes(genre) ? 'selected' : ''}`}
+                            onClick={() => handleGenreClick(genre)}
+                        >
+                            {genre}
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="navigate-button-container">
-                <button 
-                    className="login-button sign-in-button navigate-button" 
-                    type="button" 
-                    onClick={() => navigate(-1)} // annonymus function for easy readabillity navigates to previus page
-                >
+                <button className="login-button sign-in-button navigate-button" type="button" onClick={() => navigate(-1)}>
                     Go back
                 </button>
-                <button 
-                    className="login-button sign-in-button navigate-button" 
-                    type="button" 
-                    disabled={!canProceed} // Disable button if less than 3 genres are selected
-                    onClick={handleSubmit} // Call handleSubmit on click
-                >
+                <button className="login-button sign-in-button navigate-button" type="button" disabled={!canProceed} onClick={handleSubmit}>
                     Continue
                 </button>
             </div>
-            <div>
-                <p className="placeholder-bar">placeholder for onboarding bar</p>
+            
+            <div className="progress-bar">
+                <div className="progress" style={{ width: progressPercentage }}></div>
             </div>
         </section>
     );
