@@ -936,6 +936,18 @@
     text-align: left;
   }
 
+  .review-card.expanded .review-likes {
+    margin-top: 0.5rem;
+  }
+
+  .rating-stars {
+    margin-top: 0.5rem;
+  }
+
+  .review-rating h3 {
+    color: var(--white);
+  }
+
   .review-header {
     display: flex;
     align-items: center;
@@ -973,6 +985,13 @@
   }
 
   .review-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .review-album-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1020,7 +1039,7 @@
     background-color: transparent;
     color: white;
     border: none;
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     text-decoration: underline;
   }
 
