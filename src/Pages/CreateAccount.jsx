@@ -34,10 +34,11 @@ export default function CreateAccount({ setOnboardingComplete }) {
       // Create account using Firebase Authentication and method createUserWithEmailAndPassword
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user; // Get user object
-
+      const uid = user.uid
       // Call function to create user data in the database takes
       await createUser(user.uid, username, email);
       localStorage.setItem("uid", uid); // Store the UID
+      console.log(uid)
       // setting onboarding complete to false since they arent done with the create account
         setOnboardingComplete(false)
       //navigates to the next page in the account creation passes uid to the next page

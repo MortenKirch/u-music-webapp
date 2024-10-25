@@ -40,7 +40,9 @@ export default function CompleteProfile({ setOnboardingComplete }) {
         localStorage.setItem("onboardingComplete", JSON.stringify(true)) // sets onboarding state into local storrage to make sure users onboard is set to true.
         navigate("/"); // navigates to Home Page
     };
-
+    const totalSteps = 3; 
+    const completedSteps = 2; // Current completed step (this step)
+    const progressPercentage = ((completedSteps / totalSteps) * 100) + '%';
    
 //jsx for user imput makes sure to take all the values the user puts down.
     return (
@@ -124,8 +126,9 @@ export default function CompleteProfile({ setOnboardingComplete }) {
                     Finish
                 </button>
             </div>
-            <div>
-                <p className="placeholder-bar">placeholder for onboarding bar</p>
+
+            <div className="progress-bar">
+                <div className="progress" style={{ width: progressPercentage }}></div>
             </div>
         </section>
     );

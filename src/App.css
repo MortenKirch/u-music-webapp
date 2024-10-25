@@ -176,17 +176,45 @@
   input[type="checkbox"]::before {
     background-color: var(--trans-black);
   }
-
+  .locked-section{
+    overflow-x: hidden;
+  }
+  .bubble-drag-container{ 
+    overflow: scroll;
+    width: 90vw;
+    height: 50vh; 
+ 
+    padding: 10px;
+  
+  }
   .bubble-container {
+    width: 660px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-  }
+    
+    cursor: grab;
+ 
+    margin: 0 auto;
+    
+    
+}
 
-  .bubble {
+.bubble-container:active {
+    cursor: grabbing;
+    
+}
+
+.bubble {
+
     width: 100px;
     height: 100px;
-    background-color: lightblue;
+    background: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60%),
+    radial-gradient(circle at 40% 60%, rgba(255, 0, 150, 0.3) 0%, rgba(255, 0, 150, 0) 50%),
+    radial-gradient(circle at 70% 40%, rgba(0, 255, 255, 0.3) 0%, rgba(0, 255, 255, 0) 50%),
+    radial-gradient(circle at 30% 80%, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0) 50%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
+  background-size: 100px 100px; /* Size of the bubbles */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -194,11 +222,45 @@
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+    scrollbar-color: 0%;
+    
+   
+}
+.bubble:first-child {
+  margin-left: 70px; /* Add left offset to the first bubble */
+}
+.bubble:nth-child(11n) {
+  margin-left: 55px; /* Add left offset to every 11th bubble */
+}
 
-  .bubble.selected {
-    background-color: orange;
-  }
+/*removes scrollbar for chrome */
+::-webkit-scrollbar {
+  display: none;
+}
+.bubble.selected {
+  background-size: 125px 125px;
+    width: 125px;
+    height: 125px;
+    margin: 0;
+  
+    
+}
+
+.progress-bar {
+  width: 90%;
+  height: 10px; /* Height of the progress bar */
+  background-color: var(--trans-black); /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between the progress bar and the next element */
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--gray); /* Progress color */
+  border-radius: 5px; /* Rounded corners for the filled part */
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
   .checkbox-container {
     display: flex;
     justify-content: space-between;
@@ -533,12 +595,12 @@
     color: white;
   }
 
-  h2 {
+  .explore-albums-container h2 {
     margin-bottom: 20px;
     text-align: left;
   }
 
-  .albums-grid {
+  .explore-albums-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -546,7 +608,7 @@
     justify-content: center;
   }
 
-  .album-card {
+  .explore-album-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -555,28 +617,28 @@
     height: 11rem;
     border-radius: 10px;
     margin-bottom: 2rem;
+    color: var(--white);
   }
 
-  .albums-grid h3 {
+  .explore-albums-grid h3 {
     font-size: 0.7rem;
-    white-space: nowrap;
+    font-weight: 700;
   }
 
-  .artist-text {
+  .explore-album-artist-text {
     font-size: 0.6rem;
     font-weight: 400;
     white-space: nowrap;
   }
 
-  .genre-text {
+  .explore-album-genre-text {
     font-size: 0.5rem;
     font-weight: 200;
     white-space: nowrap;
   }
 
-  .album-image {
-    width: 80%;
-    height: 70%;
+  .explore-album-image {
+    width: 100%;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 0.5rem;
