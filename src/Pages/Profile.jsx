@@ -143,7 +143,7 @@ function handleClick(){
         <div className="review-header">
           <img src={profilePic} alt="Reviewer" className="reviewer-pic" />
           <div className="reviewer-details">
-            <p>Pug Fartmeister</p>
+            <p>{userData.username}</p>
             <div className="review-rating">
               <span>Rating 5/10</span>
             </div>

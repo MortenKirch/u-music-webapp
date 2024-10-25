@@ -149,8 +149,8 @@
   }
 
   .profile-image {
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    
     object-fit: cover; /* Ensures the image covers the entire area */
   }
 
@@ -737,7 +737,185 @@
     margin-top: 1rem;
   }
 
-  /* Concert */
+  /* Concert - Artilon*/
+
+  .top-sang-container {
+    color: white;
+    padding: 16px;
+    min-height: 100vh;
+  }
+
+  .concert-header-section {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .concert-cover {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .concert-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .concert-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .concert-data {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .concert-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #b3b3b3;
+  }
+
+  .concert-flag {
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  .concert-date-button {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 16px;
+  }
+
+  .setlist-section {
+    margin-top: 32px;
+  }
+
+  .setlist-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .setlist-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #ffffff;
+  }
+
+  .setlist-song {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .setlist-song-title {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .setlist-song-data {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+  }
+
+  .setlist-rating {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+  }
+
+  .see-full-list {
+    display: block;
+    margin: 16px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .warmup-section {
+    margin-top: 32px;
+  }
+
+  .warmup-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .warmup-box {
+    display: flex;
+    gap: 16px;
+  }
+
+  .warmup-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+  }
+
+  .warmup-cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
+
+  .warmup-name {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .tourdates-section {
+    margin-top: 32px;
+  }
+
+  .tourdates-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .tourdates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tourdate-box {
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    padding: 16px;
+    color: white;
+  }
+
+  .tourdate {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .tourlocation {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+  }
 
   /* Reviews */
   .reviews-container {
@@ -773,7 +951,7 @@
   .review-header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 10px;
   }
 
@@ -896,7 +1074,6 @@
 
   .profile-name {
     margin-top: 10px;
-    font-size: 45px;
     margin-bottom: 8px;
   }
 
@@ -928,12 +1105,12 @@
   }
 
   .followers {
-    font-size: 20px;
+    font-size: 1rem;
     text-align: left;
   }
 
   .following {
-    font-size: 20px;
+    font-size: 1rem;
     text-align: right;
   }
 
@@ -947,13 +1124,13 @@
   .favorit-sektion-artist h2 {
     color: white;
     text-align: left;
-    font-size: 30px;
+    
     margin-bottom: 16px;
   }
 
   .favorit-songs {
     color: white;
-    font-size: 30px;
+
     margin-left: 30px;
   }
 
@@ -965,20 +1142,21 @@
   }
 
   .artist-card {
-    flex-shrink: 0;
-    text-align: center;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75px;
   }
 
   .artist-card p {
-    font-size: 15px;
     margin-top: 8px;
     color: white;
+    text-align: center;
   }
 
   .artist-image {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border-radius: 9px;
     object-fit: cover;
   }
@@ -986,15 +1164,15 @@
   /*sange sektion */
 
   .favorit-sange-sektion {
-    margin: 32px 0;
-    padding: 0 20px;
+    width: 90vw;
+   margin: auto;
   }
 
   .favorit-songs {
     color: white;
-    font-size: 20px;
+  
     margin-bottom: 16px;
-    font-size: 30px;
+ 
     margin-left: 0;
   }
 
@@ -1010,20 +1188,21 @@
 
   .sang-content {
     display: flex;
-    align-items: center;
+    width: 100%;
+    height: 100%;
     gap: 12px;
   }
 
   .song-info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    
   }
 
   .song-title {
     color: white;
     margin: 0;
-    font-size: 20px;
+    
   }
 
   .sangnavn {
@@ -1032,11 +1211,12 @@
 
   .singer-name {
     color: #9ca3af;
+    font-size: 0.8rem;
   }
 
   .sang-image {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 4px;
   }
@@ -1044,10 +1224,11 @@
   .song-details {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 50px;
-    align-items: flex-start;
-    color: white;
+   align-items: end;
+   justify-content: space-between;
+   width: 100%;
+   
+   
   }
 
   .timestamp {
@@ -1057,6 +1238,7 @@
   }
 
   .song-details p {
+   
     margin: 2px 0;
     font-size: 14px;
   }
@@ -1069,7 +1251,7 @@
   }
 
   .favorit-albums-title {
-    font-size: 30px;
+  
     margin-bottom: 20px;
     color: white;
     margin-left: 0;
@@ -1114,6 +1296,7 @@
   }
   .album-details {
     display: flex;
+    justify-content: center;
     gap: 15px;
     margin-top: 5px;
   }
@@ -1121,8 +1304,6 @@
   /* review sektion */
 
   .reviews-sektion {
-    margin: 32px 0;
-    padding: 0 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1135,8 +1316,7 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
-    margin: 32px 0;
-    padding: 0 20;
+    margin-bottom: 2vh;
   }
 
   .reviews-sektion button {
@@ -1155,7 +1335,7 @@
     padding: 16px;
     border-radius: 12px;
     max-width: 450px;
-    width: 100%;
+    width: 90vw;
     margin: 0 auto;
     margin-bottom: 250px;
   }
@@ -1198,8 +1378,8 @@
   }
 
   .review-box p {
-    font-size: 14px;
-    color: #9ca3af;
+   
+    color: var(--gray);
   }
 
   .review-actions {
@@ -1209,7 +1389,7 @@
   }
 
   .review-rating {
-    font-size: 14px;
+    
     color: #9ca3af;
     margin-top: 8px;
     margin: 2px 0;
@@ -1700,6 +1880,7 @@
   .song-container-new {
     color: white;
     padding: 16px;
+    min-height: 100vh;
   }
 
   .song-header-section-new {
@@ -1710,15 +1891,15 @@
   }
 
   .song-cover-new {
-    width: 120px;
-    height: 120px;
-    border-radius: 4px;
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
   }
 
   .song-details-new {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
   }
 
   .song-title-new {
@@ -1729,13 +1910,13 @@
 
   .song-meta-new {
     color: #71767b;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
 
   .song-artist-new {
     color: #71767b;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
 
@@ -1747,14 +1928,14 @@
 
   .music-icons-new {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     margin-top: 16px;
   }
 
   .icon-new {
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
   }
 
   /* Lyrics Section */
@@ -1769,12 +1950,13 @@
   }
 
   .lyrics-box-new {
-    padding: 0;
-    border-radius: 0;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #2e2e2e;
   }
 
   .lyrics-text-new {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     color: #ffffff;
     margin: 0;
@@ -1834,19 +2016,19 @@
   }
 
   .reviewer-pic-new {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
   }
 
   .reviewer-name-new {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0;
   }
 
   .review-date-new {
-    font-size: 12px;
+    font-size: 14px;
     color: #71767b;
   }
 
@@ -1868,7 +2050,7 @@
     border: none;
     padding: 0;
     color: #71767b;
-    font-size: 14px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 4px;

@@ -63,10 +63,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
-        <Route
-          path="/concerts-landing-page"
-          element={<ConcertsLandingPage />}
-        />
+        <Route path="/concerts-landing-page"element={<ConcertsLandingPage />}/>
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/explore" element={<Explore />} />
