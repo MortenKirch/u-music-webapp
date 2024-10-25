@@ -1,0 +1,38 @@
+[
+  {
+    "albumId": "album_001",
+    "image": "bob-dylan-bring-it-all.jpg",
+    "year": 1965,
+    "artistId": "artist_001",
+    "genreId": ["folk", "blues_rock"],
+    "songId": ["song_001", "song_002"],
+    "description": "An folk album that blends nostalgic elements with sounds?"
+  },
+  {
+    "albumId": "album_002",
+    "image": "https://example.com/album_cover.jpg",
+    "year": 1986,
+    "artistId": "artist_002",
+    "genreId": ["pop", "indie_pop"],
+    "songId": ["song_001", "song_002"],
+    "description": "An indie rock album that blends nostalgic elements with modern sounds."
+  },
+  {
+    "albumId": "album_003",
+    "image": "https://example.com/album_cover.jpg",
+    "year": 1975,
+    "artistId": "artist_003",
+    "genreId": ["progressive", "rock"],
+    "songId": ["song_001", "song_002"],
+    "description": "An indie rock album that blends nostalgic elements with modern sounds."
+  },
+  {
+    "albumId": "album_004",
+    "image": "https://example.com/album_cover.jpg",
+    "year": 2015,
+    "artistId": "artist_004",
+    "genreId": ["conscious", "hip_hop"],
+    "songId": ["song_001", "song_002"],
+    "description": "An indie rock album that blends nostalgic elements with modern sounds."
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "songId": "song_001",
+    "title": "Like a Rolling Stone",
+    "albumId": "album_001",
+    "artistId": "artist_001",
+    "genreIds": ["folk", "blues_rock"],
+    "releaseYear": 1965,
+    "duration": 360,
+    "rating": 4.8
+  },
+  {
+    "songId": "song_002",
+    "title": "It Takes a Lot to Laugh, It Takes a Train to Cry",
+    "albumId": "album_001",
+    "artistId": "artist_001",
+    "genreIds": ["folk", "blues_rock"],
+    "releaseYear": 1965,
+    "duration": 250,
+    "rating": 4.5
+  },
+  {
+    "songId": "song_003",
+    "title": "Here Comes Your Man",
+    "albumId": "album_002",
+    "artistId": "artist_002",
+    "genreIds": ["pop", "indie_pop"],
+    "releaseYear": 1986,
+    "duration": 210,
+    "rating": 4.3
+  },
+  {
+    "songId": "song_004",
+    "title": "Where Is My Mind?",
+    "albumId": "album_002",
+    "artistId": "artist_002",
+    "genreIds": ["pop", "indie_pop"],
+    "releaseYear": 1986,
+    "duration": 200,
+    "rating": 4.7
+  },
+  {
+    "songId": "song_005",
+    "title": "Shine On You Crazy Diamond",
+    "albumId": "album_003",
+    "artistId": "artist_003",
+    "genreIds": ["progressive", "rock"],
+    "releaseYear": 1975,
+    "duration": 810,
+    "rating": 4.9
+  },
+  {
+    "songId": "song_006",
+    "title": "Wish You Were Here",
+    "albumId": "album_003",
+    "artistId": "artist_003",
+    "genreIds": ["progressive", "rock"],
+    "releaseYear": 1975,
+    "duration": 330,
+    "rating": 4.8
+  },
+  {
+    "songId": "song_007",
+    "title": "Alright",
+    "albumId": "album_004",
+    "artistId": "artist_004",
+    "genreIds": ["conscious", "hip_hop"],
+    "releaseYear": 2015,
+    "duration": 220,
+    "rating": 4.6
+  },
+  {
+    "songId": "song_008",
+    "title": "How Much a Dollar Cost",
+    "albumId": "album_004",
+    "artistId": "artist_004",
+    "genreIds": ["conscious", "hip_hop"],
+    "releaseYear": 2015,
+    "duration": 250,
+    "rating": 4.7
+  }
+]
