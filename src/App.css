@@ -391,7 +391,7 @@
   }
 
   /* Explore Artist */
-  .artist-explore-container {
+  .explore-artists-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -407,32 +407,33 @@
     height: 100vh;
   }
 
-  .artist-explore-container h2 {
+  .explore-artists-container h2 {
     margin-bottom: 20px;
     font-size: 2rem;
   }
 
-  .artists-grid {
+  .explore-artists-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     width: 100%;
   }
-  .artist-card {
+  .explore-artists-card {
     width: fit-content;
     justify-self: center;
     padding-bottom: 1.5rem;
   }
 
-  .artists-grid h3 {
+  .explore-artists-grid h3 {
     font-weight: 500;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     justify-self: start;
     width: fit-content;
     margin-left: 0.2rem;
+    color: var(--white);
   }
 
-  .artist-image {
+  .explore-artist-image {
     width: 100%;
     height: auto;
     border-radius: 10px;

@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 import KendrickLamar from "../images/artist-image/kendrick-lamar.png";
 import Drake from "../images/artist-image/drake.png";
 import Sza from "../images/artist-image/sza.png";
@@ -23,7 +24,7 @@ export default function ExploreArtists() {
     { name: "Ariana Grande", image: ArianaGrande },
   ];
   return (
-    <div className="explore-genres-container">
+    <div className="explore-artists-container">
       <div className="searchbar-container">
         <div className="search-input-container">
           <input type="text" placeholder="Search the library..." />
@@ -32,15 +33,17 @@ export default function ExploreArtists() {
       </div>
       <h2>Artists</h2>
 
-      <div className="artists-grid">
+      <div className="explore-artists-grid">
         {artists.map((artist, index) => (
-          <div className="artist-card" key={index}>
-            <img
-              src={artist.image}
-              alt={artist.name}
-              className="artist-image"
-            />
-            <h3>{artist.name}</h3>
+          <div className="explore-artists-card" key={index}>
+            <NavLink to="/artist-profile" className="artist-link">
+              <img
+                src={artist.image}
+                alt={artist.name}
+                className="explore-artists-image"
+              />
+              <h3>{artist.name}</h3>
+            </NavLink>
           </div>
         ))}
       </div>
