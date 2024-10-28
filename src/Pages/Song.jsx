@@ -44,6 +44,11 @@ export default function Song() {
           <p className="sort-option-new">Date</p>
         </div>
 
+        {/* Rating Display Moved Below Sort By */}
+        <div className="review-rating-display-new">
+          <p className="review-rating-new">Rating: 3.5/10</p>
+        </div>
+
         <div className="review-list-new">
           <div className="review-box-new">
             <div className="review-header-new">
@@ -62,10 +67,9 @@ export default function Song() {
               </p>
             </div>
             <div className="review-actions-new">
-              <p className="review-rating-new">Rating: 3.5/10</p>
               <div className="heart-reply-new">
                 <button className="heart-button-new">❤️</button>
-                <p className="reply-thread-new">Reply</p>
+                <span className="reply-thread-new">Reply</span>
               </div>
             </div>
           </div>
