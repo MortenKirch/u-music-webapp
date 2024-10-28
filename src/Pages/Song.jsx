@@ -1,4 +1,6 @@
 import "../App.css";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Songcover from "../images/rap-god.png";
 import profilePic from "../images/cat.jpg";
@@ -6,7 +8,35 @@ import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
-export default function Song({ userData }) {
+export default function SongPage({ setOnboardingComplete }) {
+  const [imageUrl, setImageUrl] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const uid = localStorage.getItem("uid");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data) {
+          setUserData(data);
+          if (data.profileImage) {
+            setImageUrl(data.profileImage);
+          }
+        } else {
+          console.log("No user data found.");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData(); // Call the function inside useEffect
+  }, [uid]);
+
   return (
     <div className="song-container-new">
       <div className="song-header-section-new">
@@ -55,11 +85,10 @@ export default function Song({ userData }) {
                 alt="Profile"
                 className="reviewer-pic-new"
               />
-
-              <p className="reviewer-name-new">test1</p>
+              <p className="reviewer-name-new">
+                {userData ? userData.username : "Anonymous"}
+              </p>
               <p className="review-date-new">Date: 2024</p>
-
-              <h4 className="Overskrift">Your Review Title</h4>
             </div>
             <div className="review-content-new">
               <p>
