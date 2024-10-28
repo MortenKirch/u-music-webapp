@@ -1,19 +1,19 @@
-import Fuel from "../images/eminem-fuel.png";
-import RapGod from "../images/rap-god.png";
+import TPAB from "../images/album-covers/tpab.png";
+import GKMC from "../images/album-covers/gkmc.png";
 
 export default function ArtistProfileAlbum() {
   const albums = [
     {
-      title: "Encore",
-      year: 2009,
-      rating: "8.3/10",
-      img: Fuel,
+      title: "To Pimp A Butterfly",
+      year: 2015,
+      rating: "9/10",
+      img: TPAB,
     },
     {
-      title: "Rap God",
-      year: 2008,
-      rating: "9.1/10",
-      img: RapGod,
+      title: "good kid, m.A.A.d city ",
+      year: 2012,
+      rating: "8/10",
+      img: GKMC,
     },
   ];
 

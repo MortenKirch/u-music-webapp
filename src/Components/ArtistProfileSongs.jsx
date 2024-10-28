@@ -1,37 +1,36 @@
-import Fuel from "../images/eminem-fuel.png";
-import RapGod from "../images/rap-god.png";
-import SomebodySaveMe from "../images/eminem-sombody-save-me.png";
-import Houdini from "../images/eminem-houdini.png";
+import Damn from "../images/album-covers/damn.png";
+import BlackPanther from "../images/album-covers/black-panther.png";
+import GKMC from "../images/album-covers/gkmc.png";
 
 export default function ArtistProfileSongs() {
   const songs = [
     {
-      title: "Fuel",
-      artist: "Eminem, JID",
-      duration: "3:43",
+      title: "Humble",
+      artist: "Kendrick Lamar",
+      duration: "2:57",
       rating: "8.3/10",
-      image: Fuel,
+      image: Damn,
     },
     {
-      title: "Rap God",
-      artist: "Eminem, JuiceWrld",
-      duration: "3:43",
+      title: "All The Stars (with SZA)",
+      artist: "Kendrick Lamar, SZA",
+      duration: "3:52",
       rating: "8.3/10",
-      image: RapGod,
+      image: BlackPanther,
     },
     {
-      title: "Rap God",
-      artist: "Eminem, JuiceWrld",
-      duration: "3:43",
+      title: "Money Trees",
+      artist: "Kendrick Lamar",
+      duration: "6:26",
       rating: "8.3/10",
-      image: SomebodySaveMe,
+      image: GKMC,
     },
     {
-      title: "Rap God",
-      artist: "Eminem, JuiceWrld",
-      duration: "3:43",
+      title: "LOVE. FEAT. ZACARI",
+      artist: "Kendrick Lamar, Zacari",
+      duration: "3:33",
       rating: "8.3/10",
-      image: Houdini,
+      image: Damn,
     },
   ];
 
