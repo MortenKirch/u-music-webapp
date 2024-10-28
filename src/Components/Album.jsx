@@ -1,5 +1,12 @@
+
+
+
+
 export default function AlbumComp() {
   
+
+
+
   const Albumdata = ({ albumcover, albumtitle, releaseyear, artistname, rating, songs }) => {
   return (  
 <div className="album-container">

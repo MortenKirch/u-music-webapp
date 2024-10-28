@@ -2,17 +2,17 @@ import "../App.css";
 
 import Songcover from "../images/rap-god.png";
 import profilePic from "../images/cat.jpg";
-import soundcloud from "../images/Soundcloud.jpg";
+import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
-export default function Song() {
+export default function Song({ userData }) {
   return (
     <div className="song-container-new">
       <div className="song-header-section-new">
         <img src={Songcover} alt="Rap god" className="song-cover-new" />
         <div className="song-details-new">
-          <h1 className="song-title-new">Rap god</h1>
+          <h1 className="song-title-new">Rap God</h1>
           <p className="song-meta-new">2003</p>
           <p className="song-artist-new">Artist - Eminem</p>
           <p className="song-rating-new">Avg Rating: 3:45</p>
@@ -37,12 +37,14 @@ export default function Song() {
           </a>
         </div>
       </div>
+      <h2 className="reviews-title-new">Reviews</h2>
+      <p className="sort-by-new">Sort by: Date</p>
 
       <div className="reviews-section-new">
-        <h2 className="reviews-title-new">Reviews</h2>
-        <div className="review-controls-new">
-          <p className="sort-by-new">Sort by:</p>
-          <p className="sort-option-new">Date</p>
+        <div className="review-controls-new"></div>
+
+        <div className="review-rating-display-new">
+          <p className="review-rating-new">Rating: 3.5/10</p>
         </div>
 
         <div className="review-list-new">
@@ -53,8 +55,11 @@ export default function Song() {
                 alt="Profile"
                 className="reviewer-pic-new"
               />
-              <h4 className="reviewer-name-new">Overskrift</h4>
+
+              <p className="reviewer-name-new">test1</p>
               <p className="review-date-new">Date: 2024</p>
+
+              <h4 className="Overskrift">Your Review Title</h4>
             </div>
             <div className="review-content-new">
               <p>
@@ -63,10 +68,9 @@ export default function Song() {
               </p>
             </div>
             <div className="review-actions-new">
-              <p className="review-rating-new">Rating: 3.5/10</p>
               <div className="heart-reply-new">
                 <button className="heart-button-new">❤️</button>
-                <p className="reply-thread-new">Reply</p>
+                <span className="reply-thread-new">Reply</span>
               </div>
             </div>
           </div>
