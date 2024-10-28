@@ -49,6 +49,7 @@ export default function ExploreConcerts() {
               <p className="tour-name">{concert.tour}</p>
               <p className="concert-dates">{concert.dates}</p>
               <p className="concert-location">{concert.location}</p>
+
               <button className="see-tour-button">See tour</button>
             </div>
           </div>
