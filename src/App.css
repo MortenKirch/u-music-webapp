@@ -2169,8 +2169,6 @@
 .reviews-section-new {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 10px;
   background-color: #2e2e2e;
   border-radius: 8px;
   margin-bottom: 100px;
@@ -2179,7 +2177,6 @@
 .reviews-title-new {
   font-size: 24px;
   font-weight: 600;
-  margin-top: 16 0px;
   margin-bottom: 15px;
   color: white;
 }
@@ -2188,14 +2185,18 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  color: #71767b;
 }
 
 .review-rating-display-new {
   margin-top: 10px;
+  text-align: right;
 }
 
 .review-rating-new {
   font-weight: bold;
+  font-size: 11px;
+  color: #71767b;
 }
 
 .sort-by-new,
@@ -2205,19 +2206,15 @@
 }
 
 .review-list-new {
-  margin-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 .review-box-new {
-  padding: 12px;
-  border-radius: 12px;
-
-  max-width: 450px;
-  width: 90vw;
-  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 0 20px;
 }
 
 .review-header-new {
@@ -2248,6 +2245,7 @@
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .heart-reply-new {

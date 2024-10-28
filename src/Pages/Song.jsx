@@ -6,13 +6,13 @@ import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
-export default function Song() {
+export default function Song({ userData }) {
   return (
     <div className="song-container-new">
       <div className="song-header-section-new">
         <img src={Songcover} alt="Rap god" className="song-cover-new" />
         <div className="song-details-new">
-          <h1 className="song-title-new">Rap god</h1>
+          <h1 className="song-title-new">Rap God</h1>
           <p className="song-meta-new">2003</p>
           <p className="song-artist-new">Artist - Eminem</p>
           <p className="song-rating-new">Avg Rating: 3:45</p>
@@ -38,13 +38,11 @@ export default function Song() {
         </div>
       </div>
       <h2 className="reviews-title-new">Reviews</h2>
-      <div className="reviews-section-new">
-        <div className="review-controls-new">
-          <p className="sort-by-new">Sort by:</p>
-          <p className="sort-option-new">Date</p>
-        </div>
+      <p className="sort-by-new">Sort by: Date</p>
 
-        {/* Rating Display Moved Below Sort By */}
+      <div className="reviews-section-new">
+        <div className="review-controls-new"></div>
+
         <div className="review-rating-display-new">
           <p className="review-rating-new">Rating: 3.5/10</p>
         </div>
@@ -57,8 +55,11 @@ export default function Song() {
                 alt="Profile"
                 className="reviewer-pic-new"
               />
-              <h4 className="reviewer-name-new">Overskrift</h4>
+
+              <p className="reviewer-name-new">test1</p>
               <p className="review-date-new">Date: 2024</p>
+
+              <h4 className="Overskrift">Your Review Title</h4>
             </div>
             <div className="review-content-new">
               <p>
