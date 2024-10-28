@@ -40,7 +40,7 @@ export default function ChooseGenre() {
         }
     };
 
-    // useEffect to handle scroll position after the component mounts
+    // useEffect to handle scroll position 
     useEffect(() => {
         const dragContainer = document.querySelector(".bubble-drag-container");
         const bubbleContainer = document.querySelector(".bubble-container");
@@ -53,7 +53,7 @@ export default function ChooseGenre() {
     }, []); // Empty dependency array means this runs once after the initial render
 
     const totalSteps = 3; // Total onboarding steps
-    const completedSteps = 1; // Current completed step (this step)
+    const completedSteps = 1; // Current completed step 
     const progressPercentage = ((completedSteps / totalSteps) * 100) + '%';
     
     return (
