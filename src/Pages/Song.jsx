@@ -2,7 +2,7 @@ import "../App.css";
 
 import Songcover from "../images/rap-god.png";
 import profilePic from "../images/cat.jpg";
-import soundcloud from "../images/Soundcloud.jpg";
+import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
@@ -37,9 +37,8 @@ export default function Song() {
           </a>
         </div>
       </div>
-
+      <h2 className="reviews-title-new">Reviews</h2>
       <div className="reviews-section-new">
-        <h2 className="reviews-title-new">Reviews</h2>
         <div className="review-controls-new">
           <p className="sort-by-new">Sort by:</p>
           <p className="sort-option-new">Date</p>

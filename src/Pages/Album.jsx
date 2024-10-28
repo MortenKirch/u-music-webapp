@@ -3,7 +3,7 @@ import profilePic from "../images/cat.jpg";
 
 // Import album cover and music icons
 import albumcover from "../images/to-pimp-a-butterfly.png";
-import soundcloud from "../images/Soundclouds.png";
+import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
