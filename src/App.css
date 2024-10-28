@@ -137,25 +137,25 @@
   }
 
   .image-placeholder {
-    width: 200px; /* Adjust the size as needed */
+    width: 200px; 
     height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    border: 2px solid var(--gray); /* Placeholder style */
+    border-radius: 50%; 
+    border: 2px solid var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensures any overflow is hidden */
-    cursor: pointer; /* Indicates the user can click */
+    overflow: hidden; 
+    cursor: pointer; 
   }
 
   .profile-image {
     width: 75%;
 
-    object-fit: cover; /* Ensures the image covers the entire area */
+    object-fit: cover;
   }
 
   .placeholder-text {
-    color: var(--white); /* Placeholder text color */
+    color: var(--white); 
   }
   .radio-container {
     width: 80%;
@@ -227,10 +227,10 @@
    
 }
 .bubble:first-child {
-  margin-left: 70px; /* Add left offset to the first bubble */
+  margin-left: 70px; 
 }
 .bubble:nth-child(11n) {
-  margin-left: 55px; /* Add left offset to every 11th bubble */
+  margin-left: 55px; 
 }
 
 /*removes scrollbar for chrome */
@@ -248,17 +248,17 @@
 
 .progress-bar {
   width: 90%;
-  height: 10px; /* Height of the progress bar */
-  background-color: var(--trans-black); /* Background color */
-  border-radius: 5px; /* Rounded corners */
-  margin-bottom: 20px; /* Space between the progress bar and the next element */
+  height: 10px; 
+  background-color: var(--trans-black); 
+  border-radius: 5px; 
+  margin-bottom: 20px; 
 }
 
 .progress {
   height: 100%;
-  background-color: var(--gray); /* Progress color */
-  border-radius: 5px; /* Rounded corners for the filled part */
-  transition: width 0.3s ease; /* Smooth transition for width change */
+  background-color: var(--gray);
+  border-radius: 5px; 
+  transition: width 0.3s ease; 
 }
 
   .checkbox-container {
@@ -701,8 +701,8 @@
   .tour-name,
   .concert-dates,
   .concert-location {
-    margin: 5px 0; /* Add space between lines */
-    font-size: 0.9rem; /* Font size for details */
+    margin: 5px 0; 
+    font-size: 0.9rem; 
   }
 
   .see-tour-button {
