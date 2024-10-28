@@ -32,7 +32,6 @@ export default function Album() {
         <div className="album-songs-section-album">
           <h2 className="album-songs-title-album">Songs</h2>
           <ul className="album-songs-list-album">
-            {/* Song 1 */}
             <li className="album-song-row-album">
               <img
                 src={albumcover}
