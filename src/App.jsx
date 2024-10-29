@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import LoginScreen from "./pages/LoginScreen";
 import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
-import Profile from "./pages/Profile";
+import Profile from "./Pages/Profile";
 import NavTop from "./Components/NavbarTop";
 import Activity from "./Pages/Activity";
 import Concert from "./Pages/Concert";
