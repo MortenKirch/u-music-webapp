@@ -73,10 +73,6 @@ export default function SongPage({ setOnboardingComplete }) {
       <div className="reviews-section-new">
         <div className="review-controls-new"></div>
 
-        <div className="review-rating-display-new">
-          <p className="review-rating-new">Rating: 3.5/10</p>
-        </div>
-
         <div className="review-list-new">
           <div className="review-box-new">
             <div className="review-header-new">
@@ -85,12 +81,17 @@ export default function SongPage({ setOnboardingComplete }) {
                 alt="Profile"
                 className="reviewer-pic-new"
               />
-              <p className="reviewer-name-new">
-                {userData ? userData.username : "Anonymous"}
-              </p>
-              <p className="review-date-new">Date: 2024</p>
+              <div className="name-rating-container">
+                <div className="review-rating-display-new">
+                  <p className="reviewer-name-new">
+                    {userData ? userData.username : "Anonymous"}
+                  </p>
+                  <p className="review-rating-new">Rating: 3.5/10</p>
+                </div>
+              </div>
             </div>
             <div className="review-content-new">
+              <h4>Overskrift</h4>
               <p>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -99,7 +100,7 @@ export default function SongPage({ setOnboardingComplete }) {
             <div className="review-actions-new">
               <div className="heart-reply-new">
                 <button className="heart-button-new">❤️</button>
-                <span className="reply-thread-new">Reply</span>
+                <span className="reply-thread-new">See thread</span>
               </div>
             </div>
           </div>
