@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 // import Madvillainy from "../images/album-covers/madvillainy.png";
 // import Rumours from "../images/album-covers/rumours.png";
 // import placeholder from "../images/cat.jpg";
+import { useNavigate } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -11,6 +12,7 @@ export default function Reviews() {
   const uid = localStorage.getItem("uid"); // Get UID from local storage
   const [reviews, setReviews] = useState([]);
   const [userData, setUserData] = useState(null); // State for user data
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getReviews() {
@@ -41,6 +43,11 @@ export default function Reviews() {
       [index]: !prev[index],
     }));
   };
+
+  function handleCreate(event) {
+    event.preventDefault();
+    navigate("/ReviewsForm");
+  }
 
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
@@ -99,7 +106,7 @@ export default function Reviews() {
   return (
     <section className="reviews-container">
       <h1>Reviews</h1>
-      <button>Create Review, skal nok flyttes?</button>
+      <button onClick={handleCreate}>Create Review, skal nok flyttes?</button>
 
       {reviews.map((review, index) => (
         <div

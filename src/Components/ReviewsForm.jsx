@@ -16,21 +16,16 @@ export default function ReviewsForm({ saveReview, review }) {
     }
   }, [review]); // useEffect is called every time post changes.
 
-  /**
-   * handleImageChange is called every time the user chooses an image in the fire system.
-   * The event is fired by the input file field in the form
-   */
-
   function handleSubmit(event) {
     event.preventDefault();
     const formData = {
       // create a new objebt to store the value from states / input fields
       title: title,
       rating: rating,
-      review: review,
+      review: reviewtext,
     };
 
-    const validForm = formData.title && formData.image; // will return false if one of the properties doesn't have a value
+    const validForm = formData.title && rating && reviewtext; // will return false if one of the properties doesn't have a value
     if (validForm) {
       // if all fields/ properties are filled, then call saveReview
       saveReview(formData);
@@ -42,7 +37,7 @@ export default function ReviewsForm({ saveReview, review }) {
 
   return (
     <form className="form-grid" onSubmit={handleSubmit}>
-      <label htmlFor="title">Title</label>
+      <label htmlFor="title">Title:</label>
       <input
         id="title"
         name="title"
@@ -52,18 +47,22 @@ export default function ReviewsForm({ saveReview, review }) {
         placeholder="Write a review title..."
         onChange={(e) => setTitle(e.target.value)}
       />
-      <label htmlFor="title">Title</label>
+      <label htmlFor="text">Write your review..</label>
       <input
         id="title"
         name="title"
         type="text"
         value={title}
         aria-label="title"
-        placeholder="Write a review title..."
+        placeholder="Write a review..."
         onChange={(e) => setTitle(e.target.value)}
       />
-      <label htmlFor="cars">Choose a car:</label>
-      <select onChange={(e) => setRating(e.target.value)} id="cars" name="cars">
+      <label htmlFor="rating">Choose a rating:</label>
+      <select
+        onChange={(e) => setRating(e.target.value)}
+        id="rating"
+        name="rating"
+      >
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
