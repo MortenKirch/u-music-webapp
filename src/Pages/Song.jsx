@@ -1,18 +1,48 @@
 import "../App.css";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Songcover from "../images/rap-god.png";
 import profilePic from "../images/cat.jpg";
-import soundcloud from "../images/Soundcloud.jpg";
+import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
-export default function Song() {
+export default function SongPage({ setOnboardingComplete }) {
+  const [imageUrl, setImageUrl] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const uid = localStorage.getItem("uid");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data) {
+          setUserData(data);
+          if (data.profileImage) {
+            setImageUrl(data.profileImage);
+          }
+        } else {
+          console.log("No user data found.");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData(); // Call the function inside useEffect
+  }, [uid]);
+
   return (
     <div className="song-container-new">
       <div className="song-header-section-new">
         <img src={Songcover} alt="Rap god" className="song-cover-new" />
         <div className="song-details-new">
-          <h1 className="song-title-new">Rap god</h1>
+          <h1 className="song-title-new">Rap God</h1>
           <p className="song-meta-new">2003</p>
           <p className="song-artist-new">Artist - Eminem</p>
           <p className="song-rating-new">Avg Rating: 3:45</p>
@@ -37,12 +67,14 @@ export default function Song() {
           </a>
         </div>
       </div>
+      <h2 className="reviews-title-new">Reviews</h2>
+      <p className="sort-by-new">Sort by: Date</p>
 
       <div className="reviews-section-new">
-        <h2 className="reviews-title-new">Reviews</h2>
-        <div className="review-controls-new">
-          <p className="sort-by-new">Sort by:</p>
-          <p className="sort-option-new">Date</p>
+        <div className="review-controls-new"></div>
+
+        <div className="review-rating-display-new">
+          <p className="review-rating-new">Rating: 3.5/10</p>
         </div>
 
         <div className="review-list-new">
@@ -53,7 +85,9 @@ export default function Song() {
                 alt="Profile"
                 className="reviewer-pic-new"
               />
-              <h4 className="reviewer-name-new">Overskrift</h4>
+              <p className="reviewer-name-new">
+                {userData ? userData.username : "Anonymous"}
+              </p>
               <p className="review-date-new">Date: 2024</p>
             </div>
             <div className="review-content-new">
@@ -63,10 +97,9 @@ export default function Song() {
               </p>
             </div>
             <div className="review-actions-new">
-              <p className="review-rating-new">Rating: 3.5/10</p>
               <div className="heart-reply-new">
                 <button className="heart-button-new">❤️</button>
-                <p className="reply-thread-new">Reply</p>
+                <span className="reply-thread-new">Reply</span>
               </div>
             </div>
           </div>
