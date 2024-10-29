@@ -11,8 +11,12 @@ export default function Reviews() {
   const [expandedReviews, setExpandedReviews] = useState({});
   const uid = localStorage.getItem("uid"); // Get UID from local storage
   const [reviews, setReviews] = useState([]);
+
   const [userData, setUserData] = useState(null); // State for user data
   const navigate = useNavigate();
+
+  const [update, setUpdate] = useState(false);
+  const forceUpdate = () => setUpdate(!update);
 
   useEffect(() => {
     async function getReviews() {
@@ -35,7 +39,7 @@ export default function Reviews() {
 
     getUserData();
     getReviews();
-  }, [uid]);
+  }, [uid, update]);
 
   const toggleExpandReview = (index) => {
     setExpandedReviews((prev) => ({
@@ -55,6 +59,27 @@ export default function Reviews() {
     }
     return text;
   };
+
+  async function handleDelete(id) {
+    console.log("Delete post", reviews);
+
+    const confirmDelete = window.confirm(
+      `Do you want to delete post, ${reviews.title}?`
+    );
+    if (confirmDelete) {
+      const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews/${id}.json`;
+      const response = await fetch(url, {
+        method: "DELETE",
+      });
+      if (response.ok) {
+        console.log("Post deleted");
+        forceUpdate();
+        navigate("/Reviews");
+      } else {
+        console.log("Sorry, something went wrong");
+      }
+    }
+  }
 
   // const reviews = [
   //   {
@@ -158,11 +183,10 @@ export default function Reviews() {
               </div>
             </div>
             <p className="main-review-text">
-                {expandedReviews[index]
-                  ? review.review
-                  : truncateText(review.review, 250)}
-              </p>
-         
+              {expandedReviews[index]
+                ? review.review
+                : truncateText(review.reviewtext, 250)}
+            </p>
           </div>
           <p className="review-likes">
             {review.likes} <FontAwesomeIcon icon={faHeart} />{" "}
@@ -176,6 +200,9 @@ export default function Reviews() {
             </button>
           </div>
           <button>Update, skal måske flyttes?</button>
+          <button type="submit" onClick={() => handleDelete(review.id)}>
+            Delete this
+          </button>
         </div>
       ))}
     </section>

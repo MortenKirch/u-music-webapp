@@ -1611,59 +1611,36 @@
 
   /* Album Display Section */
 
-  .album-container-album {
-    color: white;
-    padding: 16px;
-    min-height: 100vh;
+  .full-album-section {
+    height: 100vh;
   }
 
-  .album-display-section-album {
-    margin-bottom: 32px;
-  }
-
-  .album-header-info-album {
+  .full-album-header {
     display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 32px;
+    gap: 1.5rem;
   }
 
-  .album-cover-album {
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-    margin-top: 50px;
+  .full-album-header img {
+    width: 50%;
   }
 
-  .album-details-info-album {
+  .full-album-header-info {
+    width: 100%;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    color: var(--white);
+    font-size: 0.7rem;
   }
 
-  .album-title-heading-album {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    margin-top: 55px;
+  .full-album-header-title {
+    color: var(--gray);
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 
-  .album-meta-album {
-    color: #71767b;
-    font-size: 16px;
-    margin: 0;
-  }
-
-  .music-icons-album {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  .icon-album {
-    width: 55px;
-    height: 55px;
-    border-radius: 4px;
+  .full-album-header-description {
+    font-size: 0.8rem;
   }
 
   /* Songs Section */
@@ -2055,12 +2032,12 @@
   white-space: nowrap;
 }
 
-.recommended-albums-slider {
+.homepage-albums-slider {
   display: flex;
   gap: 20px;
 }
 
-.recommended-albums-card {
+.homepage-albums-card {
   flex: 0 0 auto;
   width: 33.3%;
   scroll-snap-align: center;

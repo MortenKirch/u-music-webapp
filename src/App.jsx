@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import LoginScreen from "./pages/LoginScreen";
 import Explore from "./Pages/Explore";
 import HomeScreen from "./pages/HomeScreen";
-import Profile from "./pages/Profile";
+import Profile from "./Pages/Profile";
 import NavTop from "./Components/NavbarTop";
 import Activity from "./Pages/Activity";
 import Concert from "./Pages/Concert";
@@ -24,7 +24,7 @@ import ArtistProfile from "./pages/ArtistProfile";
 import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
-import Album from "./Pages/Album";
+import AlbumPage from "./Pages/AlbumPage";
 import Song from "./Pages/Song";
 import ReviewsForm from "./Components/ReviewsForm";
 
@@ -60,7 +60,7 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-      
+
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
@@ -84,7 +84,7 @@ export default function App() {
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genre" element={<Genre />} />
         <Route path="/song" element={<Song />} />
-        <Route path="/album" element={<Album />} />
+        <Route path="/album" element={<AlbumPage />} />
         <Route path="/ReviewsForm" element={<ReviewsForm />} />
 
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
