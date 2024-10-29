@@ -369,7 +369,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: sticky;
     padding-bottom: 0.25rem;
     height: 60px;
     bottom: 0;
@@ -675,6 +675,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin-bottom: 100px;
   }
 
   .concert-card {
@@ -713,14 +714,17 @@
   .see-tour-button {
     margin-top: 2rem;
     margin-left: auto;
-    padding: 8px 12px;
+    padding: 12px 12px;
     background-color: #2a2525;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     width: 50%;
+    text-decoration: none;
+    text-align: center;
   }
+
   /* Genres */
   .genres-container {
     padding: 20px;
@@ -867,8 +871,7 @@
   }
 
   .main-review {
-  
- display: inline-block;
+    display: inline-block;
   }
 
   .review-album {
@@ -908,7 +911,6 @@
   }
 
   .main-review-text {
- 
     margin-top: 2rem;
   }
 
@@ -1102,13 +1104,13 @@
     margin-top: 32px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .sangcovers {
     width: 75px;
     height: 75px;
-    border-radius: 9px;
+    border-radius: 5px;
     object-fit: cover;
   }
 
@@ -1120,7 +1122,7 @@
 
   .setlist-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 90vw;
     align-items: center;
     padding: 8px 0;
@@ -1131,7 +1133,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .setlist-song-info {
@@ -1146,8 +1148,9 @@
     margin: 0;
   }
   .setlist-song-title {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
+    margin-bottom: 4px;
   }
 
   .setlist-song-data {
@@ -1830,13 +1833,20 @@
 
 .artist-profile-name {
   font-size: 1.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .artist-profile-bio,
 .artist-profile-genres {
-  margin: 0.4rem 0;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+.artist-profile-title {
+  color: var(--gray);
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .artist-profile-top-songs {
@@ -2032,7 +2042,7 @@
 }
 
 .recommendations-container section {
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
 
 .recommendations-container h2 {
@@ -2040,17 +2050,29 @@
   margin-bottom: 10px;
 }
 
-.albums-grid {
+.home-recommended-section {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.homepage-albums-slider {
   display: flex;
-  gap: 2px;
-  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.homepage-albums-card {
+  flex: 0 0 auto;
+  width: 33.3%;
+  scroll-snap-align: center;
 }
 
 .album-card {
-  width: 32%;
+  width: 100%;
   padding: 5px;
   border-radius: 10px;
   text-align: center;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .album-card img {
@@ -2061,6 +2083,8 @@
 .album-info {
   margin-top: 0px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .album-info p {
@@ -2074,7 +2098,10 @@
 }
 
 .rating {
+  display: flex;
   margin-top: 5px;
+  align-items: end;
+  width: 100%;
 }
 
 .rating button {
@@ -2084,6 +2111,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Notifications */
