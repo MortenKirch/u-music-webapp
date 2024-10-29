@@ -210,6 +210,14 @@ Why be a king when you can be a god?`;
     setIsLyricsExpanded(!isLyricsExpanded);
   };
 
+  const soundCloudUrl =
+    "https://soundcloud.com/dosill/rap-god-eminem?in=c7ux/sets/ux";
+
+  const appleMusicUrl =
+    "https://music.apple.com/us/album/rap-god/1440862963?i=1440863086";
+
+  const spotifyUrl = "https://open.spotify.com/track/6or1bKJiZ06IlK0vFvY75k";
+
   return (
     <div className="song-container-new">
       <div className="song-header-section-new">
@@ -220,9 +228,15 @@ Why be a king when you can be a god?`;
           <p className="song-artist-new">Artist - Eminem</p>
           <p className="song-rating-new">Avg Rating: 3:45</p>
           <div className="music-icons-new">
-            <img src={soundcloud} alt="soundcloud" className="icon-new" />
-            <img src={apple} alt="apple" className="icon-new" />
-            <img src={spotify} alt="spotify" className="icon-new" />
+            <a href={soundCloudUrl} target="_blank" rel="noopener noreferrer">
+              <img src={soundcloud} alt="soundcloud" className="icon-new" />
+            </a>
+            <a href={appleMusicUrl} target="_blank" rel="noopener noreferrer">
+              <img src={apple} alt="apple" className="icon-new" />
+            </a>
+            <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
+              <img src={spotify} alt="spotify" className="icon-new" />
+            </a>
           </div>
         </div>
       </div>
