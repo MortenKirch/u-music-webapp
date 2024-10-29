@@ -874,8 +874,8 @@
   }
 
   .main-review {
-    display: flex;
-    gap: 2rem;
+  
+ display: inline-block;
   }
 
   .review-album {
@@ -883,6 +883,10 @@
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    float: left;
+    width: 40%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 
   .review-album-info {
@@ -911,9 +915,7 @@
   }
 
   .main-review-text {
-    display: flex;
-    align-items: start;
-    justify-content: center;
+ 
     margin-top: 2rem;
   }
 
