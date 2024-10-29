@@ -6,8 +6,8 @@ export default function HomeReleases() {
   return (
     <section className="popular-releases-section">
       <h2>Popular releases</h2>
-      <div className="albums-grid">
-        <div className="album-card">
+      <div className="recommended-albums-slider">
+        <div className="recommended-albums-card">
           <img src={charlixcx} alt="Brat" />
           <div className="album-info">
             <p>Album</p>
@@ -16,7 +16,7 @@ export default function HomeReleases() {
             <p>Electropop</p>
           </div>
         </div>
-        <div className="album-card">
+        <div className="recommended-albums-card">
           <img src={nisemono} alt="Hit Me Hard and Soft" />
           <div className="album-info">
             <p>Album</p>
@@ -25,7 +25,7 @@ export default function HomeReleases() {
             <p>Alt-Pop</p>
           </div>
         </div>
-        <div className="album-card">
+        <div className="recommended-albums-card">
           <img src={rapgod} alt="Cutouts" />
           <div className="album-info">
             <p>Album</p>
