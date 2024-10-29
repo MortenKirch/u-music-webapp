@@ -2,7 +2,7 @@
 
 
 
-export default function AlbumComp() {
+export default function AlbumComp() 
   
 
 
