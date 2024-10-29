@@ -26,6 +26,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import Album from "./Pages/Album";
 import Song from "./Pages/Song";
+import ReviewsForm from "./Components/ReviewsForm";
 
 export default function App() {
   const auth = getAuth();
@@ -59,7 +60,7 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-      <NavbarBottom />
+      
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
@@ -84,10 +85,12 @@ export default function App() {
         <Route path="/genre" element={<Genre />} />
         <Route path="/song" element={<Song />} />
         <Route path="/album" element={<Album />} />
+        <Route path="/ReviewsForm" element={<ReviewsForm />} />
 
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <NavbarBottom />
     </>
   );
 
