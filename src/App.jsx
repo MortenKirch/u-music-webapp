@@ -59,7 +59,7 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-      <NavbarBottom />
+      
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
@@ -88,6 +88,7 @@ export default function App() {
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <NavbarBottom />
     </>
   );
 

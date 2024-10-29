@@ -369,7 +369,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: sticky;
     padding-bottom: 0.25rem;
     height: 60px;
     bottom: 0;
@@ -2007,7 +2007,7 @@
 }
 
 .recommendations-container section {
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
 
 .recommendations-container h2 {
@@ -2018,14 +2018,18 @@
 .albums-grid {
   display: flex;
   gap: 2px;
-  flex-wrap: wrap;
+  height: 100%;
+  overflow-x: scroll;
+
 }
 
 .album-card {
-  width: 32%;
+  width: 25%;
   padding: 5px;
   border-radius: 10px;
   text-align: center;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .album-card img {
@@ -2036,6 +2040,10 @@
 .album-info {
   margin-top: 0px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
 }
 
 .album-info p {
@@ -2049,7 +2057,11 @@
 }
 
 .rating {
+  display: flex;
   margin-top: 5px;
+  align-items: end;
+  width: 100%;
+
 }
 
 .rating button {
@@ -2059,6 +2071,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: underline;
+
+ 
 }
 
 /* Notifications */
