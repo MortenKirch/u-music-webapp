@@ -2057,12 +2057,12 @@
 
 .recommended-albums-card {
   flex: 0 0 auto;
-  width: 200px;
+  width: 33.3%;
   scroll-snap-align: center;
 }
 
 .album-card {
-  width: 25%;
+  width: 100%;
   padding: 5px;
   border-radius: 10px;
   text-align: center;
@@ -2080,7 +2080,6 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .album-info p {
