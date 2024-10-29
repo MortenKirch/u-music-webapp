@@ -2210,9 +2210,11 @@
 .see-all-lyrics-new {
   display: block;
   margin-top: 16px;
-  color: #71767b;
   text-decoration: none;
   font-size: 14px;
+  background: none;
+  border: none;
+  color: #71767b;
 }
 
 /* Reviews Section */

@@ -9,6 +9,7 @@ import TPAB from "../images/album-covers/tpab.png";
 import Madvillainy from "../images/album-covers/madvillainy.png";
 import GKMC from "../images/album-covers/gkmc.png";
 import Solkongen from "../images/album-covers/solkongen.png";
+import { NavLink } from "react-router-dom";
 
 export default function ExploreSong() {
   const songs = [
