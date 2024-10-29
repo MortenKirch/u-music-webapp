@@ -9,15 +9,9 @@ import Rumours from "../images/album-covers/rumours.png";
 import TPAB from "../images/album-covers/tpab.png";
 import Madvillainy from "../images/album-covers/madvillainy.png";
 import Solkongen from "../images/album-covers/solkongen.png";
+import GKMC from "../images/album-covers/gkmc.png";
 
 export default function ExploreAlbums() {
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.slice(0, maxLength) + "...";
-    }
-    return text;
-  };
-
   const albums = [
     {
       title: "Ants From Up There",
@@ -62,10 +56,10 @@ export default function ExploreAlbums() {
       image: Madvillainy,
     },
     {
-      title: "Ants From Up There",
-      artist: "Black Country, New Road",
-      genre: "Art Rock",
-      image: AFUT,
+      title: "good kid, m.A.A.d city",
+      artist: "Kendrick Lamar",
+      genre: "West Coast Hip Hop",
+      image: GKMC,
     },
     {
       title: "Solkongen",
@@ -93,10 +87,8 @@ export default function ExploreAlbums() {
                 alt={album.title}
                 className="explore-album-image"
               />
-              <h3>{truncateText(album.title, 20)}</h3>
-              <p className="explore-album-artist-text">
-                {truncateText(album.artist, 50)}
-              </p>
+              <h3>{album.title}</h3>
+              <p className="explore-album-artist-text">{album.artist}</p>
               <p className="explore-album-genre-text">{album.genre}</p>
             </div>
           </NavLink>

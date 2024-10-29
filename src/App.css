@@ -137,15 +137,15 @@
   }
 
   .image-placeholder {
-    width: 200px; 
+    width: 200px;
     height: 200px;
-    border-radius: 50%; 
+    border-radius: 50%;
     border: 2px solid var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
-    cursor: pointer; 
+    overflow: hidden;
+    cursor: pointer;
   }
 
   .profile-image {
@@ -155,7 +155,7 @@
   }
 
   .placeholder-text {
-    color: var(--white); 
+    color: var(--white);
   }
   .radio-container {
     width: 80%;
@@ -176,45 +176,59 @@
   input[type="checkbox"]::before {
     background-color: var(--trans-black);
   }
-  .locked-section{
+  .locked-section {
     overflow-x: hidden;
   }
-  .bubble-drag-container{ 
+  .bubble-drag-container {
     overflow: scroll;
     width: 90vw;
-    height: 50vh; 
- 
+    height: 50vh;
+
     padding: 10px;
-  
   }
   .bubble-container {
     width: 660px;
     display: flex;
     flex-wrap: wrap;
-    
+
     cursor: grab;
- 
+
     margin: 0 auto;
-    
-    
-}
+  }
 
-.bubble-container:active {
+  .bubble-container:active {
     cursor: grabbing;
-    
-}
+  }
 
-.bubble {
-
+  .bubble {
     width: 100px;
     height: 100px;
-    background: 
-    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60%),
-    radial-gradient(circle at 40% 60%, rgba(255, 0, 150, 0.3) 0%, rgba(255, 0, 150, 0) 50%),
-    radial-gradient(circle at 70% 40%, rgba(0, 255, 255, 0.3) 0%, rgba(0, 255, 255, 0) 50%),
-    radial-gradient(circle at 30% 80%, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0) 50%),
-    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
-  background-size: 100px 100px; /* Size of the bubbles */
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 60%
+      ),
+      radial-gradient(
+        circle at 40% 60%,
+        rgba(255, 0, 150, 0.3) 0%,
+        rgba(255, 0, 150, 0) 50%
+      ),
+      radial-gradient(
+        circle at 70% 40%,
+        rgba(0, 255, 255, 0.3) 0%,
+        rgba(0, 255, 255, 0) 50%
+      ),
+      radial-gradient(
+        circle at 30% 80%,
+        rgba(255, 255, 0, 0.2) 0%,
+        rgba(255, 255, 0, 0) 50%
+      ),
+      radial-gradient(
+        circle at 80% 10%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 50%
+      );
+    background-size: 100px 100px; /* Size of the bubbles */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -223,43 +237,39 @@
     cursor: pointer;
     transition: background-color 0.3s;
     scrollbar-color: 0%;
-    
-   
-}
-.bubble:first-child {
-  margin-left: 70px; 
-}
-.bubble:nth-child(11n) {
-  margin-left: 55px; 
-}
+  }
+  .bubble:first-child {
+    margin-left: 70px;
+  }
+  .bubble:nth-child(11n) {
+    margin-left: 55px;
+  }
 
-/*removes scrollbar for chrome */
-::-webkit-scrollbar {
-  display: none;
-}
-.bubble.selected {
-  background-size: 125px 125px;
+  /*removes scrollbar for chrome */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .bubble.selected {
+    background-size: 125px 125px;
     width: 125px;
     height: 125px;
     margin: 0;
-  
-    
-}
+  }
 
-.progress-bar {
-  width: 90%;
-  height: 10px; 
-  background-color: var(--trans-black); 
-  border-radius: 5px; 
-  margin-bottom: 20px; 
-}
+  .progress-bar {
+    width: 90%;
+    height: 10px;
+    background-color: var(--trans-black);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
 
-.progress {
-  height: 100%;
-  background-color: var(--gray);
-  border-radius: 5px; 
-  transition: width 0.3s ease; 
-}
+  .progress {
+    height: 100%;
+    background-color: var(--gray);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
 
   .checkbox-container {
     display: flex;
@@ -592,7 +602,6 @@
 
   /* Explore Album */
   .explore-albums-container {
-    padding: 20px;
     color: white;
   }
 
@@ -613,12 +622,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: fit-content;
-    height: 11rem;
+    text-align: center;
     border-radius: 10px;
     margin-bottom: 2rem;
     color: var(--white);
+    width: 100%;
   }
 
   .explore-albums-grid h3 {
@@ -640,8 +648,8 @@
 
   .explore-album-image {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    object-fit: cover;
     margin-bottom: 0.5rem;
   }
 
@@ -702,8 +710,8 @@
   .tour-name,
   .concert-dates,
   .concert-location {
-    margin: 5px 0; 
-    font-size: 0.9rem; 
+    margin: 5px 0;
+    font-size: 0.9rem;
   }
 
   .see-tour-button {

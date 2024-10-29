@@ -7,17 +7,10 @@ import PinkMoon from "../images/album-covers/pink-moon.png";
 import Rumours from "../images/album-covers/rumours.png";
 import TPAB from "../images/album-covers/tpab.png";
 import Madvillainy from "../images/album-covers/madvillainy.png";
-import TheGlow from "../images/album-covers/the-glow.png";
+import GKMC from "../images/album-covers/gkmc.png";
 import Solkongen from "../images/album-covers/solkongen.png";
 
 export default function ExploreSong() {
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.slice(0, maxLength) + "...";
-    }
-    return text;
-  };
-
   const songs = [
     {
       title: "Concorde",
@@ -26,7 +19,7 @@ export default function ExploreSong() {
       image: AFUT,
     },
     {
-      title: "Sinny Love",
+      title: "Skinny Love",
       artist: "Bon Iver",
       genre: "Indie Folk",
       image: ForEmma,
@@ -65,7 +58,7 @@ export default function ExploreSong() {
       title: "I Felt Your Shape",
       artist: "The Microphones",
       genre: "Indie Folk",
-      image: TheGlow,
+      image: GKMC,
     },
     {
       title: "Ung Kniv",
@@ -84,13 +77,17 @@ export default function ExploreSong() {
       </div>
       <h2>Albums</h2>
 
-      <div className="albums-grid">
+      <div className="explore-albums-grid">
         {songs.map((song, index) => (
-          <div className="album-card" key={index}>
-            <img src={song.image} alt={song.title} className="album-image" />
-            <h3>{truncateText(song.title, 14)}</h3>
-            <p className="artist-text">{truncateText(song.artist, 20)}</p>
-            <p className="genre-text">{song.genre}</p>
+          <div className="explore-album-card" key={index}>
+            <img
+              src={song.image}
+              alt={song.title}
+              className="explore-album-image"
+            />
+            <h3>{song.title}</h3>
+            <p className="explore-album-artist-text">{song.artist}</p>
+            <p className="explore-album-genre-text">{song.genre}</p>
           </div>
         ))}
       </div>
