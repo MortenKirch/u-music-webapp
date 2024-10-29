@@ -6,7 +6,7 @@
         "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
         "avgRating": "4.03/5.00",
         "release": "4 February 2022",
-        "genres": ["Rock", "Pop"],
+        "genres": ["Art Rock"],
         "songs": [
           "Intro",
           "Chaos Space Marine",
@@ -28,7 +28,7 @@
         "image": "https://e.snmc.io/i/600/w/296089638c6f8f7cd71a1609016d9ec7/2045769/bon-iver-for-emma-forever-ago-Cover-Art.jpg",
         "avgRating": "3.80/5.00",
         "release": "8 July 2007",
-        "genres": ["Indie Folk", "Singer-Songwriter"],
+        "genres": ["Indie Folk"],
         "songs": [
           "Flume",
           "Lump Sum",
@@ -49,13 +49,7 @@
         "image": "https://e.snmc.io/i/600/w/7409d01a8c0cdf51e8b22fd5d055196a/7027387/jeff-buckley-grace-Cover-Art.jpg",
         "avgRating": "4.09/5.00",
         "release": "23 August 1994",
-        "genres": [
-          "Alternative Rock",
-          "Singer-Songwriter",
-          "Art Rock",
-          "Acoustick Rock",
-          "Post-Rock"
-        ],
+        "genres": ["Alternative Rock"],
         "songs": [
           "Mojo Pin",
           "Grace",
@@ -77,7 +71,7 @@
         "image": "https://e.snmc.io/i/600/w/bb6cb34aad3dca77ebd12235ea36e2db/11448668/nick-drake-pink-moon-Cover-Art.jpg",
         "avgRating": "4.19/5.00",
         "release": "25 February 1972",
-        "genres": ["Contemporary Folk", "Singer-Songwriter", "Folk Baroque"],
+        "genres": ["Contemporary Folk"],
         "songs": [
           "Pink Moon",
           "Place to Be",
@@ -100,7 +94,7 @@
         "image": "https://e.snmc.io/i/600/w/92a30064c9a49d64c2885fac0bbbbeea/11613626/fleetwood-mac-rumours-Cover-Art.jpg",
         "avgRating": "4.03/5.00",
         "release": "4 February 1977",
-        "genres": ["Pop Rock", "Soft Rock", "Folk Pop", "Country Pop"],
+        "genres": ["Pop Rock"],
         "songs": [
           "Second Hand News",
           "Dreams",
@@ -123,16 +117,7 @@
         "image": "https://e.snmc.io/i/600/w/a47f7eef08776272f5525d5a1f7c9c6a/8121875/kendrick-lamar-to-pimp-a-butterfly-Cover-Art.jpg",
         "avgRating": "4.38/5.00",
         "release": "15 March 2015",
-        "genres": [
-          "Conscious Hip Hop",
-          "West Coast Hip Hop",
-          "Jazz Rap",
-          "Political Hip Hop",
-          "Neo-Soul",
-          "Funk",
-          "Poetry",
-          "Experimental Hip Hop"
-        ],
+        "genres": ["Conscious Hip Hop"],
         "songs": [
           "Wesleys Theory",
           "For Free? (Interlude)",
@@ -160,12 +145,7 @@
         "image": "https://e.snmc.io/i/600/w/afc27ca36ab3e9cf9f6703c386a7d953/10532981/madvillain-madvillainy-Cover-Art.jpg",
         "avgRating": "4.34/5.00",
         "release": "23 March 2004",
-        "genres": [
-          "Abstract Hip Hop",
-          "Jazz Rap",
-          "Experimental Hip Hop",
-          "Instrumental Hip Hop"
-        ],
+        "genres": ["Abstract Hip Hop"],
         "songs": [
           "The Illest Villains",
           "Accordion",
@@ -199,13 +179,7 @@
         "image": "https://e.snmc.io/i/600/w/396ac90b321caf0d18875f140e782ae4/11410589/kendrick-lamar-good-kid-m_a_a_d-city-Cover-Art.jpg",
         "avgRating": "4.32/5.00",
         "release": "22 October 2012",
-        "genres": [
-          "West Coast Hip Hop",
-          "Conscious Hip Hop",
-          "Hardcore Hip Hop",
-          "Pop Rap",
-          "Trap"
-        ],
+        "genres": ["West Coast Hip Hop"],
         "songs": [
           "Sherane a.k.a Master Splinter's Daughter",
           "Bitch, Don't Kill My Vibe",
@@ -229,13 +203,7 @@
         "image": "https://e.snmc.io/i/600/w/2ce1980b8329de60b2dc289cea0952bc/6878897/the-minds-of-99-solkongen-Cover-Art.jpg",
         "avgRating": "3.78/5.00",
         "release": "2 March 2018",
-        "genres": [
-          "Pop Rock",
-          "New Wave",
-          "Alternative Dance",
-          "Indietronica",
-          "Post-Punk"
-        ],
+        "genres": ["Pop Rock"],
         "songs": [
           "Solkongen",
           "Ung Kniv",

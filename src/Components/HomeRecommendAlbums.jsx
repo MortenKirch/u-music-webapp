@@ -7,7 +7,7 @@ export default function HomeRecommendAlbums({ album }) {
           <p>Album</p>
           <h3>{album.name}</h3>
           <p>{album.artist}</p>
-          <p>{album.genres}</p>
+          <p>{album.genres.join(" / ")}</p>
         </div>
       </div>
     </>

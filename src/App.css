@@ -2055,12 +2055,12 @@
   white-space: nowrap;
 }
 
-.recommended-albums-slider {
+.homepage-albums-slider {
   display: flex;
   gap: 20px;
 }
 
-.recommended-albums-card {
+.homepage-albums-card {
   flex: 0 0 auto;
   width: 33.3%;
   scroll-snap-align: center;
