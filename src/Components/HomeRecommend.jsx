@@ -15,7 +15,8 @@ export default function HomeRecommend() {
       const data = await response.json();
       const albumsArray = Object.keys(data).map((key) => ({
         id: key,
-        ...data[key],
+        name: key,
+        ...data[key][0],
       })); // from object to array
       setAlbums(albumsArray);
     }
@@ -25,9 +26,11 @@ export default function HomeRecommend() {
   return (
     <section className="home-recommended-section">
       <h2>Recommended</h2>
-      <div className="albums-grid">
+      <div className="recommended-albums-slider">
         {albums.map((album) => (
-          <HomeRecommendAlbums album={album} key={album.id} />
+          <div className="recommended-albums-card" key={album.id}>
+            <HomeRecommendAlbums album={album} />
+          </div>
         ))}
         {/* <div className="album-card">
           <img src={charlixcx} alt="Boys" />

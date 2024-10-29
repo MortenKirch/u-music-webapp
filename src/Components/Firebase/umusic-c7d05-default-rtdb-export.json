@@ -1,0 +1,828 @@
+{
+  "albums": {
+    "Ants From Up There": [
+      {
+        "artist": "Black Country New Road",
+        "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+        "avgRating": "4.03/5.00",
+        "release": "4 February 2022",
+        "genres": ["Rock", "Pop"],
+        "songs": [
+          "Intro",
+          "Chaos Space Marine",
+          "Concorde",
+          "Bread Song",
+          "Good Will Hunting",
+          "Haldern",
+          "Mark's Theme",
+          "The Place Where He Inserted the Blade",
+          "Snow Globes",
+          "Basketball Shoes"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "For Emma, Forever Ago": [
+      {
+        "artist": "Bon Iver",
+        "image": "https://e.snmc.io/i/600/w/296089638c6f8f7cd71a1609016d9ec7/2045769/bon-iver-for-emma-forever-ago-Cover-Art.jpg",
+        "avgRating": "3.80/5.00",
+        "release": "8 July 2007",
+        "genres": ["Indie Folk", "Singer-Songwriter"],
+        "songs": [
+          "Flume",
+          "Lump Sum",
+          "Skinny Love",
+          "The Wolves (Act I and II",
+          "Blindsided",
+          "Creature Fear",
+          "Team",
+          "For Emma",
+          "re: stacks"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "Grace": [
+      {
+        "artist": "Jeff Buckley",
+        "image": "https://e.snmc.io/i/600/w/7409d01a8c0cdf51e8b22fd5d055196a/7027387/jeff-buckley-grace-Cover-Art.jpg",
+        "avgRating": "4.09/5.00",
+        "release": "23 August 1994",
+        "genres": [
+          "Alternative Rock",
+          "Singer-Songwriter",
+          "Art Rock",
+          "Acoustick Rock",
+          "Post-Rock"
+        ],
+        "songs": [
+          "Mojo Pin",
+          "Grace",
+          "Last Goodbye",
+          "Lilac Wine",
+          "So Real",
+          "Hallelujah",
+          "Lover, You Should've Come Over",
+          "Corpus Christi Carol",
+          "Eternal Life",
+          "Dream Brother"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "Pink Moon": [
+      {
+        "artist": "Nick Drake",
+        "image": "https://e.snmc.io/i/600/w/bb6cb34aad3dca77ebd12235ea36e2db/11448668/nick-drake-pink-moon-Cover-Art.jpg",
+        "avgRating": "4.19/5.00",
+        "release": "25 February 1972",
+        "genres": ["Contemporary Folk", "Singer-Songwriter", "Folk Baroque"],
+        "songs": [
+          "Pink Moon",
+          "Place to Be",
+          "Road",
+          "Which Will",
+          "Horn",
+          "Things Behind the Sun",
+          "Know",
+          "Parasite",
+          "Free Ride",
+          "Harvest Breed",
+          "From the Morning"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "Rumours": [
+      {
+        "artist": "Fleetwood Mac",
+        "image": "https://e.snmc.io/i/600/w/92a30064c9a49d64c2885fac0bbbbeea/11613626/fleetwood-mac-rumours-Cover-Art.jpg",
+        "avgRating": "4.03/5.00",
+        "release": "4 February 1977",
+        "genres": ["Pop Rock", "Soft Rock", "Folk Pop", "Country Pop"],
+        "songs": [
+          "Second Hand News",
+          "Dreams",
+          "Never Going Back Again",
+          "Don't Stop",
+          "Go Your Own Way",
+          "Songbird",
+          "The Chain",
+          "You Make Loving Fun",
+          "I Don't Want to Know",
+          "Oh Daddy",
+          "Gold Dust Woman"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "To Pimp A Butterfly": [
+      {
+        "artist": "Kendrick Lamar",
+        "image": "https://e.snmc.io/i/600/w/a47f7eef08776272f5525d5a1f7c9c6a/8121875/kendrick-lamar-to-pimp-a-butterfly-Cover-Art.jpg",
+        "avgRating": "4.38/5.00",
+        "release": "15 March 2015",
+        "genres": [
+          "Conscious Hip Hop",
+          "West Coast Hip Hop",
+          "Jazz Rap",
+          "Political Hip Hop",
+          "Neo-Soul",
+          "Funk",
+          "Poetry",
+          "Experimental Hip Hop"
+        ],
+        "songs": [
+          "Wesleys Theory",
+          "For Free? (Interlude)",
+          "King Kunta",
+          "Institutionalized",
+          "These Walls",
+          "u",
+          "Alright",
+          "For Sale? (Interlude)",
+          "Momma",
+          "Hood Politics",
+          "How Much a Dollar Cost",
+          "Compelxion (A Zulu Love)",
+          "The Blacker The Berry",
+          "You Ain't Gotta Lie (Momma Said)",
+          "i",
+          "Mortal Man"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "Madvillainy": [
+      {
+        "artist": "Madvillain",
+        "image": "https://e.snmc.io/i/600/w/afc27ca36ab3e9cf9f6703c386a7d953/10532981/madvillain-madvillainy-Cover-Art.jpg",
+        "avgRating": "4.34/5.00",
+        "release": "23 March 2004",
+        "genres": [
+          "Abstract Hip Hop",
+          "Jazz Rap",
+          "Experimental Hip Hop",
+          "Instrumental Hip Hop"
+        ],
+        "songs": [
+          "The Illest Villains",
+          "Accordion",
+          "Meat Grinder",
+          "Bistro",
+          "Raid",
+          "America's Most Blunted",
+          "Sickfit (Instrumental)",
+          "Rainbows",
+          "Curls",
+          "Do Not Fire! (Instrumental)",
+          "Money Folder",
+          "Shadows of Tomorrow",
+          "Operation Lifesaver AKA Mint Test",
+          "Figaro",
+          "Hardcore Hustle",
+          "Strange Ways",
+          "Fancy Clown",
+          "Eye",
+          "Supervillain Theme (Instrumental)",
+          "All Caps",
+          "Great Day",
+          "Rhinestone Cowboy"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "good kid, mAAd city": [
+      {
+        "artist": "Kendrik Lamar",
+        "image": "https://e.snmc.io/i/600/w/396ac90b321caf0d18875f140e782ae4/11410589/kendrick-lamar-good-kid-m_a_a_d-city-Cover-Art.jpg",
+        "avgRating": "4.32/5.00",
+        "release": "22 October 2012",
+        "genres": [
+          "West Coast Hip Hop",
+          "Conscious Hip Hop",
+          "Hardcore Hip Hop",
+          "Pop Rap",
+          "Trap"
+        ],
+        "songs": [
+          "Sherane a.k.a Master Splinter's Daughter",
+          "Bitch, Don't Kill My Vibe",
+          "Backseat Freestyle",
+          "The Art of Peer Pressure",
+          "Money Trees",
+          "Poetic Justice",
+          "good kid",
+          "m.A.A.d city",
+          "Swimming Pools (Drank) (Extended Version)",
+          "Sing About Me, I'm Dying of Thirst",
+          "Real",
+          "Compton"
+        ],
+        "review": "This is one of my favorite albums of all time"
+      }
+    ],
+    "Solkongen": [
+      {
+        "artist": "The Minds of 99",
+        "image": "https://e.snmc.io/i/600/w/2ce1980b8329de60b2dc289cea0952bc/6878897/the-minds-of-99-solkongen-Cover-Art.jpg",
+        "avgRating": "3.78/5.00",
+        "release": "2 March 2018",
+        "genres": [
+          "Pop Rock",
+          "New Wave",
+          "Alternative Dance",
+          "Indietronica",
+          "Post-Punk"
+        ],
+        "songs": [
+          "Solkongen",
+          "Ung Kniv",
+          "I'm Gonna Die",
+          "Ubåd",
+          "Guldregn",
+          "Alle Skuffer Over Tid",
+          "K før ærlighed",
+          "Stor som en sol / flad som en pandekage",
+          "En engel",
+          "Ideen er død",
+          "(Tak for i dag)"
+        ],
+        "review": "Det her album er peak dansk musik"
+      }
+    ]
+  },
+  "songs": {
+    "Intro": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "4 Februrary 2022",
+      "genres": ["Post-Minimalism"],
+      "avgRating": "3.92/5",
+      "lyrics": "(Instrumental)",
+      "review": "This is a really good opener for an album"
+    },
+    "Chaos Space Marine": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "12 October 2021",
+      "genres": ["Progressive Pop"],
+      "avgRating": "4.30/5",
+      "lyrics": "And though England is mine\nI must leave it all behind\nThe war is over\nLift the anchor, set an open course\nThe New York state lines\nI think of all that went wrong\nThe sailor boys line up in song\nAnd they sing of London\nLove thy neighbor\nWill it really last\nAnytime\nWhat's that, that you said to me\nOh, I'm a chaos space marine\nSo what, I love you\nDarling, will you take my metal hand\nIt's cold\nIn time you will find\nThese things take up space inside your mind\nWhere you could be keeping honest thoughts of the sea, alone\nSo I'm leaving this body\nAnd I'm never coming home again, yeah\nI'll bury the hatchet\nBetween the window, and the kingdom of men\nOh, I'm becoming a worm now\nAnd, I'm looking for a place to live, yeah\nHere I come now\nIn time you will find\nThese things take up\nIn time you will find\nThese things take up\nIn time you will find\nThese things take you\nAnd now, so long jobs\nI'm coming home\n(Oh yeah)\nBillie Eilish style\nA Concorde will fly\nIgnore the whole I've dug again\nOh yeah\nOh yeah\nOh yeah\nOh yeah\nOh yeah",
+      "review": "This son goes so hard"
+    },
+    "Concorde": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "30 November 2021",
+      "genres": ["Indie Rock"],
+      "avgRating": "4.47/5",
+      "lyrics": "Concorde, this organ\nThe new one I'm forming\nIt's grown so persistent on you\nBy the morning I'd fell to my feet\nAnd the doctor said we are unfortunately\nRunning out of options to treat\nWhat a funny way to speak\nAnd you, like Concorde\nI came, a gentle hill racer\nI was breathless\nUp on every mountain\nJust to look for your light\nConcorde, I miss you\nDon't text me 'til winter\nI can hardly afford\nA second summer of Splinters\nThis staircase, it leads\nonly to\nSome old pictures of you\nThrough a thousand mile long tube\nHey, what's a city boy to do?\nAnd you, like Concorde\nI came, a gentle hill racer\nI was breathless\nUp on every mountain\nJust to look for your light\nBut for less than a moment\nWe'd share the same sky\nAnd then Isaac will suffer\nConcorde will fly\nConcorde, we're old now\nAnd you wield a lightsaber\nAnd led by the dark to our place on the table\nSo don't tell me you're hungry\n'Cause darling I'm starving myself\nAnd I heard you're on Atkins as well\nI was made to love you\nCan't you tell?\nAnd you, like Concorde\nI came, a light blue sleeper\nAnd I laid dead or twitching\nFor most of the night\nBut I know that you'll be there\nThe Sandman inside\nAnd I'll come to like a child\nConcorde and I\nDie free this time",
+      "review": "This is my favorite song from the album"
+    },
+    "Bread Song": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "2 November 2021",
+      "genres": ["Post-Rock"],
+      "avgRating": "4.22/5",
+      "lyrics": "Okay, well I just woke up\nAnd you already don't care\nThat I tried my best to hold you\nThrough the headset that you wear\nAnd, as tight as I might hold it\nOver where the signal's good\nThere's no way to save your evening now\nThrough the little phone that could\nAnd yes, I was tempted\nAnd I christened me lonely\nI pretended to falter\nAnd I burnt scented candles there\nAnd I hung some good pictures where\nThe paintwork was perfect\nSo no-one could doubt it\nOh, I was still losing\nSo show me the land you acquire\nAnd slip into something beside\nThe holes you tried to hide\nAnd lay out your rules for the night\nOh, don't eat your toast in my bed\nOh darling, I\nI never felt the crumbs until you said\nThis place is not for any man\nNor particles of bread\nYou furnished your suffering\nAnd you played a good organ\nAnd the world gathered singing\nGood words that you'd stolen\nAnd every phone died then\nAnd no-one had WiFi inside your apartment\nSo we knelt at your altar\nOkay, well I just woke up\nAnd you already don't care\nThat I tried my best to hold you\nThrough the headset that you wear\nAnd, as tight as I might hold\nOver where the signal's good\nThere's no way to save your evening now\nAnd I'm ready for us to be understood\nSo show me the land you acquire\nAnd slip into something beside\nThe holes you tried to hide\nAnd lay out your rules for the night\nOh, don't eat your toast in my bed\nOh, darling I\nI never felt the crumbs until you said\nThis place is not for any man\nNor particles of bread",
+      "review": "I love bread"
+    },
+    "Good Will Hunting": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "4 Februrary 2022",
+      "genres": ["Indie Rock"],
+      "avgRating": "4.26/5",
+      "lyrics": "You walk up on the raised edge, hands out for balance\nSlip and you almost grab mine but you find your feet\nAnd I never wanted so much someone to fall\nIt's just been a weekend but in my mind\nWe summer in France with our genius daughters now\nAnd you teach me to play the piano\nYou call\nI'll be there\nWhat's more\nI'm scared of the phone\nDon't ring it\nPlease know\nThat I'm just trying to find\nSome way to keep me in your mind\nAnd later on\nEveryone will say It was cool\nShe had Billie Eilish style\nMoving to Berlin for a little while\nTrying to find something to hold on to\nNever texts me nothing but she wants to\nTell me she's not that hard to find\nAnd Message me if you change your mind\nDarling, I'll keep fine\nAnd if we're on a burning starship\nThe escape pods filled with your friends, your childhood film photos\nThere's no room for me to go\nOh, I'd wait there, float with the wreckage, fashion a long sword\nTraverse the milky way trying to get home to you\nAnd you bring some piece of the stars\nYou call\nI'll be there\nWhat's more\nI'm scared of the phone\nDon't ring it\nPlease know\nThat I'm just trying to find\nSome way to keep me in your mind\nAnd later on\nEveryone will say It was cool\nShe had Billie Eilish style\nMoving to Berlin for a little while\nTrying to find something to hold on to\nNever texts me nothing but she wants to\nTell me she's not that hard to find\nAnd Message me if you change your mind\nDarling, I'll keep fine\nEveryone will say It was cool\nShe had Billie Eilish Style\nMoving to Berlin for a little while\nTrying to find something to hold on to\nNever texts me nothing but she wants to\nTell me she's not that hard to find\nAnd Message me if you change your mind\nDarling, I'll keep fine",
+      "review": "This is definitely my favorite song from the album"
+    },
+    "Haldern": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "4 Februrary 2022",
+      "genres": ["Post-Rock"],
+      "avgRating": "4.29/5",
+      "lyrics": "Ignore the hole I've dug again\nIt's only for the evening\nI never wanted you to see that much\nOf the bodies down there beneath me\nYou are the only one I've known\nWho broke the world so quietly\nAnd turned your perfect hands to me\nAnd you ruptured every bone\nWe formed a ring around your home\nTo stop your body leaving\nBut you burnt the final question then\nAnd you rose out through the ceiling\nI turn my face and hide in shame\nYou take my tired body in\nAnd you wrap it up in your undershirt\nAnd you pray for the pain to leave him",
+      "review": "Man this album is so sad but so good at the same time it's crazy"
+    },
+    "Mark's Theme": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "4 Februrary 2022",
+      "genres": ["Chamber Music"],
+      "avgRating": "3.90/5",
+      "lyrics": "(Instrumental)",
+      "review": "What a beautiful instrumental break, kinda works to let everything you've just heard sink in"
+    },
+    "The Place Where He Inserted the Blade": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "4 Februrary 2022",
+      "genres": ["Progressive Pop"],
+      "avgRating": "4.62/5",
+      "lyrics": "You're scared of a world where you're needed\nSo you never made nice with the locals\nBut you tied me up slow with your vine stuff\nIt takes a few years but they break bones\nIt takes a few months but our bones heal\nWe're stronger and we tell all our school friends\nThey sign our cast in the playground\nDarling, the rest of my body, it's yours then\nAnd I know\nYou're scared\nWell, I am scared too\nOh but every time I try to make lunch\nFor anyone else in my head\nI end up dreaming of you\nAnd you come to me\nGood morning\nShow me the place where he inserted the blade\nOr praise the Lord, burn my house\nI get lost, I freak out\nYou come home and hold me tight\nAs if it never happened at all\nGood morning\nShow me the place where he inserted the blade\nGood morning\nWhere is your light? Am I home?\nI will hold to my chest where the wind can't exist\nI will try not to keep you too long\nSo clean your soup maker and breathe in\nYour chicken broccoli and everything\nThe tug that's between us that long string\nConcorde, Bound 2 and my evening\nThe good hunter's guide to a bad night\nDarling, I'll spoil it myself, thanks you're leaving\nWell, I tried just to stroke your dreams better\nBut darling, I see that you're not really sleeping\nBut I know\nYou're tired\nWell, I'm tired too\nOh but every time I try to make lunch\nFor anyone else in my head\nI end up dreaming of you\nAnd you come to me\nGood morning\nShow me the place where he inserted the blade\nOr praise the Lord, burn my house\nI get lost, I freak out\nYou come home and hold me tight\nAs if it never happened at all\nGood morning\nShow me the fifth or the cadence you want me to play\nGood morning\nShow me where to tie the other end of this chain",
+      "review": "By far the most gut wrenching song i've ever heard"
+    },
+    "Snow Globes": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "19 January 2022",
+      "genres": ["Post-Rock"],
+      "avgRating": "4.30/5",
+      "lyrics": "We must let the clamp do what the clamp does best\nI know you're coming home Henry\nJust tell me when\nWe must let the clamp do what the clamp does best\nThat's a funny looking shrine on your bedroom wall\nWell I'm sorry Henry\nHe doesn't look anything like Jesus at all\nYour friend, the one that you loved\nDid you keep him on your side?\nDid you ever get to ask what on earth he meant by\nMight take some time to learn how to use these bodies right\nBut it is for this that God has gave us both the night\nAnd Henry hung to all of these\nHis battleship of memory\nA small nation of souvenirs\nMake Henry whole but porously\nOh, god of weather, Henry knows\nSnow globes don't shake on their own, ah\nOh, god of weather, Henry knows\nSnow globes don't shake on their own, ah\nGod of weather, Henry knows\nSnow globes don't shake on their own, ah\nGod of weather, Henry knows\nSnow globes don't shake on their own, ah\nOh, god of weather, Henry knows\nSnow globes don't shake on their own, ah\nOh, god of weather, Henry knows\nSnow globes don't shake on their own, ah\nOh, god of weather, Henry knows\nSnow globes don't shake on their own, ah",
+      "review": "Wow this song really sounds like you're inside a snow globe at times, pretty wild stuff"
+    },
+    "Basketball Shoes": {
+      "artist": "Black Country, New Road",
+      "image": "https://e.snmc.io/i/600/w/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg",
+      "release": "4 February 2022",
+      "genres": ["Post-Rock"],
+      "avgRating": "4.52/5",
+      "lyrics": "Concorde flies in my room\nTears the house to shreds\nDefines the night as such:\nA home for us, stick insects\nAnd leaves no trace of luck\nAt every market town that we intersect\nI die like fifteen times\nA dark blue stem brings me to their breast\nAnd I'm feeling kinda normal with a packed lunch\nTrain rides don't hurt much these days\nWe're all working on ourselves\nAnd we're praying that the rest don't mind how much we've changed\nSo if you see me looking strange with a fresh style\nI'm still not feeling that great\nAnd then it's in soft focus all around you\nYou can't see the football game\nOn my dad's sofa we are still\nAnd we never look at our phones anymore\nOh, I can't think of anything better\nPick a hair off my sweater\nAnd drown in me\nLike boyfriend jeans\nOh, I haven't felt this way in like ever\nI am the convo, you are the weather\nAnd the clamp is a cracked smile cheek\nAnd it tortures me\nI haven't felt this way in like ever\nI am the convo, you are the weather\nAnd the clamp is a cracked smile cheek\nAnd it tortures me\nIn my bed sheets now wet\nOf Charlie I pray to forget\nAll I've been forms the drone\nWe sing the rest\nAh, your generous loan to me\nYour crippling interest\nIn my bed sheets now wet\nOf Charlie I pray to forget\nAll I've been forms the drone\nWe sing the rest\nAh, your generous loan to me\nYour crippling interest\nIn my bed sheets now wet\nOf Charlie I pray to forget\nAll I've been forms the drone\nWe sing the rest\nAh, your generous loan to me\nYour crippling interest",
+      "review": "Never thought a song about a wet dream with Charli XCX would make me cry, but here i am"
+    }
+  },
+  "genres": {
+    "Hip Hop": {
+      "description": "Emerged primarily on the United States east coast in African American communities in the late 1970s; emphasizes rhythmic beat patterns and a type of spoken vocal delivery known as rapping",
+      "extendedDescription": "Hip hop is a form of music emphasizing rhythmic beat patterns and spoken delivery rather than harmonic melodies and sung vocals. Much of hip hop's roots can be traced to Deejay, a form of Reggae music that immigrant DJ Kool Herc hoped to emulate in the Bronx borough of New York City. The style quickly took over in more populated areas like Harlem and Queens, where many enjoyed the loose, Afrocentric nature of the parties Herc would put on. Adapting the format to Disco and Funk breaks rather than the reggae Herc utilized further enhanced the genre's appeal in urban communities.",
+      "artists": ["Drake", "Kendrick Lamar", "J. Cole"],
+      "topAlbums": ["To Pimp A Butterfly", "Madvillainy", "Illmatic"],
+      "subGenres": {
+        "Abstract Hip Hop": {
+          "description": "Uses much more abstract lyricism than what is considered conventional within the genre, typically through use of metaphors, symbolism, and cryptic meanings."
+        },
+        "Boom Bap": {
+          "description": "Production style identified by an acoustic-sounding drum pattern of a kick drum on the downbeat followed by a cracking snare on the upbeat."
+        },
+        "Chopped And Screwed": {
+          "description": "Remixing technique that consists of skipping effects (chopping) and dropping the tempo (screwing)."
+        },
+        "Christian Hip Hop": {
+          "description": "Employs lyrics with a pro-Christianity message to profess the performer's faith, and often to attract new attention from potential converts."
+        },
+        "Cloud Rap": {
+          "description": "Emerged in the early 2010s, known for its relaxed, dream-like, and reverb-heavy production style, taking influence from Chillwave, and producers' obscure sample choices."
+        },
+        "Comedy Rap": {
+          "description": "Primarily intended to be humorous, through the use of comedic lyrics, production, delivery, or other musical aspects."
+        },
+        "Conscious Hip Hop": {
+          "description": "Artists whose lyrics deal with social issues."
+        },
+        "Country Rap": {
+          "description": "Combines the flow, production-emphasis, and demeanor of Hip Hop with the lyrical content and general approach of Country."
+        },
+        "Crunk": {
+          "description": "Originating from the southern United States and reliant on drum machines and synthesizer stabs to create an energetic, often dance-oriented sound."
+        },
+        "East Coast Hip Hop": {
+          "description": "Highly influential style of Hip Hop that developed in New York City, particularly in the South Bronx, during the 1970s."
+        },
+        "Emo Rap": {
+          "description": "Moody, melancholic production combining atmospheric Cloud Rap, and Trap's typical drum programming, with sampling from Alternative Rock, Midwest Emo, Emo-Pop, and Pop Punk."
+        },
+        "Experimental Hip Hop": {
+          "description": "Incorporates experimental and eccentric elements considered unconventional or unorthodox compared to more traditional hip hop."
+        },
+        "G-Funk": {
+          "description": "Relaxed and organic sound featuring live instrumentation, use of P-Funk samples, and high-pitched synth lines."
+        },
+        "Hardcore Hip Hop": {
+          "description": "Confrontation and aggression, whether in the lyricism, vocal delivery, hard beats, heavy production, or any combination thereof."
+        },
+        "Instrumental Hip Hop": {
+          "description": "Can take the form of instrumental versions of songs that normally feature rapping, or hip hop originally released and always intended to be instrumental."
+        },
+        "Jazz Rap": {
+          "description": "Incorporates elements of Jazz through the use of samples or live instrumentation."
+        },
+        "Latin Rap": {
+          "description": "Primarily done in Spanish; incorporates Hispanic American Music elements into its sound."
+        },
+        "Lo-Fi Hip Hop": {
+          "description": "Relaxed, laid-back form of Hip Hop, typically instrumental and influenced by Jazz Rap and Downtempo."
+        },
+        "Pop Rap": {
+          "description": "Fuses Hip Hop's rapping and production traits with Pop elements such as melodious vocals and light, catchy tunes."
+        },
+        "Southern Hip Hop": {
+          "description": "Hip Hop from artists based in the Southern region of the United States."
+        },
+        "Trap": {
+          "description": "Originated in Atlanta in the early 2000s; distinctive fast hi-hat sound and heavy bass at moderate tempos."
+        },
+        "Turntablism": {
+          "description": "Manipulating and re-appropriating vinyl records using a turntable and DJ mixer in a Hip Hop context, often featuring constant scratching and beat juggling between two or more recordings into original, distinctive tracks."
+        },
+        "UK Hip Hop": {
+          "description": "Scene of the United Kingdom, influenced by American rap."
+        },
+        "West Coast Hip Hop": {
+          "description": "Artists who originate from the West Coast region of the United States."
+        }
+      }
+    },
+    "Metal": {
+      "description": "Driving and distorted riffs, aggressive drumming, vigorous vocals, and an all-around show of brute force in its early days, since branching into dozens of subgenres.",
+      "subGenres": {
+        "Alternative Metal": {
+          "description": "Mid-tempo style emphasizing melodicism and rhythmic heaviness; branches outside of the stylistic conventions of Metal."
+        },
+        "Avant-garde Metal": {
+          "description": "Often breaking the bounds of the genre through experimental structures and instrumentation, or by incorporating outside influences."
+        },
+        "Black Metal": {
+          "description": "Highly distorted, treble-heavy guitars, tremolo-picked riffs, blast beats and double bass drumming, shrieked vocals, and raw, lo-fi production; often focuses on occult, dark imagery and atmosphere."
+        },
+        "Death Metal": {
+          "description": "Heavily distorted, down-tuned guitars, palm-muted, tremolo-picked riffs, double-kick and blast beat percussion, chromatic chord progressions, minor keys, abrupt changes in tempo, and guttural vocals."
+        },
+        "Doom Metal": {
+          "description": "Plodding tempos, repeated chords, and thick, distorted, down-tuned guitars in a style focused on foreboding, atmosphere, and tension."
+        },
+        "Drone Metal": {
+          "description": "Extremely slow tempos, highly sustained, repetitive guitar notes, and minimalist song structures often omitting a traditional rhythm section and vocals."
+        },
+        "Folk Metal": {
+          "description": "Features influences from various types of Traditional Folk Music expressed through melodies and/or traditional instrumentation, notably having a large scene in Europe."
+        },
+        "Gothic Metal": {
+          "description": "Features heavy, low-mid tempo riffs, somber, gloomy atmosphere accentuated by ethereal keyboards and synthesizer layers, and vocal styles ranging from raspy growls to female operatic singing."
+        },
+        "Grindcore": {
+          "description": "Features shortened song structures and a diverse palette of intense techniques such as blast and skank beats, tremolo and down-picking, and various harsh vocal styles."
+        },
+        "Groove Metal": {
+          "description": "Midtempo riffs influenced by Thrash Metal but with a greater focus on rhythmic syncopation and heaviness over speed."
+        },
+        "Heavy Metal": {
+          "description": "Heavier outgrowth of Hard Rock featuring greater distortion and intensity along with lesser Blues influences."
+        },
+        "Industrial Metal": {
+          "description": "Incorporates the abrasive and heavy sound of Industrial into Metal, using elements like synthesizers and drum machines."
+        },
+        "Kawaii Metal": {
+          "description": "Combines a heavy and metallic style with an upbeat, J-Pop-indebted tone and vocal style; associated with a 'kawaii aesthetic'."
+        },
+        "Metalcore": {
+          "description": "Drop-tuned guitar riffs, constant double kick drumming with varying tempos and techniques, breakdown sections, and screaming or shouting vocals."
+        },
+        "Neoclassical Metal": {
+          "description": "Greatly influenced by Western Classical Music in its style of playing and composing."
+        },
+        "Post-Metal": {
+          "description": "Atmospheric and dense metallic riffs, unconventional songwriting, sonic experimentation, and adoption of eclectic influences."
+        },
+        "Power-Metal": {
+          "description": "Developed from Heavy Metal and Speed Metal; characterized by its emphasis on speed, vocal melody and harmonized lead guitars."
+        },
+        "Progressive Metal": {
+          "description": "Fuses amplified, guitar-driven sound with technical proficiency, virtuosity, complex compositions, innovative arrangements, eclecticism, and additional instrumentation."
+        },
+        "Sludge Metal": {
+          "description": "Mixes Doom Metal's slow pacing, down-tuned riffing style and dark atmosphere with Hardcore Punk's aggression, abrasiveness and harsh vocals."
+        },
+        "Southern Metal": {
+          "description": "Blues-influenced style that primarily incorporates Sludge Metal and Stoner Metal with metallic Southern Rock riffs."
+        },
+        "Stoner Metal": {
+          "description": "Combines elements of Doom Metal with elements of Psychedelic Rock and Blues Rock to create a melodic yet heavy sound."
+        },
+        "Thrash Metal": {
+          "description": "Blistering tempos, palm-muted, technical riffing influenced by Speed Metal, aggressive drumming utilizing double-kick and skank beats, and diverse vocal styles ranging from harsh to clean techniques."
+        },
+        "Viking Metal": {
+          "description": "Developed out of Black Metal and embodies an epic, Viking-like aesthetic."
+        }
+      }
+    },
+    "Pop": {
+      "description": "Umbrella of popular styles closely tied to mass production and mass marketing, focusing on catchiness and accessibility through melody, rhythm, lyrics, and hooks.",
+      "subGenres": {
+        "Afrobeats": {
+          "description": "Originated in West Africa during the early 2010s and includes elements from Pop Rap, Contemporary R&B, and Dancehall."
+        },
+        "Alt-Pop": {
+          "description": "Emerged in the late 2000s and early 2010s, combines chart Pop conventions with alternative/indie genre sensibilities sometimes on a more minimal and contemplative atmosphere, often extracted from Alternative R&B."
+        },
+        "Art Pop": {
+          "description": "Inventive, idiosyncratic, or artistically ambitious, often experimenting with unconventional musical elements and conceptual approaches while retaining accessibility."
+        },
+        "Baroque Pop": {
+          "description": "Incorporates elements of Western Classical Music, commonly featuring harpsichord or strings as well as the rhythmic flow and counterpoint of Baroque Music."
+        },
+        "Boy Band": {
+          "description": "Male vocal groups often put together by talent managers or record producers."
+        },
+        "Bubblegum": {
+          "description": "Upbeat, catchy, simple, and targeted at children and young teens; especially popular in the 1960s and 1970s."
+        },
+        "City Pop": {
+          "description": "Wave of Japanese Pop intended to reflect urban life during the period of the country's booming economy in the 1970s and 1980s, featuring a contemporary Western sound and lush arrangements."
+        },
+        "Dance-Pop": {
+          "description": "Simple, yet catchy melodies and throbbing beats inspired initially by Disco and later various House styles."
+        },
+        "Dansktop": {
+          "description": "Danish equivalent to Dansbandsmusik with Schlager and Country influences and Contemporary Folk and Pop elements."
+        },
+        "Electropop": {
+          "description": "Dense, layered, and compressed production, usually coupled with a distinct fuzzy and 'warm' low-frequency synthesizer style."
+        },
+        "Europop": {
+          "description": "Emerged throughout mainland Europe in the early 1970s, referring to slick, highly commercial Pop songs that emphasize sugary melodies and light, bouncy instrumentation."
+        },
+        "Girl Group": {
+          "description": "Combines elements of Rhythm & Blues, Rock & Roll, and Traditional Pop; typically performed by trios or quartets of female vocalists."
+        },
+        "Glitch Pop": {
+          "description": "Incorporates elements of more experimental Electronic styles like IDM and Glitch."
+        },
+        "Hyperpop": {
+          "description": "Developed and took inspiration from Bubblegum Bass and popular 2000s-2010s Electropop, characterized by eclectic, unconventional, mechanical-sounding and dense production; and by manipulated, usually auto-tuned vocals."
+        },
+        "Indie Pop": {
+          "description": "Back-to-basics Rock approach combining a less mainstream and DIY ethos with melodic, lighthearted and straightforward songwriting."
+        },
+        "J-Pop": {
+          "description": "Commercial Pop of Japan after the advent of the Heisei era (1989), characterized by modernized production, a more eclectic sound palette, and a more westernized vocal style."
+        },
+        "K-Pop": {
+          "description": "Contemporary Pop scene in South Korea based on multiple mainstream influences such as Contemporary R&B, Dance-Pop, and Hip Hop."
+        },
+        "Latin Pop": {
+          "description": "Characterized by its usage of Latino clichés and frequently influenced by traditional Latin American styles, commonly borrowing from their instrumentation."
+        },
+        "Progressive Pop": {
+          "description": "Milder counterpart to Progressive Rock, emerging in the late 1960s and introducing complex songwriting and arrangements into a Pop context."
+        },
+        "Psychedelic Pop": {
+          "description": "Combines unconventional instrumentation with studio effects to create a psychedelic atmosphere within melodic Pop music."
+        },
+        "Schlager": {
+          "description": "Light, sentimental, melodic pop music common mainly in northern and central Europe."
+        },
+        "Synthpop": {
+          "description": "Led by a prominent, melodic synthesizer sound, often with reverberated drum machine patterns that create a distinct atmospheric feel commonly associated with the 1980s."
+        }
+      }
+    },
+    "Electronic Music": {
+      "description": "Uses non-traditional electronic instrumentation and sound manipulation technology as the primary backbone of a composition.",
+      "subGenres": {
+        "Bit Music": {
+          "description": "Created by sound chips, cards, and sequencers found in video game consoles, personal computers, and arcade machines, as well as synthesizers emulating these sounds."
+        },
+        "Chillout": {
+          "description": "Broad category of many relaxed styles of Electronic music which predominantly draw influence from Electronic Dance Music subgenres and Ambient."
+        },
+        "Drift Phonk": {
+          "description": "Busy, noisy production inspired by lo-fi Memphis Rap; frequently features 808 cowbell melodies and chopped, compressed samples."
+        },
+        "Dubstep": {
+          "description": "Half-time syncopated and sparse beats set around 140 BPM with heavy sub-basses; emerged in South London in the early 2000s."
+        },
+        "Electronic Dance Music": {
+          "description": "Broad category for subgenres mainly derived from Disco, featuring Electronic sounds, synthesizers, drum machines and varying BPM ranges."
+        },
+        "Electroclash": {
+          "description": "Draws from 1980s styles such as Electro, New Wave, and Electro-Disco combined with Techno, resulting in minimal, throbbing beats and basslines, buzzing synthesizer parts, vocoders and often monotone, half-spoken, half-sung vocals."
+        },
+        "Electro Swing": {
+          "description": "Upbeat, energetic style that splices Swing with Electronic Dance Music, looking to recapture the atmosphere of late 1920s to mid-1940s Jazz within a more updated club-friendly medium."
+        },
+        "Folktronica": {
+          "description": "Combines sound design techniques from IDM and Glitch with acoustic instrumentation inspired by Contemporary Folk."
+        },
+        "Futute Bass": {
+          "description": "Woozy, detuned synthesizers, 7th chords, harsh basslines, syncopated percussion with fast-paced hi-hats and a melodic, carefree atmosphere."
+        },
+        "Glitch": {
+          "description": "Uses abstract sound design and malfunctioning electronics—CD skips, data corruption, and hardware noise—as main compositional elements."
+        },
+        "House": {
+          "description": "Large, hugely popular group of related Electronic Dance Music styles, initially developing from Disco in the early 1980s."
+        },
+        "Hypertechno": {
+          "description": "Emerged in the 2020s by mixing fast tempos, prominent basslines, and hard-hitting drums derived from popular Techno with simplistic, catchy melodies and vocals, often influenced by 2000s Hard Dance, Eurodance and Electropop."
+        },
+        "IDM": {
+          "description": "Emerged through the development of Electronic Dance Music idioms into a less club-oriented and more experimental direction, often incorporating unconventional sound design and complex rhythms."
+        },
+        "Illbient": {
+          "description": "Combines Ambient soundscapes with Hip Hop drum patterns, breaks, and samples through the busy effect layering of Dub."
+        },
+        "Indietronica": {
+          "description": "Leftfield or DIY approach characterised by simpler Pop-informed melodies, often incorporating vocals or live instrumentation alongside Electronic production."
+        },
+        "Moogsploitation": {
+          "description": "Moog synthesizer-led music often associated with a wave of Novelty records in the 1960s and 1970s."
+        },
+        "Nightcore": {
+          "description": "Based around the technique of speeding and pitching up already existing songs."
+        },
+        "Nu-Disco": {
+          "description": "21st-century trend mixing modern, polished Electronic production with the aesthetics, structures, and lively, organic beats of 1970s and 1980s Disco."
+        },
+        "Space Ambient": {
+          "description": "Flowing and relaxing synthesizer-based music derived from Progressive Electronic, often oriented around imagery of outer space."
+        },
+        "Synthwave": {
+          "description": "Rooted in 1980s synth music, characterized by large, throbbing 'retro' synths and visual elements, often features upbeat percussion and/or epic, cinematic atmospheres."
+        },
+        "Techno": {
+          "description": "Highly beat-driven, repetitive, and mechanical, typically featuring minimal chord variation and melodies, focuses on rhythms and timbral variety; generally produced for club environments."
+        },
+        "Trance": {
+          "description": "Evolving, tension-building structures with rapid, minor arpeggios on top of a hypnotic, four-on-the-floor drum patterns at fast tempo around 130-150 BPM."
+        },
+        "Trip Hop": {
+          "description": "Evokes a surreal, trippy, dreamy, and sometimes dark atmosphere with offbeat turntable scratches, light vocal melodies, and Hip Hop-influenced beats."
+        },
+        "UK Bass": {
+          "description": "Broad form of Electronic Dance Music characterized by prominent bass/sub-basses, a deep, dark, airy, and mechanical sound derived from Dubstep, and eclectic production influenced by UK Funky, Juke/Footwork, Techno, and Breakbeat."
+        },
+        "UK Garage": {
+          "description": "Shuffling rhythms and influences from sources including Contemporary R&B and Hip Hop, as well as many forms of Electronic."
+        }
+      }
+    }
+  },
+  "artists": {
+    "Black Country, New Road": {
+      "image": "https://static01.nyt.com/images/2022/02/08/arts/07blackcountry-review1/merlin_201346224_3203bed0-0a63-43f4-aafc-d1a5d9ec0df9-superJumbo.jpg?quality=75&auto=webp",
+      "formed": "2018, Cambridge, Cambridgeshire, United Kingdom",
+      "members": "Georgia Ellery (violin), Lewis Evans (saxophone, flute, vocals), Tyler Hyde (bass, vocals), May Kershaw (keyboards, vocals), Charlie Wayne (drums), Isaac Wood (vocals, guitar, 2018-22), Luke Mark (guitar, 2019-present)",
+      "genres": [
+        "Art-Rock",
+        "Post-Rock",
+        "Experimental Rock",
+        "Chamber Pop",
+        "Post-Punk",
+        "Indie Rock"
+      ],
+      "topSongs": [
+        "The Place Where He Inserted the Blade",
+        "Concorde",
+        "Chaos Space Marine",
+        "Good Will Hunting"
+      ],
+      "topAlbums": ["Ants From Up There", "For The First Time"]
+    }
+  },
+
+  "users": {
+    "5grYn6srSlXxRXStvmTwYkGwftK2": {
+      "bio": "hej",
+      "birthday": "2001-06-25",
+      "countryLanguage": "Danmark",
+      "email": "test1@gmail.com",
+      "genres": ["Pop", "Electronic", "Blues"],
+      "newsletter": false,
+      "profileImage": "",
+      "pronouns": "he",
+      "termsAccepted": true,
+      "username": "test1"
+    },
+    "6IMqIybUU9ScthFCgQmmpIabuNn1": {
+      "email": "tesqweqwet22@test.dk",
+      "username": "qweofikjasdflk"
+    },
+    "8ZkzKuRsVchbeAAVdmB5taMWZ4H2": {
+      "email": "teafsgdst22@test.dk",
+      "genres": ["Reggae", "Country", "Soul"],
+      "username": "læsfjslgv"
+    },
+    "I5bVlg5YiSRJfaKPAX2Rc8I8hjr1": {
+      "email": "tes123123t22@test.dk",
+      "username": "tes123123t22@test.dk"
+    },
+    "In1IBIw9LIRRqR1nBp9X57Hbn3z2": {
+      "email": "test232@test.dk",
+      "username": "genre test"
+    },
+    "K4ntDpb7AeX6RLSh2zyWQtmWlkl2": {
+      "email": "test22323232@test.dk",
+      "username": "qweqwreqwe"
+    },
+    "Mbaal109xCgjYa1aFsUACFBweqc2": {
+      "email": "test111122@test.dk",
+      "username": "qwrgvsvs"
+    },
+    "RwVgyKOURTTrkNqsMf5gyYoWWEt2": {
+      "email": "test2qwe2@test.dk",
+      "username": "asxfjkla"
+    },
+    "U8WZ2bnpwoZ4RsJvgNvKI0JGAAj2": {
+      "bio": "gest for at det virker ",
+      "birthday": "",
+      "countryLanguage": "",
+      "email": "test224555@test.dk",
+      "genres": ["Reggae", "Electronic", "Rock"],
+      "newsletter": false,
+      "pronouns": "",
+      "termsAccepted": true,
+      "username": "genretejk"
+    },
+    "VErdtA3vTKgvTP5aefVGfkYovVJ2": {
+      "bio": "",
+      "birthday": "",
+      "countryLanguage": "",
+      "email": "test2@test.dk",
+      "genres": ["Hip-Hop", "Country", "Reggae"],
+      "newsletter": false,
+      "pronouns": "",
+      "termsAccepted": false,
+      "username": "Test2"
+    },
+    "ZWj0E6wZ5VNgHHfjwjW99gvitVM2": {
+      "email": "test222222@test.dk",
+      "username": "asdasfasf"
+    },
+    "aIahpNRbyzPiatJ8TL9CDpbAGCH3": {
+      "email": "test223222@test.dk",
+      "username": "users123"
+    },
+    "fj9N0i4qYAcANutqYaQPVBqL2cz2": {
+      "email": "genrecss@test.dk",
+      "username": "genrecss"
+    },
+    "g51f8FOerlWbSZlRxsTOQb4ggFC3": {
+      "email": "Arti@blabla.com",
+      "genres": ["Jazz", "Electronic", "Rock"],
+      "username": "Arti"
+    },
+    "hxTpywnNoYbth4WrEWHISiTnDxf2": {
+      "email": "test22@test.dk",
+      "genres": ["Pop", "Rock", "Classical"],
+      "profileImage": "",
+      "username": "test22@test.dk"
+    },
+    "mCV02nqVg8WoeCShKnnzNdrX0cd2": {
+      "bio": "bio ind her",
+      "birthday": "2000-03-31",
+      "countryLanguage": "DK",
+      "email": "test3@test.dk",
+      "genres": ["Pop", "Hip-Hop", "Classical"],
+      "newsletter": false,
+      "pronouns": "hehim",
+      "termsAccepted": true,
+      "username": "rune"
+    },
+    "pLphOgwqpvhLJ8ax3aKlKKGDIFF3": {
+      "email": "test12322@test.dk",
+      "username": "12356765655"
+    },
+    "tYCh5li6KdQsfuQWUNSrZYvNl2E2": {
+      "bio": "esfe",
+      "birthday": "",
+      "countryLanguage": "",
+      "email": "test12312322@test.dk",
+      "genres": ["Blues", "Reggae", "Country"],
+      "newsletter": false,
+      "profileImage": "",
+      "pronouns": "",
+      "termsAccepted": true,
+      "username": "1235er"
+    },
+    "tow3Mu0pJQXPQ2dWQELNq3dBTIk2": {
+      "bio": "hej",
+      "birthday": "2001-07-25",
+      "countryLanguage": "Danmark",
+      "email": "test123@gmail.com",
+      "genres": ["Pop", "R&B", "Hip-Hop"],
+      "newsletter": false,
+      "profileImage": "",
+      "pronouns": "he",
+      "termsAccepted": true,
+      "username": "Artilon"
+    },
+    "vcPr4OsygfbzAwgbxouoSeZHxQf1": {
+      "bio": "Det her er en vild bio omkring mig",
+      "birthday": "2000-03-31",
+      "countryLanguage": "DK",
+      "email": "test@test.dk",
+      "genres": ["Pop", "Rock", "Classical"],
+      "newsletter": false,
+      "pronouns": "he/him/ligegyldigt",
+      "termsAccepted": true,
+      "username": "Test"
+    },
+    "x4r9mCCoeDgaRpc3UFYmLU4SJIq1": {
+      "email": "test2222@test.dk",
+      "username": "users"
+    },
+    "ybUaAMqFXZT8sr9Fn1V9ffAGIQO2": {
+      "email": "test22222@test.dk",
+      "username": "users123"
+    },
+    "yyKXBZ2cbNZgdhiZcsgtc3zkUGw2": {
+      "email": "test123@gmail.com",
+      "username": "Artilon"
+    }
+  }
+}

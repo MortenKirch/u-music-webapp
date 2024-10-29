@@ -867,8 +867,7 @@
   }
 
   .main-review {
-  
- display: inline-block;
+    display: inline-block;
   }
 
   .review-album {
@@ -908,7 +907,6 @@
   }
 
   .main-review-text {
- 
     margin-top: 2rem;
   }
 
@@ -1803,13 +1801,20 @@
 
 .artist-profile-name {
   font-size: 1.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .artist-profile-bio,
 .artist-profile-genres {
-  margin: 0.4rem 0;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+.artist-profile-title {
+  color: var(--gray);
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .artist-profile-top-songs {
@@ -2013,10 +2018,20 @@
   margin-bottom: 10px;
 }
 
-.albums-grid {
+.home-recommended-section {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.recommended-albums-slider {
   display: flex;
-  gap: 2px;
-  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recommended-albums-card {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: center;
 }
 
 .album-card {
