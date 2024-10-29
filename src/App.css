@@ -675,6 +675,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin-bottom: 100px;
   }
 
   .concert-card {
@@ -713,14 +714,17 @@
   .see-tour-button {
     margin-top: 2rem;
     margin-left: auto;
-    padding: 8px 12px;
+    padding: 12px 12px;
     background-color: #2a2525;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     width: 50%;
+    text-decoration: none;
+    text-align: center;
   }
+
   /* Genres */
   .genres-container {
     padding: 20px;
@@ -867,8 +871,7 @@
   }
 
   .main-review {
-  
- display: inline-block;
+    display: inline-block;
   }
 
   .review-album {
@@ -908,7 +911,6 @@
   }
 
   .main-review-text {
- 
     margin-top: 2rem;
   }
 
@@ -1102,13 +1104,13 @@
     margin-top: 32px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .sangcovers {
     width: 75px;
     height: 75px;
-    border-radius: 9px;
+    border-radius: 5px;
     object-fit: cover;
   }
 
@@ -1120,7 +1122,7 @@
 
   .setlist-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 90vw;
     align-items: center;
     padding: 8px 0;
@@ -1131,7 +1133,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .setlist-song-info {
@@ -1146,8 +1148,9 @@
     margin: 0;
   }
   .setlist-song-title {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
+    margin-bottom: 4px;
   }
 
   .setlist-song-data {

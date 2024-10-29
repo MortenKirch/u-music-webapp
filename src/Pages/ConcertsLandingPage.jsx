@@ -3,6 +3,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import EminemTour from "../images/concert-posters/eminem-poster.png";
 import KendrickTour from "../images/concert-posters/kendrick-poster.png";
+import { NavLink } from "react-router-dom";
 
 export default function ConcertsLandingPage() {
   const concerts = [
@@ -49,7 +50,9 @@ export default function ConcertsLandingPage() {
               <p className="tour-name">{concert.tour}</p>
               <p className="concert-dates">{concert.dates}</p>
               <p className="concert-location">{concert.location}</p>
-              <button className="see-tour-button">See tour</button>
+              <NavLink to="/concert" className="see-tour-button">
+                See tour
+              </NavLink>
             </div>
           </div>
         ))}
