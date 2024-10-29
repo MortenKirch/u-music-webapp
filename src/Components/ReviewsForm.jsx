@@ -1,39 +1,29 @@
 import { useEffect, useState } from "react";
 
-export default function ReviewsForm({ saveReview, review }) {
+export default function ReviewsForm() {
   const [title, setTitle] = useState("");
   const [reviewtext, setReviewText] = useState("");
   const [rating, setRating] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
-  useEffect(() => {
-    if (review?.title) {
-      // if review, set the states with values from the review object.
-      // The review object is a prop, passed from UpdatePage
-      setTitle(review.title);
-      setReviewText(review.reviewtext);
-      setRating(review.rating);
-    }
-  }, [review]); // useEffect is called every time post changes.
+  const url =
+    "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews.json";
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    const formData = {
-      // create a new objebt to store the value from states / input fields
-      title: title,
-      rating: rating,
-      review: reviewtext,
-    };
-
-    const validForm = formData.title && rating && reviewtext; // will return false if one of the properties doesn't have a value
-    if (validForm) {
-      // if all fields/ properties are filled, then call saveReview
-      saveReview(formData);
-    } else {
-      // if not, set errorMessage state.
-      setErrorMessage("Please, fill in all fields.");
+    const response = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(reviewData),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      console.log("New post created: ", data);
     }
   }
+  const reviewData = {
+    title,
+    reviewtext,
+    rating,
+  };
 
   return (
     <form className="form-grid" onSubmit={handleSubmit}>
@@ -47,15 +37,15 @@ export default function ReviewsForm({ saveReview, review }) {
         placeholder="Write a review title..."
         onChange={(e) => setTitle(e.target.value)}
       />
-      <label htmlFor="text">Write your review..</label>
-      <input
-        id="title"
-        name="title"
+      <label htmlFor="reviewtext">Write your review..</label>
+      <textarea
+        id="reviewtext"
+        name="reviewtext"
         type="text"
-        value={title}
-        aria-label="title"
+        value={reviewtext}
+        aria-label="reviewtext"
         placeholder="Write a review..."
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => setReviewText(e.target.value)}
       />
       <label htmlFor="rating">Choose a rating:</label>
       <select
@@ -69,12 +59,9 @@ export default function ReviewsForm({ saveReview, review }) {
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <div className="error-message">
-        <p>{errorMessage}</p>
-      </div>
 
-      <div className="btns">
-        <button>Save</button>
+      <div>
+        <button type="submit">Save</button>
       </div>
     </form>
   );
