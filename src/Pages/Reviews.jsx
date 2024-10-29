@@ -157,13 +157,12 @@ export default function Reviews() {
                 <p className="review-genres">{review.genres}</p>
               </div>
             </div>
-            <div className="main-review-text">
-              <p>
+            <p className="main-review-text">
                 {expandedReviews[index]
                   ? review.review
                   : truncateText(review.review, 250)}
               </p>
-            </div>
+         
           </div>
           <p className="review-likes">
             {review.likes} <FontAwesomeIcon icon={faHeart} />{" "}
