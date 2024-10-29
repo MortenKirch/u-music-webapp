@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // If you use route params for uid
+
 
 export default function ProfileImageDisplay() {
  
