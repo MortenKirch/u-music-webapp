@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-// import charlixcx from "../images/charli-xcx.png";
-// import nisemono from "../images/nisemono.png";
-// import rapgod from "../images/rap-god.png";
 import HomeRecommendAlbums from "./HomeRecommendAlbums";
 import { Link } from "react-router-dom";
 
