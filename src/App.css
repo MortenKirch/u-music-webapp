@@ -1105,6 +1105,16 @@
 
   .setlist-section {
     margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sangcovers {
+    width: 75px;
+    height: 75px;
+    border-radius: 9px;
+    object-fit: cover;
   }
 
   .setlist-title {
@@ -1116,15 +1126,30 @@
   .setlist-box {
     display: flex;
     justify-content: space-between;
+    width: 90vw;
+    align-items: center;
     padding: 8px 0;
     color: #ffffff;
   }
 
   .setlist-song {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
 
+  .setlist-song-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .sanger-navn {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0;
+  }
   .setlist-song-title {
     font-size: 16px;
     margin: 0;
@@ -1140,6 +1165,7 @@
     font-size: 14px;
     color: #b3b3b3;
     margin: 0;
+    margin-left: auto;
   }
 
   .see-full-list {
@@ -1199,6 +1225,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 100px;
   }
 
   .tourdate-box {
@@ -2223,12 +2250,19 @@
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 8px;
+  width: 100%;
 }
 
 .reviewer-pic-new {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.name-rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .reviewer-name-new {
