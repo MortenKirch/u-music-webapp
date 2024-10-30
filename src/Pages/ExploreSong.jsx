@@ -72,7 +72,11 @@ export default function ExploreSong() {
     <div className="explore-albums-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
@@ -80,7 +84,7 @@ export default function ExploreSong() {
 
       <div className="explore-albums-grid">
         {songs.map((song, index) => (
-          <NavLink to="/album" className="explore-album-card" key={index}>
+          <NavLink to="/song" className="explore-album-card" key={index}>
             <div className="explore-album-card" key={index}>
               <img
                 src={song.image}
