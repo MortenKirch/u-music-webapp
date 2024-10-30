@@ -1,4 +1,7 @@
 import AlbumHeader from "../Components/AlbumHeader";
+import AlbumSongs from "../Components/AlbumSongs";
+import AlbumReviews from "../Components/AlbumReviews";
+
 import { useEffect, useState } from "react";
 
 export default function HomeRecommend() {

@@ -84,7 +84,7 @@ export default function ExploreSong() {
 
       <div className="explore-albums-grid">
         {songs.map((song, index) => (
-          <NavLink to="/album" className="explore-album-card" key={index}>
+          <NavLink to="/song" className="explore-album-card" key={index}>
             <div className="explore-album-card" key={index}>
               <img
                 src={song.image}
