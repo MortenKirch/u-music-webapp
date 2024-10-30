@@ -48,17 +48,17 @@ export default function Reviews() {
     }));
   };
 
-  function handleCreate(event) {
-    event.preventDefault();
-    navigate("/ReviewsForm");
-  }
-
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + "...";
     }
     return text;
   };
+
+  function handleCreate(event) {
+    event.preventDefault();
+    navigate("/ReviewsForm");
+  }
 
   async function handleDelete(id) {
     console.log("Delete post", reviews);
@@ -199,9 +199,12 @@ export default function Reviews() {
               {expandedReviews[index] ? "Show Less" : "Full review"}
             </button>
           </div>
-          <button>Update, skal måske flyttes?</button>
-          <button type="submit" onClick={() => handleDelete(review.id)}>
-            Delete this
+          <button
+            className="reviews-btn"
+            type="submit"
+            onClick={() => handleDelete(review.id)}
+          >
+            Delete
           </button>
         </div>
       ))}

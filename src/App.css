@@ -931,6 +931,15 @@
     text-align: right;
   }
 
+  .reviews-btn {
+    width: 30%;
+    color: white;
+    border: 0;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   /* Reviews, create review (rune) */
 
   .reviews-form-container {
