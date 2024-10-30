@@ -530,7 +530,11 @@ export default function ExploreGenres() {
     <div className="explore-genres-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search the library..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search the library..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
