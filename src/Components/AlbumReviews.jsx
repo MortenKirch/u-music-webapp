@@ -1,3 +1,3 @@
-export default function AlbumReviews {
-return
+export default function AlbumReviews() {
+  return <></>;
 }

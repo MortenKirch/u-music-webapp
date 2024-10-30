@@ -1,17 +1,17 @@
 import AlbumHeader from "../Components/AlbumHeader";
 import AlbumSongs from "../Components/AlbumSongs";
 import AlbumReviews from "../Components/AlbumReviews";
-
 import { useEffect, useState } from "react";
 
-export default function HomeRecommend() {
-  const [albums, setAlbums] = useState([]);
+export default function AlbumPage() {
+  const [albums, setAlbum] = useState(null);
+  const [songs, setSongs] = useState([]);
 
   useEffect(() => {
-    async function getAlbums() {
-      const url =
+    async function getAlbum() {
+      const albumsUrl =
         "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/albums.json";
-      const response = await fetch(url);
+      const response = await fetch(albumsUrl);
       const data = await response.json();
       const firstKey = Object.keys(data)[0];
       if (firstKey) {
@@ -20,19 +20,27 @@ export default function HomeRecommend() {
           name: firstKey,
           ...data[firstKey][0],
         };
-        setAlbums([firstAlbum]);
+        setAlbum(firstAlbum);
       }
     }
-    getAlbums();
+
+    async function getSongs() {
+      const songsUrl =
+        "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/songs.json";
+      const response = await fetch(songsUrl);
+      const songs = await response.json();
+      setSongs(songs);
+    }
+
+    getAlbum();
+    getSongs();
   }, []);
 
   return (
     <section className="full-album-section">
-      {albums.map((album) => (
-        <div key={album.id}>
-          <AlbumHeader album={album} />
-        </div>
-      ))}
+      <AlbumHeader album={albums} />
+      <AlbumSongs songs={songs} />
+      <AlbumReviews />
     </section>
   );
 }
