@@ -31,7 +31,7 @@ export default function ExploreArtists() {
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
-      <h2>Artists</h2>
+      <h1>Artists</h1>
 
       <div className="explore-artists-grid">
         {artists.map((artist, index) => (

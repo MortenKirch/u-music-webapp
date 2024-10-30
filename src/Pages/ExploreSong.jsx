@@ -80,16 +80,18 @@ export default function ExploreSong() {
 
       <div className="explore-albums-grid">
         {songs.map((song, index) => (
-          <div className="explore-album-card" key={index}>
-            <img
-              src={song.image}
-              alt={song.title}
-              className="explore-album-image"
-            />
-            <h3>{song.title}</h3>
-            <p className="explore-album-artist-text">{song.artist}</p>
-            <p className="explore-album-genre-text">{song.genre}</p>
-          </div>
+          <NavLink to="/album" className="explore-album-card" key={index}>
+            <div className="explore-album-card" key={index}>
+              <img
+                src={song.image}
+                alt={song.title}
+                className="explore-album-image"
+              />
+              <h3>{song.title}</h3>
+              <p className="explore-album-artist-text">{song.artist}</p>
+              <p className="explore-album-genre-text">{song.genre}</p>
+            </div>
+          </NavLink>
         ))}
       </div>
     </div>

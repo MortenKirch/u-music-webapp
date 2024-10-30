@@ -400,9 +400,8 @@
   .explore-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     color: white;
   }
 
@@ -428,7 +427,7 @@
     pointer-events: none;
   }
 
-  input {
+  .searchbar-input {
     width: 100%;
     padding: 10px 40px;
     border-radius: 20px;
@@ -462,22 +461,15 @@
   .explore-artists-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-      180deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(99, 0, 90, 1) 35%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    align-items: start;
     color: white;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    height: 100%;
   }
 
-  .explore-artists-container h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+  .explore-artists-container h1 {
+    margin: 1rem;
+    font-size: 1.7rem;
   }
 
   .explore-artists-grid {
@@ -511,7 +503,7 @@
   .explore-genres-container {
     color: white;
     padding: 20px;
-    height: 100vh;
+    height: 100%;
   }
 
   .explore-genres-container h2 {
@@ -599,6 +591,7 @@
   /* Explore Album */
   .explore-albums-container {
     color: white;
+    height: 100%;
   }
 
   .explore-albums-container h2 {
@@ -620,7 +613,6 @@
     align-items: center;
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 2rem;
     color: var(--white);
     width: 100%;
   }
@@ -723,6 +715,7 @@
     width: 50%;
     text-decoration: none;
     text-align: center;
+    font-size: 0.85rem;
   }
 
   /* Genres */
@@ -1653,14 +1646,14 @@
 
   .full-album-header {
     display: flex;
-    gap: 1.5rem;
   }
 
   .full-album-header img {
+    margin: 0 0.7rem;
     width: 50%;
   }
 
-  .full-album-header-info {
+  .full-album-header-2 {
     width: 100%;
     gap: 0.5rem;
     display: flex;
