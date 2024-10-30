@@ -2,8 +2,9 @@ export default function AlbumHeader({ album }) {
   return (
     <>
       <div className="full-album-header">
+        <div className="full-album-header-1"></div>
         <img src={`${album.image}`} alt={album.name} />
-        <div className="full-album-header-info">
+        <div className="full-album-header-2">
           <div>
             <p className="full-album-header-title">Title</p>
             <p className="full-album-header-description">{album.name}</p>
