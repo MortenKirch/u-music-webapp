@@ -27,7 +27,11 @@ export default function ExploreConcerts() {
     <div className="explore-concerts-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>

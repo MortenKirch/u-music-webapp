@@ -72,7 +72,11 @@ export default function ExploreAlbums() {
     <div className="explore-albums-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
