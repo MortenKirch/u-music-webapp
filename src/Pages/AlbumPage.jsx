@@ -26,7 +26,7 @@ export default function HomeRecommend() {
   return (
     <section className="full-album-section">
       {albums.map((album) => (
-        <div className="" key={album.id}>
+        <div key={album.id}>
           <AlbumHeader album={album} />
         </div>
       ))}
