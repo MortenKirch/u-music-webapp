@@ -147,7 +147,7 @@ export default function Reviews() {
   return (
     <section className="reviews-container">
       <h1>Reviews</h1>
-      <button onClick={handleCreate}>Create Review, skal nok flyttes?</button>
+      <button className="reviews-form-btn reviews-btn-create" onClick={handleCreate}>Create Review?</button>
 
       {reviews.map((review, index) => (
         <div

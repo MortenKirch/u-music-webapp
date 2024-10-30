@@ -940,6 +940,10 @@
     background-color: rgba(0, 0, 0, 0);
   }
 
+  .reviews-btn-create {
+    margin-bottom: 1rem;
+  }
+
   /* Reviews, create review (rune) */
 
   .reviews-form-container {
