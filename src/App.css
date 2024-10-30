@@ -938,18 +938,23 @@
     width: 80%;
     background-color: rgba(45, 45, 45, 0.5);
     padding: 1.1rem;
-  }
-  .reviews-form-container label {
+    border-radius: 0.9rem;
   }
 
   .reviews-form {
     display: flex;
+
     justify-content: center;
     flex-direction: column;
   }
   .reviews-form label {
     color: white;
-    text-align: center;
+  }
+  .reviews-form input,
+  textarea,
+  select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 
   .reviews-form-title {
@@ -958,6 +963,7 @@
 
   .reviews-form-reviewtext {
     margin: 1rem 0;
+    height: 10rem;
   }
 
   .reviews-form-rating {
@@ -965,6 +971,15 @@
   }
   .reviews-form-rating option {
     text-align: center;
+  }
+  .reviews-form-btn {
+    width: 100%;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #2a2525;
   }
 
   /* Activity */
