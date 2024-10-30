@@ -1,31 +1,32 @@
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
-import LoginScreen from "./pages/LoginScreen";
+import LoginScreen from "./Pages/LoginScreen";
 import Explore from "./Pages/Explore";
-import HomeScreen from "./pages/HomeScreen";
-import Profile from "./pages/Profile";
+import HomeScreen from "./Pages/HomeScreen";
+import Profile from "./Pages/Profile";
 import NavTop from "./Components/NavbarTop";
 import Activity from "./Pages/Activity";
 import Concert from "./Pages/Concert";
 import ConcertsLandingPage from "./Pages/ConcertsLandingPage";
-import Reviews from "./pages/Reviews";
-import Notifications from "./pages/Notifications";
+import Reviews from "./Pages/Reviews";
+import Notifications from "./Pages/Notifications";
 import NavbarBottom from "./Components/NavbarBottom";
 import CreateAccount from "./Pages/CreateAccount";
 import ChooseGenre from "./Pages/ChooseGenre";
 import CompleteProfile from "./Pages/CompleteProfile";
-import Charts from "./pages/Charts";
+import Charts from "./Pages/Charts";
 import ExploreArtists from "./Pages/ExploreArtists";
 import ExploreGenres from "./Pages/ExploreGenres";
 import Genre from "./Pages/Genre";
 import ExploreAlbum from "./Pages/ExploreAlbums";
 import ExploreSong from "./Pages/ExploreSong";
-import ArtistProfile from "./pages/ArtistProfile";
+import ArtistProfile from "./Pages/ArtistProfile";
 import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
-import Album from "./Pages/Album";
+import AlbumPage from "./Pages/AlbumPage";
 import Song from "./Pages/Song";
+import ReviewsForm from "./Components/ReviewsForm";
 
 export default function App() {
   const auth = getAuth();
@@ -59,7 +60,7 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-      <NavbarBottom />
+
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
@@ -83,11 +84,13 @@ export default function App() {
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genre" element={<Genre />} />
         <Route path="/song" element={<Song />} />
-        <Route path="/album" element={<Album />} />
+        <Route path="/album" element={<AlbumPage />} />
+        <Route path="/ReviewsForm" element={<ReviewsForm />} />
 
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <NavbarBottom />
     </>
   );
 

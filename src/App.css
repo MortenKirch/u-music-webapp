@@ -369,15 +369,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: sticky;
     padding-bottom: 0.25rem;
     height: 60px;
     bottom: 0;
     background: rgb(0, 0, 0);
     width: 100%;
-    
   }
- 
 
   .nav--item {
     text-align: center;
@@ -402,9 +400,8 @@
   .explore-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     color: white;
   }
 
@@ -430,7 +427,7 @@
     pointer-events: none;
   }
 
-  input {
+  .searchbar-input {
     width: 100%;
     padding: 10px 40px;
     border-radius: 20px;
@@ -464,22 +461,15 @@
   .explore-artists-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-      180deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(99, 0, 90, 1) 35%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    align-items: start;
     color: white;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    height: 100%;
   }
 
-  .explore-artists-container h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+  .explore-artists-container h1 {
+    margin: 1rem;
+    font-size: 1.7rem;
   }
 
   .explore-artists-grid {
@@ -513,7 +503,7 @@
   .explore-genres-container {
     color: white;
     padding: 20px;
-    height: 100vh;
+    height: 100%;
   }
 
   .explore-genres-container h2 {
@@ -600,8 +590,8 @@
 
   /* Explore Album */
   .explore-albums-container {
-    padding: 20px;
     color: white;
+    height: 100%;
   }
 
   .explore-albums-container h2 {
@@ -621,12 +611,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: fit-content;
-    height: 11rem;
+    text-align: center;
     border-radius: 10px;
-    margin-bottom: 2rem;
     color: var(--white);
+    width: 100%;
   }
 
   .explore-albums-grid h3 {
@@ -648,8 +636,8 @@
 
   .explore-album-image {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    object-fit: cover;
     margin-bottom: 0.5rem;
   }
 
@@ -679,6 +667,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin-bottom: 100px;
   }
 
   .concert-card {
@@ -717,14 +706,18 @@
   .see-tour-button {
     margin-top: 2rem;
     margin-left: auto;
-    padding: 8px 12px;
+    padding: 12px 12px;
     background-color: #2a2525;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     width: 50%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.85rem;
   }
+
   /* Genres */
   .genres-container {
     padding: 20px;
@@ -871,8 +864,7 @@
   }
 
   .main-review {
-    display: flex;
-    gap: 2rem;
+    display: inline-block;
   }
 
   .review-album {
@@ -880,6 +872,10 @@
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    float: left;
+    width: 40%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 
   .review-album-info {
@@ -908,14 +904,11 @@
   }
 
   .main-review-text {
-    display: flex;
-    align-items: start;
-    justify-content: center;
     margin-top: 2rem;
   }
 
   .review-album-image {
-    width: 10rem;
+    width: 8rem;
     object-fit: cover;
     margin-bottom: 0.7rem;
     margin-top: 2rem;
@@ -936,6 +929,66 @@
 
   .review-likes {
     text-align: right;
+  }
+
+  .reviews-btn {
+    width: 30%;
+    color: white;
+    border: 0;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  /* Reviews, create review (rune) */
+
+  .reviews-form-container {
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgba(45, 45, 45, 0.5);
+    padding: 1.1rem;
+    border-radius: 0.9rem;
+  }
+
+  .reviews-form {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+  }
+  .reviews-form label {
+    color: white;
+  }
+  .reviews-form input,
+  textarea,
+  select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .reviews-form-title {
+    margin: 1rem 0;
+  }
+
+  .reviews-form-reviewtext {
+    margin: 1rem 0;
+    height: 10rem;
+  }
+
+  .reviews-form-rating {
+    margin: 1rem 0;
+  }
+  .reviews-form-rating option {
+    text-align: center;
+  }
+  .reviews-form-btn {
+    width: 100%;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #2a2525;
   }
 
   /* Activity */
@@ -1102,6 +1155,16 @@
 
   .setlist-section {
     margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sangcovers {
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    object-fit: cover;
   }
 
   .setlist-title {
@@ -1112,19 +1175,35 @@
 
   .setlist-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: 90vw;
+    align-items: center;
     padding: 8px 0;
     color: #ffffff;
   }
 
   .setlist-song {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
   }
 
-  .setlist-song-title {
-    font-size: 16px;
+  .setlist-song-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .sanger-navn {
+    color: red;
+    font-size: 0.8rem;
     margin: 0;
+  }
+  .setlist-song-title {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 4px;
   }
 
   .setlist-song-data {
@@ -1137,6 +1216,7 @@
     font-size: 14px;
     color: #b3b3b3;
     margin: 0;
+    margin-left: auto;
   }
 
   .see-full-list {
@@ -1196,6 +1276,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 100px;
   }
 
   .tourdate-box {
@@ -1583,60 +1664,60 @@
 
   /* Album Display Section */
 
-  .album-container-album {
-    color: white;
-    padding: 16px;
-    min-height: 100vh;
+  .full-album-section {
+    height: 100vh;
   }
 
-  .album-display-section-album {
-    margin-bottom: 32px;
-  }
-
-  .album-header-info-album {
+  .full-album-header {
     display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 32px;
   }
 
-  .album-cover-album {
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-    margin-top: 50px;
-  
-  }
-
-  .album-details-info-album {
+  .full-album-header-1 {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    width: 50%;
+    margin: 0 0.7rem;
   }
 
-  .album-title-heading-album {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    margin-top: 55px;
+  .full-album-header-1 h1 {
+    color: var(--white);
+    font-size: 1.1rem;
   }
 
-  .album-meta-album {
-    color: #71767b;
-    font-size: 16px;
-    margin: 0;
+  .full-album-header img {
+    width: 100%;
+    margin: 0.5rem 0;
   }
 
-  .music-icons-album {
+  .streaming-icons {
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
   }
 
-  .icon-album {
-    width: 55px;
-    height: 55px;
-    border-radius: 4px;
+  .streaming-icons img {
+    width: 20%;
+  }
+
+  .full-album-header-2 {
+    width: 50%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    font-size: 0.7rem;
+    justify-content: center;
+  }
+
+  .full-album-header-title {
+    color: var(--gray);
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .full-album-header-description {
+    font-size: 0.9rem;
   }
 
   /* Songs Section */
@@ -1806,13 +1887,20 @@
 
 .artist-profile-name {
   font-size: 1.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .artist-profile-bio,
 .artist-profile-genres {
-  margin: 0.4rem 0;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+.artist-profile-title {
+  color: var(--gray);
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .artist-profile-top-songs {
@@ -2008,7 +2096,7 @@
 }
 
 .recommendations-container section {
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
 
 .recommendations-container h2 {
@@ -2016,17 +2104,29 @@
   margin-bottom: 10px;
 }
 
-.albums-grid {
+.home-recommended-section {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.homepage-albums-slider {
   display: flex;
-  gap: 2px;
-  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.homepage-albums-card {
+  flex: 0 0 auto;
+  width: 33.3%;
+  scroll-snap-align: center;
 }
 
 .album-card {
-  width: 32%;
+  width: 100%;
   padding: 5px;
   border-radius: 10px;
   text-align: center;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .album-card img {
@@ -2037,6 +2137,8 @@
 .album-info {
   margin-top: 0px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .album-info p {
@@ -2050,7 +2152,10 @@
 }
 
 .rating {
+  display: flex;
   margin-top: 5px;
+  align-items: end;
+  width: 100%;
 }
 
 .rating button {
@@ -2060,6 +2165,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Notifications */
@@ -2158,9 +2264,11 @@
 .see-all-lyrics-new {
   display: block;
   margin-top: 16px;
-  color: #71767b;
   text-decoration: none;
   font-size: 14px;
+  background: none;
+  border: none;
+  color: #71767b;
 }
 
 /* Reviews Section */
@@ -2218,13 +2326,22 @@
 .review-header-new {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .reviewer-pic-new {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.name-rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .reviewer-name-new {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; // Import useEffect and useState
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import profilePic from "../images/cat.jpg";
 import "../App.css";
@@ -12,34 +12,31 @@ import sang1 from "../images/Rap god.png";
 // Albums
 import album1 from "../images/Album1.jpg";
 
+export default function Profile({ setOnboardingComplete }) {
+  const [imageUrl, setImageUrl] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const [isFollowing, setIsFollowing] = useState(false); // State for following status
+  const uid = localStorage.getItem("uid");
+  const navigate = useNavigate();
 
-export default function Profile({setOnboardingComplete}) {
-  const [imageUrl, setImageUrl] = useState(null); // State for profile image
-  const [userData, setUserData] = useState(null); // State for user data
-  const uid = localStorage.getItem('uid'); // Get UID from local storage
-const navigate = useNavigate();
-//function for navigating to create account of you try to go to profile whe nyou havent registered
-function handleClick(){
-  setOnboardingComplete(false)
-  navigate("/create-account")
-  
-}
+  function handleClick() {
+    setOnboardingComplete(false);
+    navigate("/create-account");
+  }
+
   useEffect(() => {
     const fetchUserData = async () => {
-
-
-      // Fetch user profile data from Firebase
       const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
-      
+
       try {
         const response = await fetch(url);
         const data = await response.json();
         if (data) {
-          setUserData(data); // Set the user data
+          setUserData(data);
+          setIsFollowing(data.isFollowing || false); // Initialize following status
           if (data.profileImage) {
-            setImageUrl(data.profileImage); // Set profile image if available
+            setImageUrl(data.profileImage);
           }
-          //error handling
         } else {
           console.log("No user data found.");
         }
@@ -49,26 +46,69 @@ function handleClick(){
     };
 
     fetchUserData(); // Call the fetch function
-  }, [uid]); // Run this effect when uid changes
-// if user data doesnt exist return dont have a user jsx
+  }, [uid]);
+
+  const handleFollowToggle = async () => {
+    const newFollowingStatus = !isFollowing;
+    const updatedFollowersCount = newFollowingStatus
+      ? (userData.followers || 0) + 1
+      : (userData.followers || 0) - 1;
+
+    setIsFollowing(newFollowingStatus);
+
+    // Update user data in Firebase
+    const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
+    await fetch(url, {
+      method: "PATCH",
+      body: JSON.stringify({
+        followers: updatedFollowersCount,
+        isFollowing: newFollowingStatus,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    // Update the local user data to reflect the change
+    setUserData((prevData) => ({
+      ...prevData,
+      followers: updatedFollowersCount,
+      isFollowing: newFollowingStatus,
+    }));
+  };
+
   if (!userData) {
-    return <>
-    <div>You dont have one, Create a user here</div>
-    <button type="submit" onClick={handleClick}>create account</button>
-    </> ; // Loading state while fetching user data
+    return (
+      <>
+        <div>You don't have one, create a user here</div>
+        <button type="submit" onClick={handleClick}>
+          Create Account
+        </button>
+      </>
+    );
   }
 
   return (
     <div>
       <div className="profile-container">
         <div className="profile-header">
-          <img src={imageUrl || profilePic} alt="Profile" className="profile-image" />
+          <img
+            src={imageUrl || profilePic}
+            alt="Profile"
+            className="profile-image"
+          />
           <h1 className="profile-name">{userData.username || "Anonymous"}</h1>
           <div className="followingsection">
-            <span className="followers">Followers: {userData.followers || 0}</span>
-            <span className="following">Following: {userData.following || 0}</span>
+            <span className="followers">
+              Followers: {userData.followers || 0}
+            </span>
+            <span className="following">
+              Following: {userData.following || 0}
+            </span>
           </div>
-          <button className="followme-button">Follow</button>
+          <button className="followme-button" onClick={handleFollowToggle}>
+            {isFollowing ? "Following" : "Follow"}
+          </button>
         </div>
       </div>
       {/* Favorite Artists Section */}
@@ -111,7 +151,6 @@ function handleClick(){
               </div>
             </div>
           </li>
-          {/* Repeat for other songs */}
         </ul>
       </div>
 
@@ -129,7 +168,6 @@ function handleClick(){
               <p className="album-rating">Rating: 5/10</p>
             </div>
           </div>
-          {/* Repeat for other albums */}
         </div>
       </div>
 
@@ -141,7 +179,7 @@ function handleClick(){
       </div>
       <div className="review-box">
         <div className="review-header">
-          <img src={profilePic} alt="Reviewer" className="reviewer-pic" />
+          <img src={imageUrl} alt="Reviewer" className="reviewer-pic" />
           <div className="reviewer-details">
             <p>{userData.username}</p>
             <div className="review-rating">

@@ -27,11 +27,15 @@ export default function ExploreArtists() {
     <div className="explore-artists-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search the library..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search the library..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
-      <h2>Artists</h2>
+      <h1>Artists</h1>
 
       <div className="explore-artists-grid">
         {artists.map((artist, index) => (

@@ -1,45 +1,41 @@
-import charlixcx from "../images/charli-xcx.png";
-import nisemono from "../images/nisemono.png";
-import rapgod from "../images/rap-god.png";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import HomeRecommendAlbums from "./HomeRecommendAlbums";
 
 export default function HomeNews() {
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    async function getAlbums() {
+      const url =
+        "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/albums.json";
+      const response = await fetch(url);
+      const data = await response.json();
+      const albumsArray = Object.keys(data).map((key) => ({
+        id: key,
+        name: key,
+        ...data[key][0],
+      })); // from object to array
+      setAlbums(albumsArray);
+    }
+    getAlbums();
+  }, []);
+
   return (
-    <section className="new-from-friends-section">
-      <h2>New from friends</h2>
-      <div className="albums-grid">
-        <div className="album-card">
-          <img src={charlixcx} alt="The Eminem Show" />
-          <div className="album-info">
-            <p>Album</p>
-            <h3>The Eminem Show</h3>
-            <p>2009 - Album</p>
-            <div className="rating">
-              <button>See Review</button>
-            </div>
+    <section className="home-recommended-section">
+      <h2>Recommended</h2>
+      <div className="homepage-albums-slider">
+        {albums.map((album, index) => (
+          <div className="homepage-albums-card" key={album.id}>
+            {index === 0 ? (
+              <Link to="/album">
+                <HomeRecommendAlbums album={album} />
+              </Link>
+            ) : (
+              <HomeRecommendAlbums album={album} />
+            )}
           </div>
-        </div>
-        <div className="album-card">
-          <img src={nisemono} alt="Hit Me Hard and Soft" />
-          <div className="album-info">
-            <p>Album</p>
-            <h3>Hit Me Hard and Soft</h3>
-            <p>Billie Eilish</p>
-            <div className="rating">
-              <button>See Review</button>
-            </div>
-          </div>
-        </div>
-        <div className="album-card">
-          <img src={rapgod} alt="Cutouts" />
-          <div className="album-info">
-            <p>Album</p>
-            <h3>Cutouts</h3>
-            <p>The Smile</p>
-            <div className="rating">
-              <button>See Review</button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

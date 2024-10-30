@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 // import Madvillainy from "../images/album-covers/madvillainy.png";
 // import Rumours from "../images/album-covers/rumours.png";
 // import placeholder from "../images/cat.jpg";
+import { useNavigate } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -10,7 +11,28 @@ export default function Reviews() {
   const [expandedReviews, setExpandedReviews] = useState({});
   const uid = localStorage.getItem("uid"); // Get UID from local storage
   const [reviews, setReviews] = useState([]);
+  const [profileImage, setProfileImage] = useState();
+
   const [userData, setUserData] = useState(null); // State for user data
+  const navigate = useNavigate();
+
+  const [update, setUpdate] = useState(false);
+  const forceUpdate = () => setUpdate(!update);
+
+  useEffect(() => {
+    async function getProfile() {
+      const uid = localStorage.getItem("uid");
+      // users.uid. app/users/{uid}
+
+      const profileurl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
+      const profileresponse = await fetch(profileurl);
+      const profiledata = await profileresponse.json();
+
+      setUserData(profiledata);
+    }
+
+    getProfile();
+  });
 
   useEffect(() => {
     async function getReviews() {
@@ -33,7 +55,7 @@ export default function Reviews() {
 
     getUserData();
     getReviews();
-  }, [uid]);
+  }, [uid, update]);
 
   const toggleExpandReview = (index) => {
     setExpandedReviews((prev) => ({
@@ -48,6 +70,32 @@ export default function Reviews() {
     }
     return text;
   };
+
+  function handleCreate(event) {
+    event.preventDefault();
+    navigate("/ReviewsForm");
+  }
+
+  async function handleDelete(id) {
+    console.log("Delete post", reviews);
+
+    const confirmDelete = window.confirm(
+      `Do you want to delete post, ${reviews.title}?`
+    );
+    if (confirmDelete) {
+      const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews/${id}.json`;
+      const response = await fetch(url, {
+        method: "DELETE",
+      });
+      if (response.ok) {
+        console.log("Post deleted");
+        forceUpdate();
+        navigate("/Reviews");
+      } else {
+        console.log("Sorry, something went wrong");
+      }
+    }
+  }
 
   // const reviews = [
   //   {
@@ -99,7 +147,7 @@ export default function Reviews() {
   return (
     <section className="reviews-container">
       <h1>Reviews</h1>
-      <button>Create Review, skal nok flyttes?</button>
+      <button onClick={handleCreate}>Create Review, skal nok flyttes?</button>
 
       {reviews.map((review, index) => (
         <div
@@ -111,11 +159,11 @@ export default function Reviews() {
           <div className="review-header">
             <div className="review-profile">
               <img
-                src={review.profileImage}
+                src={userData?.profileImage}
                 alt="Profile"
                 className="review-profile-image"
               />
-              <p className="review-profile-name">{review.profileName}</p>
+              <p className="review-profile-name">{userData?.username}</p>
             </div>
             <div>
               <div className="review-rating">
@@ -150,13 +198,11 @@ export default function Reviews() {
                 <p className="review-genres">{review.genres}</p>
               </div>
             </div>
-            <div className="main-review-text">
-              <p>
-                {expandedReviews[index]
-                  ? review.review
-                  : truncateText(review.review, 250)}
-              </p>
-            </div>
+            <p className="main-review-text">
+              {expandedReviews[index]
+                ? review.reviewtext
+                : truncateText(review.reviewtext, 250)}
+            </p>
           </div>
           <p className="review-likes">
             {review.likes} <FontAwesomeIcon icon={faHeart} />{" "}
@@ -169,7 +215,13 @@ export default function Reviews() {
               {expandedReviews[index] ? "Show Less" : "Full review"}
             </button>
           </div>
-          <button>Update, skal måske flyttes?</button>
+          <button
+            className="reviews-btn"
+            type="submit"
+            onClick={() => handleDelete(review.id)}
+          >
+            Delete
+          </button>
         </div>
       ))}
     </section>

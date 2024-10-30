@@ -3,6 +3,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import EminemTour from "../images/concert-posters/eminem-poster.png";
 import KendrickTour from "../images/concert-posters/kendrick-poster.png";
+import { NavLink } from "react-router-dom"; // Import NavLink
 
 export default function ExploreConcerts() {
   const concerts = [
@@ -26,7 +27,11 @@ export default function ExploreConcerts() {
     <div className="explore-concerts-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
@@ -50,7 +55,10 @@ export default function ExploreConcerts() {
               <p className="concert-dates">{concert.dates}</p>
               <p className="concert-location">{concert.location}</p>
 
-              <button className="see-tour-button">See tour</button>
+              {/* Directly navigate to the concert page without IDs */}
+              <NavLink to="/concert" className="see-tour-button">
+                See Tour
+              </NavLink>
             </div>
           </div>
         ))}

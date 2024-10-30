@@ -10,13 +10,6 @@ import ElectronicImage from "../images/album-covers/mezzanine.png";
 export default function ExploreGenres() {
   const navigate = useNavigate();
 
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.slice(0, maxLength) + "...";
-    }
-    return text;
-  };
-
   const genres = [
     {
       name: "Hip Hop",
@@ -537,7 +530,11 @@ export default function ExploreGenres() {
     <div className="explore-genres-container">
       <div className="searchbar-container">
         <div className="search-input-container">
-          <input type="text" placeholder="Search the library..." />
+          <input
+            className="searchbar-input"
+            type="text"
+            placeholder="Search the library..."
+          />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
@@ -570,7 +567,7 @@ export default function ExploreGenres() {
                 <p style={{ textAlign: "left" }}>
                   {expandedGenreIndex === index
                     ? genre.description
-                    : truncateText(genre.description, 75)}
+                    : genre.description}
                 </p>
                 <button
                   className="show-subgenres"
@@ -594,7 +591,7 @@ export default function ExploreGenres() {
                     <li key={subIndex}>
                       <div className="subgenre-item">
                         <strong>{subgenre.name}</strong>
-                        <p>{truncateText(subgenre.teaser, 110)}</p>
+                        <p>{subgenre.teaser}</p>
                       </div>
                     </li>
                   ))}

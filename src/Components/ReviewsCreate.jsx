@@ -26,7 +26,7 @@ export default function CreateReviewsPage() {
     <section>
       <div>
         <h1>Create New Review</h1>
-        <ReviewsForm savePost={createReview} />
+        <ReviewsForm saveReview={createReview} />
       </div>
     </section>
   );
