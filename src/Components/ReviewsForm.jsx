@@ -26,43 +26,50 @@ export default function ReviewsForm() {
   };
 
   return (
-    <form className="form-grid" onSubmit={handleSubmit}>
-      <label htmlFor="title">Title:</label>
-      <input
-        id="title"
-        name="title"
-        type="text"
-        value={title}
-        aria-label="title"
-        placeholder="Write a review title..."
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <label htmlFor="reviewtext">Write your review..</label>
-      <textarea
-        id="reviewtext"
-        name="reviewtext"
-        type="text"
-        value={reviewtext}
-        aria-label="reviewtext"
-        placeholder="Write a review..."
-        onChange={(e) => setReviewText(e.target.value)}
-      />
-      <label htmlFor="rating">Choose a rating:</label>
-      <select
-        onChange={(e) => setRating(e.target.value)}
-        id="rating"
-        name="rating"
-      >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
+    <section className="reviews-form-container">
+      <form className="reviews-form" onSubmit={handleSubmit}>
+        <label htmlFor="title">Title:</label>
+        <input
+          id="title"
+          className="reviews-form-title"
+          name="title"
+          type="text"
+          value={title}
+          aria-label="title"
+          placeholder="Write a review title..."
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <label htmlFor="reviewtext">Write your review..</label>
+        <textarea
+          id="reviewtext"
+          className="reviews-form-reviewtext"
+          name="reviewtext"
+          type="text"
+          value={reviewtext}
+          aria-label="reviewtext"
+          placeholder="Write a review..."
+          onChange={(e) => setReviewText(e.target.value)}
+        />
+        <label htmlFor="rating">Choose a rating:</label>
+        <select
+          className="reviews-form-rating"
+          onChange={(e) => setRating(e.target.value)}
+          id="rating"
+          name="rating"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
 
-      <div>
-        <button type="submit">Save</button>
-      </div>
-    </form>
+        <div>
+          <button className="reviews-form-btn" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </section>
   );
 }
