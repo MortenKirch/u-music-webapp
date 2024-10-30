@@ -11,12 +11,28 @@ export default function Reviews() {
   const [expandedReviews, setExpandedReviews] = useState({});
   const uid = localStorage.getItem("uid"); // Get UID from local storage
   const [reviews, setReviews] = useState([]);
+  const [profileImage, setProfileImage] = useState();
 
   const [userData, setUserData] = useState(null); // State for user data
   const navigate = useNavigate();
 
   const [update, setUpdate] = useState(false);
   const forceUpdate = () => setUpdate(!update);
+
+  useEffect(() => {
+    async function getProfile() {
+      const uid = localStorage.getItem("uid");
+      // users.uid. app/users/{uid}
+
+      const profileurl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
+      const profileresponse = await fetch(profileurl);
+      const profiledata = await profileresponse.json();
+
+      setUserData(profiledata);
+    }
+
+    getProfile();
+  });
 
   useEffect(() => {
     async function getReviews() {
@@ -143,11 +159,11 @@ export default function Reviews() {
           <div className="review-header">
             <div className="review-profile">
               <img
-                src={review.profileImage}
+                src={userData?.profileImage}
                 alt="Profile"
                 className="review-profile-image"
               />
-              <p className="review-profile-name">{review.profileName}</p>
+              <p className="review-profile-name">{userData?.username}</p>
             </div>
             <div>
               <div className="review-rating">
@@ -184,7 +200,7 @@ export default function Reviews() {
             </div>
             <p className="main-review-text">
               {expandedReviews[index]
-                ? review.review
+                ? review.reviewtext
                 : truncateText(review.reviewtext, 250)}
             </p>
           </div>
