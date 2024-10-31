@@ -1,8 +1,4 @@
 import { useState, useEffect } from "react";
-// import TPAB from "../images/album-covers/tpab.png";
-// import Madvillainy from "../images/album-covers/madvillainy.png";
-// import Rumours from "../images/album-covers/rumours.png";
-// import placeholder from "../images/cat.jpg";
 import { useNavigate } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,27 +7,11 @@ export default function Reviews() {
   const [expandedReviews, setExpandedReviews] = useState({});
   const uid = localStorage.getItem("uid"); // Get UID from local storage
   const [reviews, setReviews] = useState([]);
-  const [profileImage, setProfileImage] = useState();
-
-  const [userData, setUserData] = useState(null); // State for user data
+  const [userData, setUserData] = useState({}); // State for user data keyed by UID
   const navigate = useNavigate();
 
   const [update, setUpdate] = useState(false);
   const forceUpdate = () => setUpdate(!update);
-
-  useEffect(() => {
-    async function getProfile() {
-
-
-      const profileurl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${reviews.uid}.json`;
-      const profileresponse = await fetch(profileurl);
-      const profiledata = await profileresponse.json();
-
-      setUserData(profiledata);
-    }
-
-    getProfile();
-  });
 
   useEffect(() => {
     async function getReviews() {
@@ -41,18 +21,21 @@ export default function Reviews() {
       const postsArray = Object.keys(data).map((key) => ({
         id: key,
         ...data[key],
-      })); // from object to array
+      })); // Convert object to array
       setReviews(postsArray);
-    }
-    async function getUserData() {
-      const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${reviews.uid}.json`;
 
-      const response = await fetch(url);
-      const userData = await response.json();
-      setUserData(userData); // Set the user data
+      // Fetch user data for each review
+      postsArray.forEach(async (review) => {
+        const userUrl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${review.uid}.json`;
+        const userResponse = await fetch(userUrl);
+        const user = await userResponse.json();
+        setUserData((prevUserData) => ({
+          ...prevUserData,
+          [review.uid]: user,
+        }));
+      });
     }
 
-    getUserData();
     getReviews();
   }, [uid, update]);
 
@@ -79,7 +62,7 @@ export default function Reviews() {
     console.log("Delete post", reviews);
 
     const confirmDelete = window.confirm(
-      `Do you want to delete post, ${reviews.title}?`
+      `Do you want to delete post, ${reviews.find(r => r.id === id).title}?`
     );
     if (confirmDelete) {
       const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews/${id}.json`;
@@ -96,8 +79,6 @@ export default function Reviews() {
     }
   }
 
- 
-
   return (
     <section className="reviews-container">
       <h1>Reviews</h1>
@@ -113,11 +94,11 @@ export default function Reviews() {
           <div className="review-header">
             <div className="review-profile">
               <img
-                src={userData?.profileImage}
+                src={userData[review.uid]?.profileImage}
                 alt="Profile"
                 className="review-profile-image"
               />
-              <p className="review-profile-name">{userData?.username}</p>
+              <p className="review-profile-name">{userData[review.uid]?.username}</p>
             </div>
             <div>
               <div className="review-rating">

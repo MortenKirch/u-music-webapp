@@ -1,49 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import placeholder from "../images/image-placeholder.png";
-//passes uid as a prop to make sure you upload the picture to your own profile
+
 export default function ProfileImageUpload({ uid }) {
   const [image, setImage] = useState(null); // State for the uploaded image
-
-  // Function to handle image upload
-  const handleImageChange = (event) => {
-    const file = event.target.files[0]; // Get the uploaded file
-    if (file) {
-      const reader = new FileReader(); // Create a FileReader to read the file
-      reader.onloadend = () => {
-        setImage(reader.result); // Set the image state with the file's data URL
-        uploadImage(reader.result); // Upload the image after it's loaded
-      };
-      reader.readAsDataURL(file); // Read the file as a data URL
-    }
-  };
+  const [imageUrl, setImageUrl] = useState(""); // State for the URL input
 
   // Function to upload image URL to Firebase
   const uploadImage = async (imageData) => {
     const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
 
-      const response = await fetch(url, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          profileImage: imageData, // Store the image data URL in Firebase
-        }),
-      });
-// error handling for response
-      if (!response.ok) {
-        console.error("Error uploading image to Firebase");
-      } else {
-        console.log("Image uploaded successfully");
-      }
- 
+    const response = await fetch(url, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        profileImage: imageData, // Store the image URL in Firebase
+      }),
+    });
+
+    // Error handling for response
+    if (!response.ok) {
+      console.error("Error uploading image to Firebase");
+    } else {
+      console.log("Image uploaded successfully");
+    }
   };
+
+  // UseEffect to update image state and upload image when URL changes
+  useEffect(() => {
+    if (imageUrl) {
+      setImage(imageUrl);
+      uploadImage(imageUrl);
+    }
+  }, [imageUrl]);
 
   return (
     <div className="image-upload-container">
       <label htmlFor="upload">
         <div className="image-placeholder">
-          {/*short hand if statement if uploaded picture doesnt exist show placeholder */}
+          {/* Show uploaded image if it exists; otherwise, show placeholder */}
           {image ? (
             <img src={image} alt="Profile" className="profile-image" />
           ) : (
@@ -51,12 +47,13 @@ export default function ProfileImageUpload({ uid }) {
           )}
         </div>
       </label>
+      
       <input
-        type="file"
-        id="upload"
-        accept="image/*"
-        onChange={handleImageChange}
-        style={{ display: "none" }} // Hide the file input
+        type="text"
+        placeholder="Enter image URL"
+        value={imageUrl}
+        onChange={(e) => setImageUrl(e.target.value)}
+        className="image-url-input input-login"
       />
     </div>
   );
