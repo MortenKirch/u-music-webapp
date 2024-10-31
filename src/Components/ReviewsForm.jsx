@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ReviewsForm() {
   const [reviewTitle, setTitle] = useState("");
   const [reviewtext, setReviewText] = useState("");
   const [rating, setRating] = useState("");
+  const navigate = useNavigate();
   const uid = localStorage.getItem("uid");
   const url =
     "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews.json";
@@ -16,6 +18,7 @@ export default function ReviewsForm() {
     });
     if (response.ok) {
       const data = await response.json();
+      navigate(-1);
       console.log("New post created: ", data);
     }
   }
