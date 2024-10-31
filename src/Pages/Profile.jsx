@@ -99,6 +99,10 @@ export default function Profile({ setOnboardingComplete }) {
           />
           <h1 className="profile-name">{userData.username || "Anonymous"}</h1>
 
+          {userData.pronouns && (
+            <p className="profile-pronouns">{userData.pronouns}</p>
+          )}
+
           {/* Bio Section */}
           {userData.bio && (
             <div className="bio-box">
