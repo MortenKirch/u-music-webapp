@@ -1,23 +1,22 @@
 export default function AlbumSongs({ songs }) {
+  // Map over songs to display each song’s details
+  const songEntries = songs.map((song) => ({
+    uid: song.id, // This is the song title
+    ...song,
+  }));
+
   return (
-    <div className="album-songs">
+    <div className="full-album-songs">
       <h2>Songs</h2>
-      <ul className="album-songs-list">
-        {songs.map((song, index) => (
-          <li key={index} className="album-song-row">
-            <img
-              src={song.cover}
-              alt={song.title}
-              className="album-song-cover"
-            />
-            <div className="album-song-info">
-              <p className="album-song-title">{song.title}</p>
-              <p className="album-song-artist">{song.artist}</p>
+      <ul className="full-album-songs-list">
+        {songEntries.map((song) => (
+          <li key={song.uid} className="full-album-song-row">
+            <div className="full-album-song-info">
+              <p className="full-album-song-title">{song.uid}</p>{" "}
+              <p className="full-album-song-duration">{song.duration}</p>
+              <p className="full-album-song-rating">{song.avgRating}</p>
             </div>
-            <div className="album-song-details">
-              <p className="album-song-duration">{song.duration}</p>
-              <p className="album-song-rating">Rating: {song.rating}/10</p>
-            </div>
+            <div className="full-album-song-details"></div>
           </li>
         ))}
       </ul>
