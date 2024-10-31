@@ -1790,14 +1790,19 @@ margin-right: 1rem;
     flex-direction: column;
     gap: 1rem;
     padding: 0.5rem;
+    width: 90vw;
   }
-
+  .full-album-song-title{
+    flex-grow: 1;
+  }
   .full-album-song-info {
     display: flex;
     gap: 1rem;
+    margin-left: auto;
   }
-
+  
   .full-album-song-duration {
+    align-self: end;
   }
 
   /* Songs Section */
@@ -2357,9 +2362,11 @@ margin-right: 1rem;
 .reviews-section-new {
   display: flex;
   flex-direction: column;
-  background-color: #2e2e2e;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  margin-bottom: 100px;
+  margin: 1rem ;
+  width: 90%;
+  
 }
 
 .reviews-title-new {
@@ -2374,6 +2381,7 @@ margin-right: 1rem;
   justify-content: flex-end;
   align-items: center;
   color: #71767b;
+
 }
 
 .review-rating-display-new {
@@ -2397,6 +2405,8 @@ margin-right: 1rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  color: white;
+
 }
 
 .review-box-new {

@@ -7,7 +7,7 @@ export default function AlbumHeader({ album }) {
     <>
       <div className="full-album-header">
         <div className="full-album-header-1">
-          <p className="full-album-header-title">Title</p>
+        
           <h1>{album.name}</h1>
           <img src={album.image} alt={album.name} />
           <div className="streaming-icons">

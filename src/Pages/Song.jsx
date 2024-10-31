@@ -8,12 +8,12 @@ import soundcloud from "../images/Sound-icon.png";
 import apple from "../images/Apple.png";
 import spotify from "../images/Spotify.png";
 
-export default function SongPage({ setOnboardingComplete }) {
+export default function SongPage() {
   const [imageUrl, setImageUrl] = useState(null);
   const [userData, setUserData] = useState(null);
   const [isLyricsExpanded, setIsLyricsExpanded] = useState(false); // State for lyrics visibility
   const uid = localStorage.getItem("uid");
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchUserData = async () => {
