@@ -1351,11 +1351,13 @@
     justify-content: center;
     gap: 16px;
     margin: 10px 0;
+    margin-bottom: 35px;
   }
 
   .followers,
   .following {
-    font-size: 14px;
+    font-size: 25px;
+    margin-top: 20px;
   }
 
   .followers {
