@@ -4,7 +4,7 @@ export default function ReviewsForm() {
   const [reviewTitle, setTitle] = useState("");
   const [reviewtext, setReviewText] = useState("");
   const [rating, setRating] = useState("");
-
+  const uid = localStorage.getItem("uid")
   const url =
     "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews.json";
 
@@ -22,6 +22,7 @@ export default function ReviewsForm() {
 
   const reviewData = {
     date: new Date().toLocaleDateString("en-US"),
+    uid : uid,
     reviewTitle,
     reviewtext,
     rating,
