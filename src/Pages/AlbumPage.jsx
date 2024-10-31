@@ -31,11 +31,13 @@ export default function AlbumPage() {
       const response = await fetch(songsUrl);
       const songsData = await response.json();
 
-      const songsArray = Object.entries(songsData).map(([title, details]) => ({
-        id: title,
-        name: title, // Song title as name
-        ...details, // Spread the rest of the song details
-      }));
+      const songsArray = Object.entries(songsData)
+        .map(([title, details]) => ({
+          id: title,
+          name: title,
+          ...details,
+        }))
+        .sort((a, b) => a.order - b.order);
 
       setSongs(songsArray);
     }
