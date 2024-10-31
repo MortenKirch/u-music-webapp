@@ -98,6 +98,14 @@ export default function Profile({ setOnboardingComplete }) {
             className="profile-image"
           />
           <h1 className="profile-name">{userData.username || "Anonymous"}</h1>
+
+          {/* Bio Section */}
+          {userData.bio && (
+            <div className="bio-box">
+              <p className="bio-content">{userData.bio}</p>
+            </div>
+          )}
+
           <div className="followingsection">
             <span className="followers">
               Followers: {userData.followers || 0}
@@ -111,7 +119,8 @@ export default function Profile({ setOnboardingComplete }) {
           </button>
         </div>
       </div>
-      {/* Favorite Artists Section */}
+
+      {/* Rest of the Profile Sections */}
       <div className="favorit-sektion-artist">
         <h2>Favorite Artists</h2>
         <div className="artist-favorit">

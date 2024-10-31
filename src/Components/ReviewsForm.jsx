@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 export default function ReviewsForm() {
-  const [title, setTitle] = useState("");
+  const [reviewTitle, setTitle] = useState("");
   const [reviewtext, setReviewText] = useState("");
   const [rating, setRating] = useState("");
-
+  const uid = localStorage.getItem("uid")
   const url =
     "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews.json";
 
@@ -19,8 +19,11 @@ export default function ReviewsForm() {
       console.log("New post created: ", data);
     }
   }
+
   const reviewData = {
-    title,
+    date: new Date().toLocaleDateString("en-US"),
+    uid : uid,
+    reviewTitle,
     reviewtext,
     rating,
   };
@@ -34,7 +37,7 @@ export default function ReviewsForm() {
           className="reviews-form-title"
           name="title"
           type="text"
-          value={title}
+          value={reviewTitle}
           aria-label="title"
           placeholder="Write a review title..."
           onChange={(e) => setTitle(e.target.value)}

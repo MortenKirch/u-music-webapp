@@ -908,7 +908,7 @@
   }
 
   .review-album-image {
-    width: 10rem;
+    width: 8rem;
     object-fit: cover;
     margin-bottom: 0.7rem;
     margin-top: 2rem;
@@ -929,6 +929,19 @@
 
   .review-likes {
     text-align: right;
+  }
+
+  .reviews-btn {
+    width: 30%;
+    color: white;
+    border: 0;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .reviews-btn-create {
+    margin-bottom: 1rem;
   }
 
   /* Reviews, create review (rune) */
@@ -1352,6 +1365,36 @@
   .following {
     font-size: 1rem;
     text-align: right;
+  }
+
+  .bio-box {
+    background-color: #2a2525;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left;
+    max-width: 400px;
+    color: #333;
+  }
+
+  .bio-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .bio-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .bio-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
   }
 
   /* artist sektion */
