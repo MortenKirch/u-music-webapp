@@ -134,6 +134,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .image-placeholder {
@@ -1699,7 +1700,7 @@
   /* Album Display Section */
 
   .full-album-section {
-    height: 100vh;
+    height: 100%;
   }
 
   .full-album-header {
@@ -1752,6 +1753,25 @@
 
   .full-album-header-description {
     font-size: 0.9rem;
+  }
+
+  .full-album-songs {
+    color: var(--white);
+  }
+
+  .full-album-songs h2 {
+    padding-left: 0.5rem;
+  }
+
+  .full-album-songs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .full-album-song-info {
+    border: solid 1px white;
   }
 
   /* Songs Section */

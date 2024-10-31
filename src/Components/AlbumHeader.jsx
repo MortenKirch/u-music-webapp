@@ -8,8 +8,8 @@ export default function AlbumHeader({ album }) {
       <div className="full-album-header">
         <div className="full-album-header-1">
           <p className="full-album-header-title">Title</p>
-          <h1>Ants From Up There</h1>
-          <img src={`${album.image}`} alt={album.name} />
+          <h1>{album.name}</h1>
+          <img src={album.image} alt={album.name} />
           <div className="streaming-icons">
             <img
               src={Spotify}
@@ -48,17 +48,14 @@ export default function AlbumHeader({ album }) {
             <p className="full-album-header-title">Artist</p>
             <p className="full-album-header-description">{album.artist}</p>
           </div>
-
           <div>
             <p className="full-album-header-title">Release</p>
             <p className="full-album-header-description">{album.release}</p>
           </div>
-
           <div>
             <p className="full-album-header-title">Average Rating</p>
             <p className="full-album-header-description">{album.avgRating}</p>
           </div>
-
           <div>
             <p className="full-album-header-title">Genres</p>
             <p className="full-album-header-description">
