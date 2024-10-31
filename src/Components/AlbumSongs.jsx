@@ -19,7 +19,7 @@ export default function AlbumSongs({ songs }) {
           </li>
         ))}
       </ul>
-      <p className="see-all-songs">See all songs</p>
+      
     </div>
   );
 }

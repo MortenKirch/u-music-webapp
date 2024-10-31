@@ -27,6 +27,7 @@ import { useState, useEffect } from "react";
 import AlbumPage from "./Pages/AlbumPage";
 import SongPage from "./Pages/Song";
 import ReviewsForm from "./Components/ReviewsForm";
+import BackButton from "./Components/BackButton";
 
 export default function App() {
   const auth = getAuth();
@@ -60,7 +61,7 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-
+        <BackButton/>
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
