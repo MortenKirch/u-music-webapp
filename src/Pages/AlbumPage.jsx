@@ -4,21 +4,22 @@ import AlbumReviews from "../Components/AlbumReviews";
 import { useEffect, useState } from "react";
 
 export default function AlbumPage() {
-  const [albums, setAlbum] = useState(null);
+  const [album, setAlbum] = useState(null);
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
+    // Fetching the first album from "albums"
     async function getAlbum() {
       const albumsUrl =
         "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/albums.json";
       const response = await fetch(albumsUrl);
       const data = await response.json();
-      const firstKey = Object.keys(data)[0];
+      const firstKey = Object.keys(data)[0]; // Get the first album's key
       if (firstKey) {
         const firstAlbum = {
           id: firstKey,
           name: firstKey,
-          ...data[firstKey][0],
+          ...data[firstKey][0], // Access the first album in the structure
         };
         setAlbum(firstAlbum);
       }
@@ -28,8 +29,15 @@ export default function AlbumPage() {
       const songsUrl =
         "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/songs.json";
       const response = await fetch(songsUrl);
-      const songs = await response.json();
-      setSongs(songs);
+      const songsData = await response.json();
+
+      const songsArray = Object.entries(songsData).map(([title, details]) => ({
+        id: title,
+        name: title, // Song title as name
+        ...details, // Spread the rest of the song details
+      }));
+
+      setSongs(songsArray);
     }
 
     getAlbum();
@@ -38,7 +46,7 @@ export default function AlbumPage() {
 
   return (
     <section className="full-album-section">
-      <AlbumHeader album={albums} />
+      {album && <AlbumHeader album={album} />}
       <AlbumSongs songs={songs} />
       <AlbumReviews />
     </section>
