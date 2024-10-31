@@ -1788,7 +1788,11 @@ margin-right: 1rem;
   }
 
   .full-album-song-info {
-    border: solid 1px white;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .full-album-song-duration {
   }
 
   /* Songs Section */

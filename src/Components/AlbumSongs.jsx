@@ -12,11 +12,10 @@ export default function AlbumSongs({ songs }) {
         {songEntries.map((song) => (
           <li key={song.uid} className="full-album-song-row">
             <div className="full-album-song-info">
+              <p>{song.order}</p>
               <p className="full-album-song-title">{song.uid}</p>{" "}
               <p className="full-album-song-duration">{song.duration}</p>
-              <p className="full-album-song-rating">{song.avgRating}</p>
             </div>
-            <div className="full-album-song-details"></div>
           </li>
         ))}
       </ul>
