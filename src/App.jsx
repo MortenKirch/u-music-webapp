@@ -25,7 +25,7 @@ import "./Components/Firebase/Firebase-config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import AlbumPage from "./Pages/AlbumPage";
-import Song from "./Pages/Song";
+import SongPage from "./Pages/Song";
 import ReviewsForm from "./Components/ReviewsForm";
 
 export default function App() {
@@ -80,13 +80,15 @@ export default function App() {
         <Route path="/explore-genres" element={<ExploreGenres />} />
         <Route path="/explore-albums" element={<ExploreAlbum />} />
         <Route path="/explore-songs" element={<ExploreSong />} />
+
+        <Route path="/song" element={<SongPage />} />
+
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
         <Route path="/genre" element={<Genre />} />
-        <Route path="/song" element={<Song />} />
+
         <Route path="/album" element={<AlbumPage />} />
         <Route path="/ReviewsForm" element={<ReviewsForm />} />
-
         {/* makes sure that if a route doesnt exist you get thrown back to homepage "this instance its homeScreen"*/}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
