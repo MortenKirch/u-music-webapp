@@ -1,39 +1,47 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import HomeRecommendAlbums from "./HomeRecommendAlbums";
+
 
 export default function HomeNews() {
-  const [albums, setAlbums] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    async function getAlbums() {
+    async function getReviews() {
       const url =
-        "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/albums.json";
+        "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews.json";
       const response = await fetch(url);
       const data = await response.json();
-      const albumsArray = Object.keys(data).map((key) => ({
+      const reviewsArray = Object.keys(data).map((key) => ({
         id: key,
         name: key,
-        ...data[key][0],
+        ...data[key],
       })); // from object to array
-      setAlbums(albumsArray);
+      setReviews(reviewsArray);
     }
-    getAlbums();
+    getReviews();
   }, []);
 
   return (
     <section className="home-recommended-section">
-      <h2>Recommended</h2>
+      <h2>Latest Reviews</h2>
       <div className="homepage-albums-slider">
-        {albums.map((album, index) => (
-          <div className="homepage-albums-card" key={album.id}>
-            {index === 0 ? (
-              <Link to="/album">
-                <HomeRecommendAlbums album={album} />
-              </Link>
-            ) : (
-              <HomeRecommendAlbums album={album} />
-            )}
+        {reviews.map((review) => (
+          <div className="homepage-albums-card" key={review.id}>
+      <div className="album-card">
+        <img src={`${review.image}`} alt={review.artist} />
+        <div className="album-info">
+          <p>Album</p>
+          <h3>{review.album}</h3>
+          <p>{review.year}</p>
+          <p>{review.genres}</p>
+          <div  className="review-homepage">
+          <img src={review.profileImage} alt={review.profileName} className="review-profile-img" />
+          <h3>{review.rating}/5</h3>
+          </div>
+          <a href="/reviews" className="review-ancor">See Review</a>
+        
+        </div>
+
+      </div>
           </div>
         ))}
       </div>

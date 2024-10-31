@@ -14,7 +14,7 @@ export default function HomeReleases() {
       const SongsArray = Object.keys(data).map((key) => ({
         id: key,
         name: key,
-        ...data[key][0],
+        ...data[key],
       })); // from object to array
       setSongs(SongsArray);
     }
