@@ -1,4 +1,3 @@
-import React from "react";
 import Spotify from "../images/Spotify.png";
 import Soundcloud from "../images/soundcloud.png";
 import AppleMusic from "../images/Apple.png";
