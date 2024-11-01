@@ -28,7 +28,7 @@ import AlbumPage from "./Pages/AlbumPage";
 import SongPage from "./Pages/Song";
 import ReviewsForm from "./Components/ReviewsForm";
 import BackButton from "./Components/BackButton";
-
+import SplashScreen from "./Pages/splashScreen"
 export default function App() {
   const auth = getAuth();
   const [isAuth, setIsAuth] = useState(
@@ -57,6 +57,16 @@ export default function App() {
     }, //puts auth at the end to tell the function to run everytime auth is changed
     [auth]
   );
+
+  const [isSplashVisible, setIsSplashVisible] = useState(true);
+
+  useEffect(() => {
+    // Hide splash screen after 3 seconds
+    const timer = setTimeout(() => setIsSplashVisible(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+
 
   const privateRoutes = (
     <>
@@ -133,7 +143,11 @@ export default function App() {
   // private routes if not you only have acces to public routes
   return (
     <>
-      <main>{isAuth && onboardingComplete ? privateRoutes : publicRoutes}</main>
+      {isSplashVisible ? (
+        <SplashScreen />
+      ) : (
+        <main>{isAuth && onboardingComplete ? privateRoutes : publicRoutes}</main>
+      )}
     </>
   );
 }
