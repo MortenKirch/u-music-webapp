@@ -43,7 +43,7 @@ export default function SongPage() {
       {song ? (
         <>
           <SongHeader song={song} />
-          <SongLyrics lyrics={song.lyrics} />
+          <SongLyrics song={song} />
         </>
       ) : (
         <p>Song not found.</p>
