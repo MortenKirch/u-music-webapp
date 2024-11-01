@@ -1,3 +1,4 @@
+import React from "react";
 import Spotify from "../images/Spotify.png";
 import Soundcloud from "../images/soundcloud.png";
 import AppleMusic from "../images/Apple.png";
@@ -8,10 +9,28 @@ export default function SongHeader({ song }) {
       <div className="song-header-1">
         <p className="song-header-title">Title</p>
         <img src={song.image} alt={song.title} className="song-foto" />
-        <h1>{song.title}</h1>
-        <h2>{song.artist}</h2>
-        <p>Genre: {song.genre}</p>
-        <div className="'streaming-icons">
+      </div>
+
+      <div className="song-header-2">
+        <div>
+          <p className="song-header-title">Artist</p>
+          <p className="song-header-description">{song.artist}</p>
+        </div>
+        <div>
+          <p className="song-header-title">Release</p>
+          <p className="song-header-description">{song.releaseDate}</p>
+        </div>
+        <div>
+          <p className="song-header-title">Average Rating</p>
+          <p className="song-header-description">{song.avgRating}</p>
+        </div>
+        <div>
+          <p className="song-header-title">Genre</p>
+          <p className="song-header-description">{song.genre}</p>
+        </div>
+
+        {/* Streaming Icons */}
+        <div className="streaming-icons">
           <img
             src={Spotify}
             alt="Spotify"
@@ -22,7 +41,6 @@ export default function SongHeader({ song }) {
               )
             }
           />
-
           <img
             src={AppleMusic}
             alt="Apple Music"
@@ -33,7 +51,6 @@ export default function SongHeader({ song }) {
               )
             }
           />
-
           <img
             src={Soundcloud}
             alt="Soundcloud"

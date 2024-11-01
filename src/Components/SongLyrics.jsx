@@ -1,3 +1,6 @@
+import React from "react";
+import "../App.css";
+
 export default function SongLyrics({ song }) {
   return (
     <div className="song-lyrics-container">
