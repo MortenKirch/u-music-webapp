@@ -8,7 +8,6 @@ export default function AlbumPage() {
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
-    // Fetching the first album from "albums"
     async function getAlbum() {
       const albumsUrl =
         "https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/albums.json";
