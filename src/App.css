@@ -2066,6 +2066,7 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   margin-bottom: 20px;
+  height: 100vh;
 }
 
 .albums-list-container h2 {
