@@ -62,7 +62,7 @@ export default function Reviews() {
     console.log("Delete post", reviews);
 
     const confirmDelete = window.confirm(
-      `Do you want to delete post, ${reviews.find(r => r.id === id).title}?`
+      `Do you want to delete post, ${reviews.find((r) => r.id === id).title}?`
     );
     if (confirmDelete) {
       const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/reviews/${id}.json`;
@@ -82,7 +82,12 @@ export default function Reviews() {
   return (
     <section className="reviews-container">
       <h1>Reviews</h1>
-      <button className="reviews-form-btn reviews-btn-create" onClick={handleCreate}>Create Review?</button>
+      <button
+        className="reviews-form-btn reviews-btn-create"
+        onClick={handleCreate}
+      >
+        Create Review?
+      </button>
 
       {reviews.map((review, index) => (
         <div
@@ -98,7 +103,9 @@ export default function Reviews() {
                 alt="Profile"
                 className="review-profile-image"
               />
-              <p className="review-profile-name">{userData[review.uid]?.username}</p>
+              <p className="review-profile-name">
+                {userData[review.uid]?.username}
+              </p>
             </div>
             <div>
               <div className="review-rating">
@@ -136,7 +143,7 @@ export default function Reviews() {
             <p className="main-review-text">
               {expandedReviews[index]
                 ? review.reviewtext
-                : truncateText(review.reviewtext, 250)}
+                : truncateText(review.reviewtext, 230)}
             </p>
           </div>
           <p className="review-likes">

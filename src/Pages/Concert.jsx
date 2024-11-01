@@ -4,7 +4,6 @@ import warmup from "../images/eminem-fuel.png";
 import warmup2 from "../images/Album1.jpg";
 import sangpic from "../images/eminem-fuel.png";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 
 const setlistSongs = [
   {
@@ -76,7 +75,6 @@ const tourDates = [
 ];
 
 export default function Concert() {
-  const { concertId } = useParams();
   const [showFullList, setShowFullList] = useState(false);
 
   const toggleFullList = () => {
