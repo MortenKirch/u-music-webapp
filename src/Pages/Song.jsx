@@ -7,39 +7,47 @@ export default function SongPage() {
   const { id } = useParams();
   const [song, setSong] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchSongData = async () => {
-      const encodedId = encodeURIComponent(id); // Ensure encoding
-      const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/songs/${encodedId}.json`;
+    async function fetchSongData() {
+      const songsUrl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/songs/${encodeURIComponent(
+        id
+      )}.json`;
 
       try {
-        const response = await fetch(url);
+        const response = await fetch(songsUrl);
         const data = await response.json();
-        console.log("Fetched song data:", data);
 
         if (data) {
-          setSong({ title: id, ...data });
+          setSong({ id, ...data });
         } else {
-          console.error("No song data found.");
+          setError("Song not found.");
         }
       } catch (error) {
         console.error("Error fetching song data:", error);
+        setError("Failed to fetch song data.");
       } finally {
         setLoading(false);
       }
-    };
+    }
 
     fetchSongData();
   }, [id]);
 
   if (loading) return <div>Loading song data...</div>;
-  if (!song) return <p>Song not found.</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className="song-container-new">
-      <SongHeader song={song} />
-      <SongLyrics lyrics={song.lyrics} />
+      {song ? (
+        <>
+          <SongHeader song={song} />
+          <SongLyrics lyrics={song.lyrics} />
+        </>
+      ) : (
+        <p>Song not found.</p>
+      )}
     </div>
   );
 }

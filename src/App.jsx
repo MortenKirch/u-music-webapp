@@ -61,7 +61,7 @@ export default function App() {
   const privateRoutes = (
     <>
       <NavTop />
-        <BackButton/>
+      <BackButton />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/concert" element={<Concert />} />
@@ -82,7 +82,7 @@ export default function App() {
         <Route path="/explore-albums" element={<ExploreAlbum />} />
         <Route path="/explore-songs" element={<ExploreSong />} />
 
-        <Route path="/song" element={<SongPage />} />
+        <Route path="/song/:id" element={<SongPage />} />
 
         <Route path="/charts" element={<Charts />} />
         <Route path="/artist-profile" element={<ArtistProfile />} />
