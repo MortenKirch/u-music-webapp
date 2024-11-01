@@ -1,4 +1,3 @@
-import HomeRecommendAlbums from "./HomeRecommendAlbums";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -19,7 +18,6 @@ export default function HomeReleases() {
       setSongs(SongsArray);
     }
     getSongs();
-
   }, []);
   return (
     <section className="home-recommended-section">
@@ -27,17 +25,15 @@ export default function HomeReleases() {
       <div className="homepage-albums-slider">
         {songs.map((song) => (
           <div className="homepage-albums-card" key={song.id}>
-                {    console.log(song.image)}
-      <div className="album-card">
-        <img src={song.image} alt={song.name} />
-        <div className="album-info">
-          <p>Song</p>
-          <h3>{song.name}</h3>
-          <p>{song.artist}</p>
-         
-        </div>
-      </div>
-    
+            {console.log(song.image)}
+            <div className="album-card">
+              <img src={song.image} alt={song.name} />
+              <div className="album-info">
+                <p>Song</p>
+                <h3>{song.name}</h3>
+                <p>{song.artist}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

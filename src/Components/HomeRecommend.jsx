@@ -15,7 +15,7 @@ export default function HomeRecommend() {
         id: key,
         name: key,
         ...data[key][0],
-      })); // from object to array
+      }));
       setAlbums(albumsArray);
     }
     getAlbums();
@@ -25,15 +25,11 @@ export default function HomeRecommend() {
     <section className="home-recommended-section">
       <h2>Recommended</h2>
       <div className="homepage-albums-slider">
-        {albums.map((album, index) => (
+        {albums.map((album) => (
           <div className="homepage-albums-card" key={album.id}>
-            {index === 0 ? (
-              <Link to="/album">
-                <HomeRecommendAlbums album={album} />
-              </Link>
-            ) : (
+            <Link to="/album">
               <HomeRecommendAlbums album={album} />
-            )}
+            </Link>
           </div>
         ))}
       </div>
