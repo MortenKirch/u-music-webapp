@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import profilePic from "../images/cat.jpg";
 import "../App.css";
@@ -80,7 +80,7 @@ export default function Profile({ setOnboardingComplete }) {
   if (!userData) {
     return (
       <>
-        <div>You don't have one, create a user here</div>
+        <div>You don&apos;t have one, create a user here</div>
         <button type="submit" onClick={handleClick}>
           Create Account
         </button>
