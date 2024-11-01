@@ -11,9 +11,7 @@ export default function SongPage() {
 
   useEffect(() => {
     async function fetchSongData() {
-      const songsUrl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/songs/${encodeURIComponent(
-        id
-      )}.json`;
+      const songsUrl = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/songs/${id}.json`;
 
       try {
         const response = await fetch(songsUrl);
@@ -43,7 +41,7 @@ export default function SongPage() {
       {song ? (
         <>
           <SongHeader song={song} />
-          <SongLyrics lyrics={song.lyrics} />
+          <SongLyrics song={song} />
         </>
       ) : (
         <p>Song not found.</p>
