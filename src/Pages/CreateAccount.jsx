@@ -120,10 +120,7 @@ export default function CreateAccount({ setOnboardingComplete }) {
           Continue
         </button>
       </div>
-      <div>
-        {/* current placeholder for progressbar*/}
-        <p className="placeholder-bar">placeholder for onboarding bar</p>
-      </div>
+
     </section>
   );
 }
