@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 export default function HomeNews() {
   const [reviews, setReviews] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getReviews() {
@@ -37,7 +40,9 @@ export default function HomeNews() {
           <img src={review.profileImage} alt={review.profileName} className="review-profile-img" />
           <h3>{review.rating}/5</h3>
           </div>
-          <a href="/reviews" className="review-ancor">See Review</a>
+          <a onClick={()=>{
+            navigate("/reviews")
+          }} className="review-ancor">See Review</a>
         
         </div>
 
