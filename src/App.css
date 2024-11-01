@@ -1312,21 +1312,21 @@
     align-items: center;
     color: #fff;
   }
-.review-homepage{
-display: flex;
-flex-direction: row;
-align-items: center;
-}
-.review-profile-img{
-width: 20% !important;
-height: 20%;
-border-radius: 50% !important;
-margin-right: 1rem;
-}
-.review-ancor{
-  text-decoration: underline;
-  color: white;
-}
+  .review-homepage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .review-profile-img {
+    width: 20% !important;
+    height: 20%;
+    border-radius: 50% !important;
+    margin-right: 1rem;
+  }
+  .review-ancor {
+    text-decoration: underline;
+    color: white;
+  }
   .profile-header {
     text-align: center;
     margin-bottom: 20px;
@@ -1624,13 +1624,13 @@ margin-right: 1rem;
     font-size: 14px;
     margin: 0 10px;
   }
-.back-button{
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 1.25rem;
-  color: white;
-}
+  .back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.25rem;
+    color: white;
+  }
   .review-box {
     background-color: #2a2525;
     padding: 16px;
@@ -1792,7 +1792,7 @@ margin-right: 1rem;
     padding: 0.5rem;
     width: 90vw;
   }
-  .full-album-song-title{
+  .full-album-song-title {
     flex-grow: 1;
   }
   .full-album-song-info {
@@ -1800,7 +1800,7 @@ margin-right: 1rem;
     gap: 1rem;
     margin-left: auto;
   }
-  
+
   .full-album-song-duration {
     align-self: end;
   }
@@ -2364,9 +2364,8 @@ margin-right: 1rem;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  margin: 1rem ;
+  margin: 1rem;
   width: 90%;
-  
 }
 
 .reviews-title-new {
@@ -2381,7 +2380,6 @@ margin-right: 1rem;
   justify-content: flex-end;
   align-items: center;
   color: #71767b;
-
 }
 
 .review-rating-display-new {
@@ -2406,7 +2404,6 @@ margin-right: 1rem;
   flex-direction: column;
   gap: 16px;
   color: white;
-
 }
 
 .review-box-new {
