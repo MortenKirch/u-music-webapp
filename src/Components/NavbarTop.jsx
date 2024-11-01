@@ -12,7 +12,6 @@ export default function NavTop() {
         <NavLink to="/Notifications">
           <img src={NotiIcon} alt="" />
         </NavLink>
-        <span className="notification-dot"></span>
       </div>
     </div>
   );
