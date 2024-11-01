@@ -24,8 +24,11 @@ export default function HomeReleases() {
       <h2>Popular Releases</h2>
       <div className="homepage-albums-slider">
         {songs.map((song) => (
-          <div className="homepage-albums-card" key={song.id}>
-            {console.log(song.image)}
+          <Link
+            to={`/song/${encodeURIComponent(song.id)}`}
+            key={song.id}
+            className="homepage-albums-card"
+          >
             <div className="album-card">
               <img src={song.image} alt={song.name} />
               <div className="album-info">
@@ -34,7 +37,7 @@ export default function HomeReleases() {
                 <p>{song.artist}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -80,12 +80,12 @@ export default function ExploreSong() {
           <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
       </div>
-      <h2>Albums</h2>
+      <h2>Songs</h2>
 
       <div className="explore-albums-grid">
         {songs.map((song, index) => (
           <NavLink
-            to="/song/${song.id}`}"
+            to="/song/Concorde"
             className="explore-album-card"
             key={index}
           >
