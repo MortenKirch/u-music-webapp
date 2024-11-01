@@ -5,32 +5,42 @@ import Logo from "../images/logo.png";
 export default function ChooseGenre() {
     const navigate = useNavigate();
     const location = useLocation();
+    //takes uid from useLocation state
     const { uid } = location.state;
     const [selectedGenres, setSelectedGenres] = useState([]);
     const containerRef = useRef(null);
+// Array of music genres to display as selectable "genre bubbles"
+const genres = ["Pop", "Rock", "Jazz", "Hip-Hop", "Classical", "Electronic", "Blues", "Reggae", "Country", "Metal", "Folk", "Soul", "R&B", "Punk", "Funk", "Disco"];
 
-    const genres = ["Pop", "Rock", "Jazz", "Hip-Hop", "Classical", "Electronic", "Blues", "Reggae", "Country", "Metal", "Folk", "Soul", "R&B", "Punk", "Funk", "Disco"];
+// Function to handle clicks on genre bubbles
+// Takes a genre as an argument and toggles its selection state
+const handleGenreClick = (genre) => {
+    // Check if the clicked genre is already in the selectedGenres array
+    if (selectedGenres.includes(genre)) {
+        // If the genre is already selected, remove it from selectedGenres
+        // Creates a new array excluding the clicked genre using filter
+        setSelectedGenres(selectedGenres.filter(g => g !== genre));
+    } else {
+        // If the genre is not already selected, add it to selectedGenres
+        // Creates a new array by spreading selectedGenres and appending the new genre
+        setSelectedGenres([...selectedGenres, genre]);
+    }
+};
 
-    const handleGenreClick = (genre) => {
-        if (selectedGenres.includes(genre)) {
-            setSelectedGenres(selectedGenres.filter(g => g !== genre));
-        } else {
-            setSelectedGenres([...selectedGenres, genre]);
-        }
-    };
-
+// makes a fetch patch, so that your account will get genres added to the database
     const updateUserGenres = async (uid, genres) => {
         const url = `https://umusic-c7d05-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
         const response = await fetch(url, {
             method: "PATCH",
             body: JSON.stringify({ genres })
         });
+        // error handling if response is not working
         if (!response.ok) {
             console.log("Sorry, something went wrong");
         }
     };
-
-    const canProceed = selectedGenres.length >= 3; // At least 3 genres to proceed
+// makes a variable to say you need atleast 3 genres
+    const canProceed = selectedGenres.length >= 3; 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -52,6 +62,7 @@ export default function ChooseGenre() {
         }
     }, []); // Empty dependency array means this runs once after the initial render
 
+    //simple math to make the width of the onbaording bar
     const totalSteps = 3; // Total onboarding steps
     const completedSteps = 1; // Current completed step 
     const progressPercentage = ((completedSteps / totalSteps) * 100) + '%';
@@ -66,6 +77,7 @@ export default function ChooseGenre() {
                     className="bubble-container"
                     ref={containerRef}
                 >
+                    {/* maps over the array of genres to make the bubbles for all genres*/}
                     {genres.map((genre, index) => (
                         <div
                             key={index}
