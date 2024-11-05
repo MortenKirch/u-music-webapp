@@ -16,7 +16,6 @@
   --dark-gray: #2a2525;
 }
 
-@media (max-width: 500px) {
   body {
     background: rgb(2, 0, 36);
     background: linear-gradient(
@@ -290,7 +289,7 @@
   }
   .notification-section {
     color: var(--white);
-    height: 80vh;
+    height: 100vh;
 
     text-align: center;
   }
@@ -1937,7 +1936,7 @@
   .album-reply-thread-album:hover {
     color: #ffffff;
   }
-}
+
 
 /* ArtistProfile */
 /* ArtistProfile - Rune */
